@@ -1,0 +1,30 @@
+[
+  {
+    "market_id": "market-london-9c-tomorrow",
+    "best_bid": 0.04,
+    "best_ask": 0.06,
+    "bid_size": 500.0,
+    "ask_size": 500.0
+  },
+  {
+    "market_id": "market-nyc-15c-tomorrow",
+    "best_bid": 0.07,
+    "best_ask": 0.09,
+    "bid_size": 300.0,
+    "ask_size": 400.0
+  },
+  {
+    "market_id": "market-seoul-5c-tomorrow",
+    "best_bid": 0.02,
+    "best_ask": 0.04,
+    "bid_size": 200.0,
+    "ask_size": 200.0
+  },
+  {
+    "market_id": "market-london-15c-tomorrow",
+    "best_bid": 0.01,
+    "best_ask": 0.03,
+    "bid_size": 100.0,
+    "ask_size": 150.0
+  }
+]

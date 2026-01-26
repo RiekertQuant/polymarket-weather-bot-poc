@@ -1,0 +1,65 @@
+[
+  {
+    "id": "market-london-5c-tomorrow",
+    "title": "Will London hit 5°C tomorrow?",
+    "description": "This market resolves YES if the daily high temperature in London reaches or exceeds 5 degrees Celsius tomorrow. Very likely in winter.",
+    "end_date": "2026-01-28",
+    "yes_price": 0.05,
+    "volume": 1500.0,
+    "active": true
+  },
+  {
+    "id": "market-nyc-0c-tomorrow",
+    "title": "Will New York City reach 0°C tomorrow?",
+    "description": "Resolves YES if NYC daily max temp is 0C or above. Very likely.",
+    "end_date": "2026-01-28",
+    "yes_price": 0.04,
+    "volume": 2000.0,
+    "active": true
+  },
+  {
+    "id": "market-seoul-minus5c-tomorrow",
+    "title": "Will Seoul temperature exceed -5°C tomorrow?",
+    "description": "Market resolves YES if Seoul max temperature is above -5 degrees Celsius. Very likely even in winter.",
+    "end_date": "2026-01-28",
+    "yes_price": 0.03,
+    "volume": 800.0,
+    "active": true
+  },
+  {
+    "id": "market-london-20c-tomorrow",
+    "title": "Will London reach 20°C tomorrow?",
+    "description": "Unlikely winter temperature target - should be cheap and stay cheap.",
+    "end_date": "2026-01-28",
+    "yes_price": 0.02,
+    "volume": 500.0,
+    "active": true
+  },
+  {
+    "id": "market-5050-test",
+    "title": "Will London hit 10°C tomorrow?",
+    "description": "A market priced at 50/50 for testing filter.",
+    "end_date": "2026-01-28",
+    "yes_price": 0.50,
+    "volume": 3000.0,
+    "active": true
+  },
+  {
+    "id": "market-expensive",
+    "title": "Will NYC hit -10°C tomorrow?",
+    "description": "High probability market that max temp exceeds -10C, priced expensive.",
+    "end_date": "2026-01-28",
+    "yes_price": 0.85,
+    "volume": 5000.0,
+    "active": true
+  },
+  {
+    "id": "market-inactive",
+    "title": "Will Seoul hit 25°C tomorrow?",
+    "description": "Inactive market for testing.",
+    "end_date": "2026-01-28",
+    "yes_price": 0.01,
+    "volume": 100.0,
+    "active": false
+  }
+]
