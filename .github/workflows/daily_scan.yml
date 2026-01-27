@@ -57,6 +57,9 @@ jobs:
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
 
+          # Fetch latest to check for conflicts
+          git fetch origin master || git fetch origin main
+
           # Add signal files
           git add data/signals/*.json || true
 
@@ -69,9 +72,18 @@ jobs:
           Automated signal scan by GitHub Actions.
           Run: ${{ github.run_number }}"
 
-            # Pull any changes that happened during the run, then push
-            git pull --rebase origin master || git pull --rebase origin main
-            git push
+            # Try to push, handling conflicts gracefully
+            if ! git push; then
+              echo "Push failed, trying rebase..."
+              if git pull --rebase origin master; then
+                git push
+              else
+                # Conflict - another run already committed today's signals
+                echo "Rebase conflict - signals already committed by another run"
+                git rebase --abort || true
+                echo "Skipping commit (signals already exist)"
+              fi
+            fi
           fi
 
       - name: Create summary
