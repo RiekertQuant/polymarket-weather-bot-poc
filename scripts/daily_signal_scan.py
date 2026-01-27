@@ -107,6 +107,8 @@ def scan_markets() -> dict:
             "title": market.title,
             "city": market.city,
             "threshold_celsius": market.threshold_celsius,
+            "threshold_celsius_upper": market.threshold_celsius_upper,
+            "comparison": market.comparison,
             "target_date": market.target_date.isoformat(),
             "end_date": market.end_date.isoformat(),
             "market_price": market.yes_price,
@@ -259,6 +261,19 @@ def print_summary(result: dict) -> None:
     print("=" * 60)
 
 
+def _load_outcomes_summary() -> dict | None:
+    """Load the outcomes summary from outcomes.json if it exists."""
+    outcomes_path = Path("data/signals/outcomes.json")
+    if not outcomes_path.exists():
+        return None
+    try:
+        with open(outcomes_path) as f:
+            data = json.load(f)
+        return data.get("summary")
+    except (json.JSONDecodeError, OSError):
+        return None
+
+
 def main():
     logger.info("Starting signal scan...")
 
@@ -270,7 +285,8 @@ def main():
     # Discord notification
     if settings.discord_webhook_url and result["signals_generated"] > 0:
         notifier = DiscordNotifier(settings.discord_webhook_url)
-        notifier.send_signal_alert(result)
+        outcomes_summary = _load_outcomes_summary()
+        notifier.send_signal_alert(result, outcomes_summary=outcomes_summary)
         logger.info("Discord alert dispatched")
     else:
         logger.info("Discord alert skipped (no URL or no signals)")

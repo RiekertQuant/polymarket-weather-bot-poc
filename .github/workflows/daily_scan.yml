@@ -47,6 +47,12 @@ jobs:
         run: |
           python scripts/daily_signal_scan.py
 
+      - name: Resolve past signals
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        run: |
+          python scripts/resolve_signals.py
+
       - name: Upload signals as artifact
         uses: actions/upload-artifact@v4
         with:
