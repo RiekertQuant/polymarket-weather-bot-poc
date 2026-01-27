@@ -20,9 +20,10 @@ class ProbabilityResult:
     p_raw: float  # Raw probability from normal distribution
     p_calibrated: float  # Calibrated probability (from ML model or same as raw)
     forecast_temp: float  # Forecasted temperature
-    threshold: float  # Temperature threshold
+    threshold: float  # Temperature threshold (lower bound for range)
     sigma: float  # Standard deviation used
-    comparison: str  # ">=" or "<"
+    comparison: str  # ">=", "<=", or "range"
+    threshold_upper: Optional[float] = None  # Upper bound for range markets
 
 
 class WeatherProbabilityEngine:
@@ -75,17 +76,19 @@ class WeatherProbabilityEngine:
         target_date: date,
         comparison: str = ">=",
         forecast: Optional[DailyForecast] = None,
+        threshold_upper: Optional[float] = None,
     ) -> Optional[ProbabilityResult]:
-        """Calculate probability of temperature exceeding threshold.
+        """Calculate probability of temperature outcome.
 
         Uses a normal distribution centered on the forecast with uncertainty sigma.
 
         Args:
             city: City name.
-            threshold: Temperature threshold in Celsius.
+            threshold: Temperature threshold in Celsius (lower bound for range).
             target_date: Target date for the forecast.
-            comparison: ">=" for above threshold, "<" for below.
+            comparison: ">=" for above, "<=" for below, "range" for between.
             forecast: Optional pre-fetched forecast.
+            threshold_upper: Upper bound in Celsius (required for "range").
 
         Returns:
             ProbabilityResult with raw and calibrated probabilities.
@@ -98,19 +101,29 @@ class WeatherProbabilityEngine:
             logger.warning(f"No forecast available for {city} on {target_date}")
             return None
 
-        # Use max temperature for "high/hit" markets
+        # Use max temperature for "highest temperature" markets
         forecast_temp = forecast.temperature_max
         sigma = self.get_sigma(city)
 
         # Calculate probability using normal CDF
-        # P(X >= threshold) = 1 - CDF(threshold)
-        # P(X < threshold) = CDF(threshold)
-        z_score = (threshold - forecast_temp) / sigma
-
-        if comparison == ">=":
-            p_raw = 1.0 - stats.norm.cdf(z_score)
-        else:  # comparison == "<"
+        if comparison == "range" and threshold_upper is not None:
+            # P(lower <= X <= upper) = CDF(upper) - CDF(lower)
+            z_lower = (threshold - forecast_temp) / sigma
+            z_upper = (threshold_upper - forecast_temp) / sigma
+            p_raw = stats.norm.cdf(z_upper) - stats.norm.cdf(z_lower)
+        elif comparison == "<=":
+            # P(X <= threshold_upper)
+            bound = threshold_upper if threshold_upper is not None else threshold
+            z_score = (bound - forecast_temp) / sigma
             p_raw = stats.norm.cdf(z_score)
+        elif comparison == "<":
+            # P(X < threshold)
+            z_score = (threshold - forecast_temp) / sigma
+            p_raw = stats.norm.cdf(z_score)
+        else:  # comparison == ">="
+            # P(X >= threshold)
+            z_score = (threshold - forecast_temp) / sigma
+            p_raw = 1.0 - stats.norm.cdf(z_score)
 
         # Ensure probability is in valid range
         p_raw = float(np.clip(p_raw, 0.0, 1.0))
@@ -122,9 +135,10 @@ class WeatherProbabilityEngine:
             p_raw=p_raw,
             p_calibrated=p_calibrated,
             forecast_temp=forecast_temp,
-            threshold=threshold,
+            threshold=threshold if threshold is not None else 0.0,
             sigma=sigma,
             comparison=comparison,
+            threshold_upper=threshold_upper,
         )
 
     def _apply_calibration(

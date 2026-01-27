@@ -21,7 +21,9 @@ class Market:
     # Parsed fields (populated by parsing module)
     city: Optional[str] = None
     threshold_celsius: Optional[float] = None
+    threshold_celsius_upper: Optional[float] = None  # Upper bound for range markets
     target_date: Optional[date] = None
+    comparison: str = ">="  # ">=", "<=", or "range"
 
 
 @dataclass

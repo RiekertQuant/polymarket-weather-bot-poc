@@ -31,11 +31,11 @@ class Settings(BaseSettings):
 
     # Strategy filters
     price_min: float = Field(default=0.001, description="Minimum price to consider")
-    price_max: float = Field(default=0.10, description="Maximum price for cheap shares")
+    price_max: float = Field(default=0.25, description="Maximum price for cheap shares")
     skip_price_min: float = Field(default=0.40, description="Skip 50/50 range lower bound")
     skip_price_max: float = Field(default=0.60, description="Skip 50/50 range upper bound")
-    min_edge_absolute: float = Field(default=0.60, description="Minimum p_model required")
-    min_edge_relative: float = Field(default=0.30, description="p_model must exceed price by this")
+    min_edge_absolute: float = Field(default=0.15, description="Minimum p_model required")
+    min_edge_relative: float = Field(default=0.10, description="p_model must exceed price by this")
 
     # Weather forecast
     forecast_sigma: float = Field(

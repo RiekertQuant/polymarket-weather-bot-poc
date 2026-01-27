@@ -72,15 +72,24 @@ def scan_markets() -> dict:
     all_markets = []
 
     for market in markets:
-        if not market.city or not market.threshold_celsius or not market.target_date:
+        if not market.city or not market.target_date:
             continue
 
-        # Calculate probability
+        # Range markets use threshold_celsius_upper; threshold/boundary markets use threshold_celsius
+        has_bounds = (
+            market.threshold_celsius is not None
+            or market.threshold_celsius_upper is not None
+        )
+        if not has_bounds:
+            continue
+
+        # Calculate probability using the market's comparison type
         prob_result = prob_engine.calculate_probability(
             city=market.city,
-            threshold=market.threshold_celsius,
+            threshold=market.threshold_celsius if market.threshold_celsius is not None else 0.0,
             target_date=market.target_date,
-            comparison=">=",
+            comparison=market.comparison,
+            threshold_upper=market.threshold_celsius_upper,
         )
 
         if prob_result is None:
