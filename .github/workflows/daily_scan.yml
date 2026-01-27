@@ -69,6 +69,8 @@ jobs:
           Automated signal scan by GitHub Actions.
           Run: ${{ github.run_number }}"
 
+            # Pull any changes that happened during the run, then push
+            git pull --rebase origin master || git pull --rebase origin main
             git push
           fi
 
