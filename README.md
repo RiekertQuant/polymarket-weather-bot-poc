@@ -185,8 +185,6 @@ Key settings:
 │   │   ├── weather_history.py # Historical forecasts/actuals
 │   │   ├── engine.py       # Backtest simulation engine
 │   │   └── report.py       # Report generation
-│   └── vision/             # OCR module (stub)
-│       └── market_ocr.py   # Image processing
 ├── tests/
 │   ├── fixtures/           # Test data
 │   │   ├── markets.json    # Sample markets
@@ -223,7 +221,6 @@ Edit `tests/fixtures/markets.json` to add new market scenarios:
 
 - [ ] **Live trading intentionally disabled** - LiveBroker not implemented
 - [ ] Real Polymarket API integration is best-effort (may need API key)
-- [ ] OCR module is a stub (not implemented)
 - [ ] Calibration requires manual outcome labeling
 - [ ] No scheduled/continuous running (single run only)
 - [x] ~~Weather history collection not automated~~ - Now handled by backtester
