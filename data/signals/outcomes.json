@@ -1,0 +1,14 @@
+{
+  "resolved_signals": [],
+  "pending_signals": [],
+  "summary": {
+    "total_resolved": 0,
+    "wins": 0,
+    "losses": 0,
+    "win_rate": 0,
+    "total_pnl": 0,
+    "total_risked": 0,
+    "pending": 0
+  },
+  "last_updated": "2026-01-27"
+}
