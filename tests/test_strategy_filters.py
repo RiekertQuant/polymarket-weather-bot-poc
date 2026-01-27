@@ -55,13 +55,13 @@ class TestPriceFilters:
 
     def test_reject_expensive_price(self):
         """Should reject prices above maximum."""
-        result = self.filter.check_price_range(0.15)
+        result = self.filter.check_price_range(0.30)
         assert not result.passed
         assert result.reason == FilterReason.PRICE_TOO_HIGH
 
     def test_reject_between_max_and_5050(self):
-        """Prices between 0.10 and 0.40 should be rejected as too high."""
-        result = self.filter.check_price_range(0.25)
+        """Prices between 0.25 and 0.40 should be rejected as too high."""
+        result = self.filter.check_price_range(0.35)
         assert not result.passed
         assert result.reason == FilterReason.PRICE_TOO_HIGH
 
@@ -74,38 +74,39 @@ class TestEdgeFilters:
         self.filter = MarketFilter()
 
     def test_sufficient_edge_absolute(self):
-        """Should accept when p_model >= 0.60 (absolute minimum)."""
+        """Should accept when p_model >= 0.15 (absolute minimum)."""
         # Price: 0.05, p_model: 0.65
-        # Required: max(0.60, 0.05 + 0.30) = max(0.60, 0.35) = 0.60
+        # Required: max(0.15, 0.05 + 0.10) = max(0.15, 0.15) = 0.15
         result = self.filter.check_edge(p_model=0.65, price=0.05)
         assert result.passed
 
     def test_sufficient_edge_relative(self):
-        """Should accept when p_model >= price + 0.30."""
+        """Should accept when p_model >= price + 0.10."""
         # Price: 0.08, p_model: 0.70
-        # Required: max(0.60, 0.08 + 0.30) = max(0.60, 0.38) = 0.60
+        # Required: max(0.15, 0.08 + 0.10) = max(0.15, 0.18) = 0.18
         result = self.filter.check_edge(p_model=0.70, price=0.08)
         assert result.passed
 
     def test_insufficient_edge(self):
         """Should reject when edge is too small."""
-        # Price: 0.05, p_model: 0.50
-        # Required: 0.60, but p_model is only 0.50
-        result = self.filter.check_edge(p_model=0.50, price=0.05)
+        # Price: 0.05, p_model: 0.10
+        # Required: max(0.15, 0.05 + 0.10) = 0.15, but p_model is only 0.10
+        result = self.filter.check_edge(p_model=0.10, price=0.05)
         assert not result.passed
         assert result.reason == FilterReason.INSUFFICIENT_EDGE
 
     def test_edge_at_boundary(self):
         """Should accept at exact boundary."""
-        # Price: 0.05, p_model: 0.60 (exactly at minimum)
-        result = self.filter.check_edge(p_model=0.60, price=0.05)
+        # Price: 0.04, p_model: 0.15
+        # Required: max(0.15, 0.04 + 0.10) = max(0.15, 0.14) = 0.15
+        result = self.filter.check_edge(p_model=0.15, price=0.04)
         assert result.passed
 
     def test_high_price_requires_higher_edge(self):
         """Higher price should require higher p_model."""
-        # Price: 0.10, p_model: 0.60
-        # Required: max(0.60, 0.10 + 0.30) = max(0.60, 0.40) = 0.60
-        result = self.filter.check_edge(p_model=0.60, price=0.10)
+        # Price: 0.10, p_model: 0.20
+        # Required: max(0.15, 0.10 + 0.10) = max(0.15, 0.20) = 0.20
+        result = self.filter.check_edge(p_model=0.20, price=0.10)
         assert result.passed
 
 
