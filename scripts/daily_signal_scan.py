@@ -127,7 +127,7 @@ def scan_markets() -> dict:
             }
             signals.append(signal)
             logger.info(
-                f"SIGNAL: {market.city} {market.threshold_celsius}C @ ${market.yes_price:.3f} | "
+                f"SIGNAL: {market.title} @ ${market.yes_price:.3f} | "
                 f"p={prob_result.p_calibrated:.2f} | edge={decision.edge:+.2f}"
             )
 
@@ -246,7 +246,7 @@ def print_summary(result: dict) -> None:
         print("TRADE SIGNALS")
         print("-" * 60)
         for sig in result["signals"]:
-            print(f"  {sig['city']} {sig['threshold_celsius']}C")
+            print(f"  {sig['title']}")
             print(f"    Market Price: ${sig['market_price']:.3f}")
             print(f"    Model Prob:   {sig['p_model']:.1%}")
             print(f"    Edge:         {sig['edge']:+.1%}")
