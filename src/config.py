@@ -52,6 +52,11 @@ class Settings(BaseSettings):
     polymarket_client: Literal["mock", "real"] = Field(default="mock")
     polymarket_api_url: str = Field(default="https://clob.polymarket.com")
 
+    # Notifications
+    discord_webhook_url: str = Field(
+        default="", description="Discord webhook URL for alerts"
+    )
+
     # Logging
     log_level: str = Field(default="INFO")
 

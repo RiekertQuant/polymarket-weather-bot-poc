@@ -25,6 +25,7 @@ from src.weather.probability import WeatherProbabilityEngine
 from src.strategy.filters import MarketFilter
 from src.strategy.decision import DecisionEngine
 from src.strategy.sizing import PositionSizer
+from src.notifications.discord import DiscordNotifier
 
 logging.basicConfig(
     level=logging.INFO,
@@ -259,11 +260,20 @@ def print_summary(result: dict) -> None:
 
 
 def main():
-    logger.info("Starting daily signal scan...")
+    logger.info("Starting signal scan...")
 
+    settings = Settings()
     result = scan_markets()
     filepath = save_signal(result)
     print_summary(result)
+
+    # Discord notification
+    if settings.discord_webhook_url and result["signals_generated"] > 0:
+        notifier = DiscordNotifier(settings.discord_webhook_url)
+        notifier.send_signal_alert(result)
+        logger.info("Discord alert dispatched")
+    else:
+        logger.info("Discord alert skipped (no URL or no signals)")
 
     # Output for GitHub Actions (using environment file)
     if os.environ.get("GITHUB_OUTPUT"):
