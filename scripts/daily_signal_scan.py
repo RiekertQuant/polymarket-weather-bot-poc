@@ -9,6 +9,7 @@ Outputs signals to data/signals/ directory as JSON files.
 
 import json
 import logging
+import os
 import sys
 from datetime import datetime, date
 from pathlib import Path
@@ -255,9 +256,11 @@ def main():
     filepath = save_signal(result)
     print_summary(result)
 
-    # Output for GitHub Actions
-    print(f"\n::set-output name=signals_count::{result['signals_generated']}")
-    print(f"::set-output name=markets_count::{result['markets_scanned']}")
+    # Output for GitHub Actions (using environment file)
+    if os.environ.get("GITHUB_OUTPUT"):
+        with open(os.environ["GITHUB_OUTPUT"], "a") as f:
+            f.write(f"signals_count={result['signals_generated']}\n")
+            f.write(f"markets_count={result['markets_scanned']}\n")
 
     return 0
 
