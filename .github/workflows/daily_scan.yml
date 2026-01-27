@@ -1,0 +1,103 @@
+name: Daily Signal Scan
+
+on:
+  # Run daily at 14:00 UTC (9 AM EST / 6 AM PST)
+  schedule:
+    - cron: '0 14 * * *'
+
+  # Allow manual trigger
+  workflow_dispatch:
+
+  # Also run on push to main for testing
+  push:
+    branches: [main, master]
+    paths:
+      - 'src/**'
+      - 'scripts/daily_signal_scan.py'
+      - '.github/workflows/daily_scan.yml'
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write  # Needed to commit signal files
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Full history for proper git operations
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[dev]"
+
+      - name: Run daily signal scan
+        id: scan
+        run: |
+          python scripts/daily_signal_scan.py
+
+      - name: Upload signals as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: signals-${{ github.run_number }}
+          path: data/signals/
+          retention-days: 90
+
+      - name: Commit signal files
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+
+          # Add signal files
+          git add data/signals/*.json || true
+
+          # Check if there are changes to commit
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Daily signal scan: $(date -u +%Y-%m-%d)
+
+          Automated signal scan by GitHub Actions.
+          Run: ${{ github.run_number }}"
+
+            git push
+          fi
+
+      - name: Create summary
+        run: |
+          echo "## Daily Signal Scan Results" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Date:** $(date -u +%Y-%m-%d)" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+
+          if [ -f data/signals/latest.json ]; then
+            MARKETS=$(jq -r '.markets_scanned' data/signals/latest.json)
+            SIGNALS=$(jq -r '.signals_generated' data/signals/latest.json)
+            SOURCE=$(jq -r '.data_source' data/signals/latest.json)
+
+            echo "- **Data Source:** $SOURCE" >> $GITHUB_STEP_SUMMARY
+            echo "- **Markets Scanned:** $MARKETS" >> $GITHUB_STEP_SUMMARY
+            echo "- **Signals Generated:** $SIGNALS" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+
+            if [ "$SIGNALS" -gt "0" ]; then
+              echo "### Trade Signals" >> $GITHUB_STEP_SUMMARY
+              echo "" >> $GITHUB_STEP_SUMMARY
+              echo '```json' >> $GITHUB_STEP_SUMMARY
+              jq '.signals' data/signals/latest.json >> $GITHUB_STEP_SUMMARY
+              echo '```' >> $GITHUB_STEP_SUMMARY
+            else
+              echo "No trade signals generated today." >> $GITHUB_STEP_SUMMARY
+            fi
+          else
+            echo "No signal file generated." >> $GITHUB_STEP_SUMMARY
+          fi

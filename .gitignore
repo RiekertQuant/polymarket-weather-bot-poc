@@ -22,8 +22,13 @@ build/
 .env
 
 # Data and models (generated)
-data/
+data/trading.db
+data/backtest_cache/
+data/backtest_results/
 models/
+
+# Keep signal tracking files
+!data/signals/
 
 # Testing
 .pytest_cache/

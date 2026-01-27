@@ -1,0 +1,16 @@
+{
+  "scan_time": "2026-01-27T04:33:26.918252Z",
+  "scan_date": "2026-01-27",
+  "data_source": "polymarket_api",
+  "markets_scanned": 0,
+  "signals_generated": 0,
+  "signals": [],
+  "all_markets": [],
+  "settings": {
+    "price_min": 0.001,
+    "price_max": 0.1,
+    "min_edge_absolute": 0.6,
+    "min_edge_relative": 0.3,
+    "forecast_sigma": 2.0
+  }
+}

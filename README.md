@@ -52,6 +52,85 @@ pytest -q
 python scripts/train_calibrator.py
 ```
 
+## Backtesting
+
+The bot includes a full backtesting system to evaluate strategy performance on historical data.
+
+```bash
+# Run backtest with synthetic data (for testing)
+python scripts/run_backtest.py --synthetic
+
+# Run backtest and try to collect real Polymarket data
+python scripts/run_backtest.py --collect --max-markets 50
+
+# Run backtest and save report to file
+python scripts/run_backtest.py --synthetic --save
+
+# Customize initial balance
+python scripts/run_backtest.py --synthetic --initial-balance 5000
+```
+
+### Backtest Data Sources
+
+| Data Type | Source | Notes |
+|-----------|--------|-------|
+| Market prices | Polymarket Gamma/CLOB API | Auto-collected if weather markets exist |
+| Historical forecasts | Open-Meteo Historical Forecast API | What was predicted at decision time |
+| Actual temperatures | Open-Meteo Historical Weather API | For determining outcomes |
+
+### Backtest Output
+
+The backtester generates:
+- **Performance summary**: P&L, win rate, Sharpe ratio, max drawdown
+- **Trade log**: Every trade with entry price, model probability, edge, outcome
+- **Equity curve**: ASCII visualization of cumulative P&L
+- **JSON export**: Full data for further analysis
+
+Reports are saved to `data/backtest_results/`.
+
+## Automated Signal Tracking (GitHub Actions)
+
+Track the bot's theoretical performance over time using GitHub Actions.
+
+### Setup
+
+1. Push this repo to GitHub
+2. Go to Settings > Actions > General
+3. Enable "Read and write permissions" under Workflow permissions
+4. The bot will automatically run daily at 14:00 UTC
+
+### How It Works
+
+- **Daily scan**: GitHub Actions runs `scripts/daily_signal_scan.py` daily
+- **Signal logging**: Trade signals are saved to `data/signals/` and committed to the repo
+- **Outcome tracking**: Run `python scripts/review_signals.py` to check how signals performed
+
+### Manual Run
+
+```bash
+# Run signal scan locally
+python scripts/daily_signal_scan.py
+
+# Review past signals and their outcomes
+python scripts/review_signals.py
+```
+
+### Files Generated
+
+| File | Description |
+|------|-------------|
+| `data/signals/signals_YYYY-MM-DD.json` | Daily signal scan results |
+| `data/signals/latest.json` | Most recent scan |
+| `data/signals/history.json` | Running summary of all scans |
+| `data/signals/outcomes.json` | Signals with actual outcomes (after review) |
+
+### Viewing Results
+
+- Check the **Actions** tab in GitHub for daily run summaries
+- Each run shows markets scanned, signals generated
+- Signal files are committed to the repo for permanent tracking
+- Run `review_signals.py` to see win/loss rates against actual weather data
+
 ## Configuration
 
 Copy `.env.example` to `.env` and customize:
@@ -101,6 +180,11 @@ Key settings:
 │   ├── storage/            # Database
 │   │   ├── db.py           # SQLite operations
 │   │   └── schema.sql      # Database schema
+│   ├── backtest/           # Backtesting system
+│   │   ├── data_collector.py  # Polymarket historical data
+│   │   ├── weather_history.py # Historical forecasts/actuals
+│   │   ├── engine.py       # Backtest simulation engine
+│   │   └── report.py       # Report generation
 │   └── vision/             # OCR module (stub)
 │       └── market_ocr.py   # Image processing
 ├── tests/
@@ -111,8 +195,12 @@ Key settings:
 │   ├── test_probability.py
 │   ├── test_strategy_filters.py
 │   └── test_paper_broker.py
-└── scripts/
-    └── train_calibrator.py # ML training script
+├── scripts/
+│   ├── train_calibrator.py # ML training script
+│   └── run_backtest.py     # Backtest runner
+└── data/
+    └── backtest_cache/     # Cached market/weather data
+    └── backtest_results/   # Generated reports
 ```
 
 ## Simulating New Markets
@@ -138,7 +226,13 @@ Edit `tests/fixtures/markets.json` to add new market scenarios:
 - [ ] OCR module is a stub (not implemented)
 - [ ] Calibration requires manual outcome labeling
 - [ ] No scheduled/continuous running (single run only)
-- [ ] Weather history collection not automated
+- [x] ~~Weather history collection not automated~~ - Now handled by backtester
+- [x] ~~No backtesting capability~~ - Full backtester implemented
+
+### Backtest Limitations
+- Polymarket may not always have weather/temperature markets available
+- Synthetic data mode available when real market data unavailable
+- Historical forecast API data available from Jan 2024 onwards
 
 ## License
 
