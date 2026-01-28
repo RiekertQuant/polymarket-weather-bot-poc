@@ -52,6 +52,20 @@ class Settings(BaseSettings):
     polymarket_client: Literal["mock", "real"] = Field(default="mock")
     polymarket_api_url: str = Field(default="https://clob.polymarket.com")
 
+    # Weather forecast source
+    weather_source: Literal["open_meteo", "nws"] = Field(
+        default="open_meteo",
+        description="Weather forecast source: open_meteo or nws (NWS matches Polymarket resolution)",
+    )
+
+    # Correlated bets limit (max bets per city/date)
+    max_bets_per_city_date: int = Field(
+        default=1,
+        ge=1,
+        le=10,
+        description="Maximum bets allowed per city/date to avoid correlated losses",
+    )
+
     # Notifications
     discord_webhook_url: str = Field(
         default="", description="Discord webhook URL for alerts"

@@ -5,7 +5,7 @@ from datetime import date
 from typing import Optional
 
 from src.polymarket.client_base import Market
-from src.strategy.filters import MarketFilter, FilterResult
+from src.strategy.filters import MarketFilter, FilterResult, FilterReason
 from src.strategy.sizing import PositionSizer, BetSize
 from src.weather.probability import ProbabilityResult
 
@@ -130,6 +130,7 @@ class DecisionEngine:
         city_risk: Optional[dict[str, float]] = None,
         daily_risk: float = 0.0,
         trades_today: int = 0,
+        max_bets_per_city_date: int = 1,
     ) -> list[TradingDecision]:
         """Evaluate multiple markets.
 
@@ -139,13 +140,17 @@ class DecisionEngine:
             city_risk: Current risk per city.
             daily_risk: Current daily risk total.
             trades_today: Number of trades already made today.
+            max_bets_per_city_date: Maximum bets allowed per city/date combo.
+                Prevents correlated bets on same day (e.g., betting both
+                17F and 18-19F bands which are highly correlated).
 
         Returns:
             List of TradingDecisions, sorted by edge descending.
         """
         city_risk = city_risk or {}
-        decisions = []
 
+        # First pass: evaluate all markets and collect decisions
+        all_decisions = []
         for market in markets:
             prob_result = prob_results.get(market.id)
             if prob_result is None:
@@ -159,14 +164,40 @@ class DecisionEngine:
                 current_daily_risk=daily_risk,
                 trades_today=trades_today,
             )
-            decisions.append(decision)
-
-            # Update running totals if trade will be made
-            if decision.should_trade and decision.bet_size:
-                city_risk[city] = city_risk.get(city, 0.0) + decision.bet_size.amount_usd
-                daily_risk += decision.bet_size.amount_usd
-                trades_today += 1
+            all_decisions.append(decision)
 
         # Sort by edge (best opportunities first)
-        decisions.sort(key=lambda d: d.edge, reverse=True)
-        return decisions
+        all_decisions.sort(key=lambda d: d.edge, reverse=True)
+
+        # Second pass: apply correlated bets filter
+        # Only allow max_bets_per_city_date trades per city/date combination
+        city_date_counts: dict[tuple[str, date], int] = {}
+        final_decisions = []
+
+        for decision in all_decisions:
+            key = (decision.city, decision.target_date)
+
+            if decision.should_trade and decision.bet_size:
+                current_count = city_date_counts.get(key, 0)
+
+                if current_count >= max_bets_per_city_date:
+                    # Skip this trade - already have enough bets for this city/date
+                    decision.should_trade = False
+                    decision.side = "NONE"
+                    decision.bet_size = None
+                    if decision.filter_result:
+                        decision.filter_result = FilterResult(
+                            passed=False,
+                            reason=FilterReason.CORRELATED_BET,
+                            details=f"Already have {current_count} bet(s) for {decision.city} on {decision.target_date}",
+                        )
+                else:
+                    # Allow this trade
+                    city_date_counts[key] = current_count + 1
+                    city_risk[decision.city] = city_risk.get(decision.city, 0.0) + decision.bet_size.amount_usd
+                    daily_risk += decision.bet_size.amount_usd
+                    trades_today += 1
+
+            final_decisions.append(decision)
+
+        return final_decisions

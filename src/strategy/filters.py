@@ -18,6 +18,7 @@ class FilterReason(Enum):
     MISSING_DATA = "missing_data"
     MARKET_INACTIVE = "market_inactive"
     INVALID_CITY = "invalid_city"
+    CORRELATED_BET = "correlated_bet"  # Already have bet for same city/date
 
 
 @dataclass
