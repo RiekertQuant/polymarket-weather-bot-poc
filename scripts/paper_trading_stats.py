@@ -2,23 +2,40 @@
 """Display paper trading statistics.
 
 Recovers all signals from git history (since history.json gets overwritten),
-fetches actual weather data for resolved markets, and calculates PnL.
+fetches actual weather data from NWS station observations (matching
+Polymarket's resolution source), and calculates PnL.
 
 Usage:
     python scripts/paper_trading_stats.py
 """
 
 import json
+import logging
+import re
 import subprocess
 import sys
 from dataclasses import dataclass
-from datetime import date, datetime
+from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
+from typing import Optional
 
-# Add src to path
-sys.path.insert(0, str(Path(__file__).parent.parent))
+import requests
 
-from src.backtest.weather_history import WeatherHistoryCollector
+logging.basicConfig(
+    level=logging.WARNING,
+    format="%(asctime)s | %(levelname)-8s | %(message)s",
+)
+logger = logging.getLogger(__name__)
+
+# NWS station IDs used by Polymarket for each city
+CITY_NWS_STATIONS: dict[str, str] = {
+    "New York City": "KLGA",
+}
+
+# Timezone offsets (standard time) for local-day filtering
+CITY_UTC_OFFSETS: dict[str, int] = {
+    "New York City": -5,  # EST
+}
 
 
 @dataclass
@@ -46,13 +63,66 @@ class Signal:
         return self.recommended_size_usd / self.market_price
 
 
+def get_nws_daily_max(station_id: str, target_date: date, utc_offset: int) -> Optional[float]:
+    """Fetch the daily max temperature from NWS station observations.
+
+    Queries the NWS API for all observations during the local calendar day,
+    and returns the highest temperature in Fahrenheit (rounded to nearest
+    integer, matching Polymarket's resolution).
+
+    Args:
+        station_id: NWS station identifier (e.g. "KLGA").
+        target_date: The local calendar date.
+        utc_offset: UTC offset in hours for the station's timezone (e.g. -5 for EST).
+
+    Returns:
+        Max temperature in Fahrenheit as integer, or None if unavailable.
+    """
+    # Convert local day boundaries to UTC
+    offset = timedelta(hours=utc_offset)
+    start_utc = datetime(target_date.year, target_date.month, target_date.day,
+                         tzinfo=timezone.utc) - offset
+    end_utc = start_utc + timedelta(days=1)
+
+    url = f"https://api.weather.gov/stations/{station_id}/observations"
+    params = {
+        "start": start_utc.strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "end": end_utc.strftime("%Y-%m-%dT%H:%M:%SZ"),
+    }
+    headers = {
+        "User-Agent": "polymarket-weather-bot",
+        "Accept": "application/geo+json",
+    }
+
+    try:
+        resp = requests.get(url, params=params, headers=headers, timeout=15)
+        resp.raise_for_status()
+        data = resp.json()
+    except requests.exceptions.RequestException as e:
+        logger.warning(f"NWS API request failed for {station_id}: {e}")
+        return None
+
+    max_temp_f: Optional[float] = None
+    for obs in data.get("features", []):
+        props = obs.get("properties", {})
+        temp = props.get("temperature", {})
+        val = temp.get("value")
+        if val is not None:
+            temp_f = val * 9 / 5 + 32
+            if max_temp_f is None or temp_f > max_temp_f:
+                max_temp_f = temp_f
+
+    if max_temp_f is not None:
+        return round(max_temp_f)
+    return None
+
+
 def extract_signals_from_git() -> list[Signal]:
     """Extract all unique tradeable signals from git history.
 
     Returns:
         List of Signal objects, deduplicated by (market_id, target_date).
     """
-    # Get commits that touched signal files
     result = subprocess.run(
         ["git", "log", "--oneline", "--all", "--", "data/signals/*.json"],
         capture_output=True,
@@ -92,37 +162,29 @@ def extract_signals_from_git() -> list[Signal]:
                         continue
                     seen_ids.add(sig_id)
 
-                    # Parse threshold from title for range markets
-                    import re
-
                     title = sig.get("title", "")
                     threshold = sig.get("threshold_celsius")
                     threshold_upper = None
                     comparison = ">="
 
-                    # Detect market type from title and extract threshold if needed
                     if "or below" in title.lower():
                         comparison = "<="
-                        # Extract threshold from title like "15°F or below"
                         if threshold is None:
                             match = re.search(r"(\d+)°F or below", title)
                             if match:
                                 threshold = (int(match.group(1)) - 32) * 5 / 9
                     elif "or higher" in title.lower():
                         comparison = ">="
-                        # Extract threshold from title like "26°F or higher"
                         if threshold is None:
                             match = re.search(r"(\d+)°F or higher", title)
                             if match:
                                 threshold = (int(match.group(1)) - 32) * 5 / 9
                     elif "-" in title and "°F" in title:
-                        # Range market like "18-19°F"
                         comparison = "range"
-                        # Extract range from title
                         match = re.search(r"(\d+)-(\d+)°F", title)
                         if match:
                             low_f = int(match.group(1))
-                            high_f = int(match.group(2)) + 1  # Upper bound exclusive
+                            high_f = int(match.group(2)) + 1
                             threshold = (low_f - 32) * 5 / 9
                             threshold_upper = (high_f - 32) * 5 / 9
 
@@ -147,24 +209,41 @@ def extract_signals_from_git() -> list[Signal]:
     return all_signals
 
 
-def determine_outcome(actual_temp: float, signal: Signal) -> bool:
-    """Determine if signal won (YES outcome).
+def determine_outcome_f(actual_temp_f: int, signal: Signal) -> bool:
+    """Determine if signal won based on actual temp in Fahrenheit.
+
+    Uses integer Fahrenheit to match Polymarket's resolution.
 
     Args:
-        actual_temp: Actual max temperature in Celsius.
+        actual_temp_f: Actual max temperature in whole-degree Fahrenheit.
         signal: The signal to evaluate.
 
     Returns:
         True if YES won, False if NO won.
     """
+    title = signal.title
+
     if signal.comparison == "<=":
-        return actual_temp <= (signal.threshold_celsius or 0)
+        # "15°F or below" means actual <= 15
+        match = re.search(r"(\d+)°F or below", title)
+        if match:
+            return actual_temp_f <= int(match.group(1))
+        return False
+    elif signal.comparison == ">=":
+        # "26°F or higher" means actual >= 26
+        match = re.search(r"(\d+)°F or higher", title)
+        if match:
+            return actual_temp_f >= int(match.group(1))
+        return False
     elif signal.comparison == "range":
-        low = signal.threshold_celsius or 0
-        high = signal.threshold_celsius_upper or 0
-        return low <= actual_temp < high
-    else:  # >= or default
-        return actual_temp >= (signal.threshold_celsius or 0)
+        # "18-19°F" means actual is 18 or 19
+        match = re.search(r"(\d+)-(\d+)°F", title)
+        if match:
+            low_f = int(match.group(1))
+            high_f = int(match.group(2))
+            return low_f <= actual_temp_f <= high_f
+        return False
+    return False
 
 
 def calculate_pnl(signal: Signal, won: bool) -> float:
@@ -178,19 +257,12 @@ def calculate_pnl(signal: Signal, won: bool) -> float:
         PnL in dollars.
     """
     if won:
-        # Each YES share pays $1, we paid market_price per share
         return signal.shares * (1 - signal.market_price)
     else:
-        # Lost entire stake
         return -signal.recommended_size_usd
 
 
-def celsius_to_fahrenheit(c: float) -> float:
-    """Convert Celsius to Fahrenheit."""
-    return c * 9 / 5 + 32
-
-
-def print_stats(signals: list[Signal], collector: WeatherHistoryCollector) -> None:
+def print_stats(signals: list[Signal]) -> None:
     """Print paper trading statistics."""
     today = date.today()
 
@@ -198,10 +270,12 @@ def print_stats(signals: list[Signal], collector: WeatherHistoryCollector) -> No
     print("PAPER TRADING STATS - Polymarket Weather Bot")
     print("=" * 70)
     print(f"Generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+    print(f"Weather source: NWS station observations (KLGA for NYC)")
     print()
 
-    resolved: list[tuple[Signal, float, bool, float]] = []  # signal, actual, won, pnl
+    resolved: list[tuple[Signal, int, bool, float]] = []
     pending: list[Signal] = []
+    temp_cache: dict[tuple[str, str], Optional[int]] = {}
 
     for signal in signals:
         target = date.fromisoformat(signal.target_date)
@@ -210,27 +284,35 @@ def print_stats(signals: list[Signal], collector: WeatherHistoryCollector) -> No
             pending.append(signal)
             continue
 
-        actual = collector.get_actual_weather(signal.city, target)
-        if actual is None:
+        cache_key = (signal.city, signal.target_date)
+        if cache_key not in temp_cache:
+            station = CITY_NWS_STATIONS.get(signal.city)
+            utc_offset = CITY_UTC_OFFSETS.get(signal.city)
+            if station and utc_offset is not None:
+                temp_cache[cache_key] = get_nws_daily_max(station, target, utc_offset)
+            else:
+                logger.warning(f"No NWS station configured for {signal.city}")
+                temp_cache[cache_key] = None
+
+        actual_f = temp_cache[cache_key]
+        if actual_f is None:
             pending.append(signal)
             continue
 
-        actual_temp = actual.actual_max_temp
-        won = determine_outcome(actual_temp, signal)
+        won = determine_outcome_f(actual_f, signal)
         pnl = calculate_pnl(signal, won)
-        resolved.append((signal, actual_temp, won, pnl))
+        resolved.append((signal, actual_f, won, pnl))
 
     # Print resolved trades
     if resolved:
         print("RESOLVED TRADES:")
         print("-" * 70)
-        for signal, actual_temp, won, pnl in resolved:
-            actual_f = celsius_to_fahrenheit(actual_temp)
+        for signal, actual_f, won, pnl in resolved:
             status = "WIN" if won else "LOSS"
             print(f"{signal.title}")
             print(f"  Target: {signal.target_date} | Price: ${signal.market_price:.4f} | "
                   f"Size: ${signal.recommended_size_usd:.2f} | Shares: {signal.shares:.1f}")
-            print(f"  Actual: {actual_temp:.1f}°C ({actual_f:.1f}°F)")
+            print(f"  Actual: {actual_f}°F (KLGA)")
             print(f"  Result: {status} | P&L: ${pnl:+.2f}")
             print()
 
@@ -299,8 +381,7 @@ def main() -> int:
     print(f"Found {len(signals)} unique tradeable signals.")
     print()
 
-    collector = WeatherHistoryCollector()
-    print_stats(signals, collector)
+    print_stats(signals)
 
     return 0
 
