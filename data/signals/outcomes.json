@@ -2,6 +2,25 @@
   "resolved_signals": [],
   "pending_signals": [
     {
+      "market_id": "1270715",
+      "title": "Highest temperature in NYC on January 28? - 23\u00b0F or below",
+      "city": "New York City",
+      "threshold_celsius": null,
+      "threshold_celsius_upper": -4.722222222222222,
+      "comparison": "<=",
+      "target_date": "2026-01-28",
+      "end_date": "2026-01-28",
+      "market_price": 0.235,
+      "p_model": 0.651320829061262,
+      "forecast_temp": -5.5,
+      "edge": 0.416320829061262,
+      "should_trade": true,
+      "filter_reason": "passed",
+      "signal": "BUY_YES",
+      "recommended_size_usd": 4.497924974367572,
+      "potential_profit": 14.64218129953699
+    },
+    {
       "market_id": "1276586",
       "title": "Highest temperature in NYC on January 29? - 17\u00b0F or below",
       "city": "New York City",
@@ -10,15 +29,15 @@
       "comparison": "<=",
       "target_date": "2026-01-29",
       "end_date": "2026-01-29",
-      "market_price": 0.0295,
+      "market_price": 0.0215,
       "p_model": 0.15202718588236674,
       "forecast_temp": -6.0,
-      "edge": 0.12252718588236675,
+      "edge": 0.13052718588236675,
       "should_trade": true,
       "filter_reason": "passed",
       "signal": "BUY_YES",
-      "recommended_size_usd": 2.7351631152942004,
-      "potential_profit": 89.98223062349226
+      "recommended_size_usd": 2.7831631152942005,
+      "potential_profit": 126.66628410769187
     },
     {
       "market_id": "1276587",
@@ -29,15 +48,15 @@
       "comparison": "range",
       "target_date": "2026-01-29",
       "end_date": "2026-01-29",
-      "market_price": 0.0455,
+      "market_price": 0.0625,
       "p_model": 0.16635690391047597,
       "forecast_temp": -6.0,
-      "edge": 0.12085690391047597,
+      "edge": 0.10385690391047597,
       "should_trade": true,
       "filter_reason": "passed",
       "signal": "BUY_YES",
-      "recommended_size_usd": 2.7251414234628557,
-      "potential_profit": 57.16807667462189
+      "recommended_size_usd": 2.623141423462856,
+      "potential_profit": 39.34712135194284
     }
   ],
   "summary": {
@@ -47,7 +66,7 @@
     "win_rate": 0,
     "total_pnl": 0,
     "total_risked": 0,
-    "pending": 2
+    "pending": 3
   },
   "last_updated": "2026-01-28"
 }
