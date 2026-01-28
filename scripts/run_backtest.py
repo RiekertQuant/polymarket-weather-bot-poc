@@ -3,11 +3,13 @@
 
 Usage:
     python scripts/run_backtest.py [--collect] [--max-markets N] [--no-cache]
+                                   [--weather-source {era5,nws}]
 
 Options:
-    --collect       Force fresh data collection from Polymarket API
-    --max-markets   Maximum markets to collect (default: 50)
-    --no-cache      Don't use cached weather data
+    --collect           Force fresh data collection from Polymarket API
+    --max-markets       Maximum markets to collect (default: 50)
+    --no-cache          Don't use cached weather data
+    --weather-source    Weather actual source: era5 (Open-Meteo) or nws (KLGA station)
 """
 
 import argparse
@@ -21,6 +23,7 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from src.backtest.data_collector import PolymarketHistoricalCollector, HistoricalMarket
 from src.backtest.weather_history import WeatherHistoryCollector
+from src.backtest.nws_weather import NWSWeatherCollector
 from src.backtest.engine import BacktestEngine, BacktestConfig
 from src.backtest.report import BacktestReport, print_quick_summary
 
@@ -229,17 +232,30 @@ def main():
     parser.add_argument(
         "--initial-balance", type=float, default=1000.0, help="Initial balance"
     )
+    parser.add_argument(
+        "--weather-source",
+        choices=["era5", "nws"],
+        default="era5",
+        help="Weather actual source: era5 (Open-Meteo ERA5) or nws (NWS KLGA station)",
+    )
 
     args = parser.parse_args()
+
+    weather_source = args.weather_source
 
     print("=" * 70)
     print("POLYMARKET WEATHER BOT - BACKTESTER")
     print("=" * 70)
+    source_label = "NWS KLGA station" if weather_source == "nws" else "Open-Meteo ERA5"
+    print(f"Weather actuals source: {source_label}")
     print()
 
     # Initialize collectors
     market_collector = PolymarketHistoricalCollector()
-    weather_collector = WeatherHistoryCollector()
+    if weather_source == "nws":
+        weather_collector = NWSWeatherCollector()
+    else:
+        weather_collector = WeatherHistoryCollector()
 
     # Phase 1: Get market data
     if args.synthetic:
