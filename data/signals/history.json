@@ -2,11 +2,50 @@
   "scans": [
     {
       "date": "2026-01-28",
-      "scan_time": "2026-01-28T04:37:06.798175Z",
+      "scan_time": "2026-01-28T05:21:29.851843Z",
       "data_source": "polymarket_api",
-      "markets_scanned": 0,
-      "signals_generated": 0,
-      "signals": []
+      "markets_scanned": 14,
+      "signals_generated": 2,
+      "signals": [
+        {
+          "market_id": "1276586",
+          "title": "Highest temperature in NYC on January 29? - 17\u00b0F or below",
+          "city": "New York City",
+          "threshold_celsius": null,
+          "threshold_celsius_upper": -8.055555555555555,
+          "comparison": "<=",
+          "target_date": "2026-01-29",
+          "end_date": "2026-01-29",
+          "market_price": 0.0165,
+          "p_model": 0.21835001536137888,
+          "forecast_temp": -6.5,
+          "edge": 0.20185001536137887,
+          "should_trade": true,
+          "filter_reason": "passed",
+          "signal": "BUY_YES",
+          "recommended_size_usd": 3.211100092168273,
+          "potential_profit": 191.4010267059089
+        },
+        {
+          "market_id": "1276587",
+          "title": "Highest temperature in NYC on January 29? - 18-19\u00b0F",
+          "city": "New York City",
+          "threshold_celsius": -8.055555555555555,
+          "threshold_celsius_upper": -6.944444444444445,
+          "comparison": "range",
+          "target_date": "2026-01-29",
+          "end_date": "2026-01-29",
+          "market_price": 0.045,
+          "p_model": 0.19372043250956367,
+          "forecast_temp": -6.5,
+          "edge": 0.14872043250956368,
+          "should_trade": true,
+          "filter_reason": "passed",
+          "signal": "BUY_YES",
+          "recommended_size_usd": 2.892322595057382,
+          "potential_profit": 61.38151285066221
+        }
+      ]
     },
     {
       "date": "2026-01-27",
@@ -17,6 +56,8 @@
       "signals": []
     }
   ],
-  "total_signals": 0,
-  "signals_by_city": {}
+  "total_signals": 2,
+  "signals_by_city": {
+    "New York City": 2
+  }
 }
