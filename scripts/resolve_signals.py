@@ -17,6 +17,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from src.backtest.weather_history import WeatherHistoryCollector
+from src.weather.forecast_logger import ForecastLogger
 
 logging.basicConfig(
     level=logging.INFO,
@@ -143,6 +144,7 @@ def resolve_signals() -> dict:
     signals = load_history()
     already_resolved = load_existing_outcomes()
     collector = WeatherHistoryCollector()
+    forecast_logger = ForecastLogger()  # For updating ML training data
 
     today = date.today()
     resolved_signals = []
@@ -182,6 +184,10 @@ def resolve_signals() -> dict:
 
         outcome = determine_outcome(actual.actual_max_temp, signal)
         pnl_info = calculate_pnl(signal, outcome)
+
+        # Update forecast log with actual for ML training data
+        actual_f = round(actual.actual_max_temp * 9/5 + 32)
+        forecast_logger.update_with_actual(city, target_date, actual_f)
 
         resolved = {
             **signal,

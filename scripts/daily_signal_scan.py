@@ -23,7 +23,9 @@ from src.polymarket.real_client import RealPolymarketClient
 from src.weather.open_meteo import OpenMeteoClient
 from src.weather.nws_forecast import NWSForecastClient
 from src.weather.probability import WeatherProbabilityEngine
+from src.weather.enhanced_probability import EnhancedProbabilityEngine
 from src.weather.ml_calibrator import MLCalibrator
+from src.weather.forecast_logger import ForecastLogger
 from src.strategy.filters import MarketFilter
 from src.strategy.decision import DecisionEngine
 from src.strategy.sizing import PositionSizer
@@ -59,13 +61,18 @@ def scan_markets() -> dict:
 
     logger.info(f"Found {len(markets)} markets from {data_source}")
 
-    # Initialize weather client based on settings
+    # Initialize weather clients
+    nws_client = NWSForecastClient()
+    open_meteo_client = OpenMeteoClient()
+
     if settings.weather_source == "nws":
-        weather_client = NWSForecastClient()
+        primary_client = nws_client
+        secondary_client = open_meteo_client
         weather_source = "nws"
         logger.info("Using NWS forecast API (matches Polymarket resolution source)")
     else:
-        weather_client = OpenMeteoClient()
+        primary_client = open_meteo_client
+        secondary_client = nws_client
         weather_source = "open_meteo"
         logger.info("Using Open-Meteo forecast API")
 
@@ -81,15 +88,39 @@ def scan_markets() -> dict:
     else:
         logger.info("ML calibrator disabled, using raw probabilities")
 
-    prob_engine = WeatherProbabilityEngine(
-        weather_client=weather_client,
-        default_sigma=settings.forecast_sigma,
-        calibrator=calibrator,
-    )
+    # Use enhanced probability engine if enabled
+    if settings.use_enhanced_engine:
+        bias_models_path = Path("experiments/weather_sources/bias_models.json")
+        prob_engine = EnhancedProbabilityEngine(
+            primary_client=primary_client,
+            secondary_client=secondary_client,
+            enable_ensemble=settings.enable_ensemble,
+            enable_bias_correction=settings.enable_bias_correction,
+            enable_dynamic_sigma=settings.enable_dynamic_sigma,
+            enable_regime_detection=settings.enable_regime_detection,
+            calibrator=calibrator,
+            bias_models_path=bias_models_path if bias_models_path.exists() else None,
+        )
+        logger.info("Using enhanced probability engine with:")
+        logger.info(f"  - Ensemble: {settings.enable_ensemble}")
+        logger.info(f"  - Bias correction: {settings.enable_bias_correction}")
+        logger.info(f"  - Dynamic sigma: {settings.enable_dynamic_sigma}")
+        logger.info(f"  - Regime detection: {settings.enable_regime_detection}")
+    else:
+        prob_engine = WeatherProbabilityEngine(
+            weather_client=primary_client,
+            default_sigma=settings.forecast_sigma,
+            calibrator=calibrator,
+        )
+        logger.info("Using standard probability engine")
     decision_engine = DecisionEngine(
         market_filter=MarketFilter(settings),
         position_sizer=PositionSizer(settings),
     )
+
+    # Initialize forecast logger for ML training data collection
+    forecast_logger = ForecastLogger()
+    logged_forecasts = set()  # Track which city/date combos we've logged
 
     # Process markets
     signals = []
@@ -118,6 +149,32 @@ def scan_markets() -> dict:
 
         if prob_result is None:
             continue
+
+        # Log forecast for ML training data (once per city/date)
+        forecast_key = (market.city, market.target_date)
+        if forecast_key not in logged_forecasts:
+            logged_forecasts.add(forecast_key)
+            # Get enhanced metadata if available
+            ensemble_spread = None
+            regime = "unknown"
+            bias_corr = 0.0
+            if hasattr(prob_result, "ensemble") and prob_result.ensemble:
+                ensemble_spread = prob_result.ensemble.spread
+            if hasattr(prob_result, "weather_regime"):
+                regime = prob_result.weather_regime
+            if hasattr(prob_result, "bias_correction"):
+                bias_corr = prob_result.bias_correction
+
+            forecast_logger.log_forecast(
+                city=market.city,
+                target_date=market.target_date,
+                forecast_temp_c=prob_result.forecast_temp - bias_corr,  # Raw forecast
+                source=weather_source,
+                bias_correction=bias_corr,
+                ensemble_spread=ensemble_spread,
+                weather_regime=regime,
+                sigma_used=prob_result.sigma,
+            )
 
         # Make decision
         decision = decision_engine.evaluate_market(

@@ -72,6 +72,28 @@ class Settings(BaseSettings):
         description="Use ML calibrator for probability adjustment (experimental)",
     )
 
+    # Enhanced probability engine features
+    use_enhanced_engine: bool = Field(
+        default=True,
+        description="Use enhanced probability engine with all improvements",
+    )
+    enable_ensemble: bool = Field(
+        default=True,
+        description="Combine forecasts from multiple sources",
+    )
+    enable_bias_correction: bool = Field(
+        default=True,
+        description="Apply bias correction to forecasts",
+    )
+    enable_dynamic_sigma: bool = Field(
+        default=True,
+        description="Scale uncertainty by forecast horizon",
+    )
+    enable_regime_detection: bool = Field(
+        default=True,
+        description="Detect stable vs transitional weather patterns",
+    )
+
     # Notifications
     discord_webhook_url: str = Field(
         default="", description="Discord webhook URL for alerts"
