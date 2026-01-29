@@ -2,11 +2,107 @@
   "scans": [
     {
       "date": "2026-01-29",
-      "scan_time": "2026-01-29T07:16:18.738693Z",
+      "scan_time": "2026-01-29T07:27:50.520133Z",
       "data_source": "polymarket_api",
       "markets_scanned": 14,
-      "signals_generated": 0,
-      "signals": []
+      "signals_generated": 5,
+      "signals": [
+        {
+          "market_id": "1276586",
+          "title": "Highest temperature in NYC on January 29? - 17\u00b0F or below",
+          "city": "New York City",
+          "threshold_celsius": null,
+          "threshold_celsius_upper": -8.055555555555555,
+          "comparison": "<=",
+          "target_date": "2026-01-29",
+          "end_date": "2026-01-29",
+          "market_price": 0.0055,
+          "p_model": 0.15202718588236674,
+          "forecast_temp": -6.0,
+          "edge": 0.14652718588236674,
+          "should_trade": true,
+          "filter_reason": "passed",
+          "signal": "BUY_YES",
+          "recommended_size_usd": 2.8791631152942005,
+          "potential_profit": 520.6050396654696
+        },
+        {
+          "market_id": "1276587",
+          "title": "Highest temperature in NYC on January 29? - 18-19\u00b0F",
+          "city": "New York City",
+          "threshold_celsius": -8.055555555555555,
+          "threshold_celsius_upper": -6.944444444444445,
+          "comparison": "range",
+          "target_date": "2026-01-29",
+          "end_date": "2026-01-29",
+          "market_price": 0.008,
+          "p_model": 0.16635690391047597,
+          "forecast_temp": -6.0,
+          "edge": 0.15835690391047597,
+          "should_trade": true,
+          "filter_reason": "passed",
+          "signal": "BUY_YES",
+          "recommended_size_usd": 2.950141423462856,
+          "potential_profit": 365.8175365093941
+        },
+        {
+          "market_id": "1282065",
+          "title": "Highest temperature in NYC on January 30? - 9\u00b0F or below",
+          "city": "New York City",
+          "threshold_celsius": null,
+          "threshold_celsius_upper": -12.5,
+          "comparison": "<=",
+          "target_date": "2026-01-30",
+          "end_date": "2026-01-30",
+          "market_price": 0.003,
+          "p_model": 0.2911596867883464,
+          "forecast_temp": -11.4,
+          "edge": 0.2881596867883464,
+          "should_trade": true,
+          "filter_reason": "passed",
+          "signal": "BUY_YES",
+          "recommended_size_usd": 3.7289581207300784,
+          "potential_profit": 1239.2570821226293
+        },
+        {
+          "market_id": "1282066",
+          "title": "Highest temperature in NYC on January 30? - 10-11\u00b0F",
+          "city": "New York City",
+          "threshold_celsius": -12.5,
+          "threshold_celsius_upper": -11.38888888888889,
+          "comparison": "range",
+          "target_date": "2026-01-30",
+          "end_date": "2026-01-30",
+          "market_price": 0.0075,
+          "p_model": 0.21105664781297978,
+          "forecast_temp": -11.4,
+          "edge": 0.20355664781297977,
+          "should_trade": true,
+          "filter_reason": "passed",
+          "signal": "BUY_YES",
+          "recommended_size_usd": 3.2213398868778786,
+          "potential_profit": 426.29064503017264
+        },
+        {
+          "market_id": "1282067",
+          "title": "Highest temperature in NYC on January 30? - 12-13\u00b0F",
+          "city": "New York City",
+          "threshold_celsius": -11.38888888888889,
+          "threshold_celsius_upper": -10.277777777777779,
+          "comparison": "range",
+          "target_date": "2026-01-30",
+          "end_date": "2026-01-30",
+          "market_price": 0.0225,
+          "p_model": 0.21042276836893337,
+          "forecast_temp": -11.4,
+          "edge": 0.18792276836893337,
+          "should_trade": true,
+          "filter_reason": "passed",
+          "signal": "BUY_YES",
+          "recommended_size_usd": 3.1275366102136,
+          "potential_profit": 135.8740905103909
+        }
+      ]
     },
     {
       "date": "2026-01-28",
@@ -83,8 +179,8 @@
       "signals": []
     }
   ],
-  "total_signals": 3,
+  "total_signals": 8,
   "signals_by_city": {
-    "New York City": 3
+    "New York City": 8
   }
 }
