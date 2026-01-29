@@ -1,6 +1,5 @@
 {
-  "resolved_signals": [],
-  "pending_signals": [
+  "resolved_signals": [
     {
       "market_id": "1270717",
       "title": "Highest temperature in NYC on January 28? - 26-27\u00b0F",
@@ -18,8 +17,14 @@
       "filter_reason": "passed",
       "signal": "BUY_YES",
       "recommended_size_usd": 2.9144106404824033,
-      "potential_profit": 579.9677174559982
-    },
+      "potential_profit": 579.9677174559982,
+      "actual_temp": -6.8,
+      "outcome": "NO",
+      "pnl": -2.9144,
+      "return_pct": -1.0
+    }
+  ],
+  "pending_signals": [
     {
       "market_id": "1276586",
       "title": "Highest temperature in NYC on January 29? - 17\u00b0F or below",
@@ -60,13 +65,13 @@
     }
   ],
   "summary": {
-    "total_resolved": 0,
+    "total_resolved": 1,
     "wins": 0,
-    "losses": 0,
-    "win_rate": 0,
-    "total_pnl": 0,
-    "total_risked": 0,
-    "pending": 3
+    "losses": 1,
+    "win_rate": 0.0,
+    "total_pnl": -2.9144,
+    "total_risked": 2.9144,
+    "pending": 2
   },
-  "last_updated": "2026-01-28"
+  "last_updated": "2026-01-29"
 }
