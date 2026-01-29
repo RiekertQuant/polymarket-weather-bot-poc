@@ -2,11 +2,30 @@
   "scans": [
     {
       "date": "2026-01-29",
-      "scan_time": "2026-01-29T14:59:55.813258Z",
+      "scan_time": "2026-01-29T15:09:40.999198Z",
       "data_source": "polymarket_api",
       "markets_scanned": 21,
-      "signals_generated": 1,
+      "signals_generated": 3,
       "signals": [
+        {
+          "market_id": "1276592",
+          "title": "Highest temperature in NYC on January 29? - 28\u00b0F or higher",
+          "city": "New York City",
+          "threshold_celsius": -2.5,
+          "threshold_celsius_upper": null,
+          "comparison": ">=",
+          "target_date": "2026-01-29",
+          "end_date": "2026-01-29",
+          "market_price": 0.0035,
+          "p_model": 0.20484101324242632,
+          "forecast_temp": -4.8579365079365076,
+          "edge": 0.20134101324242631,
+          "should_trade": true,
+          "filter_reason": "passed",
+          "signal": "BUY_YES",
+          "recommended_size_usd": 3.208046079454558,
+          "potential_profit": 913.3765480504192
+        },
         {
           "market_id": "1291793",
           "title": "Highest temperature in NYC on January 31? - 17\u00b0F or below",
@@ -17,14 +36,33 @@
           "target_date": "2026-01-31",
           "end_date": "2026-01-31",
           "market_price": 0.1,
-          "p_model": 0.25530767982504066,
+          "p_model": 0.30640677387743726,
           "forecast_temp": -6.213492063492064,
-          "edge": 0.15530767982504065,
+          "edge": 0.20640677387743725,
           "should_trade": true,
           "filter_reason": "passed",
           "signal": "BUY_YES",
-          "recommended_size_usd": 2.931846078950244,
-          "potential_profit": 26.386614710552195
+          "recommended_size_usd": 3.2384406432646236,
+          "potential_profit": 29.14596578938161
+        },
+        {
+          "market_id": "1291799",
+          "title": "Highest temperature in NYC on January 31? - 28\u00b0F or higher",
+          "city": "New York City",
+          "threshold_celsius": -2.5,
+          "threshold_celsius_upper": null,
+          "comparison": ">=",
+          "target_date": "2026-01-31",
+          "end_date": "2026-01-31",
+          "market_price": 0.0075,
+          "p_model": 0.15381914947881103,
+          "forecast_temp": -6.213492063492064,
+          "edge": 0.14631914947881103,
+          "should_trade": true,
+          "filter_reason": "passed",
+          "signal": "BUY_YES",
+          "recommended_size_usd": 2.8779148968728663,
+          "potential_profit": 380.8440713528427
         }
       ]
     },
@@ -103,8 +141,8 @@
       "signals": []
     }
   ],
-  "total_signals": 4,
+  "total_signals": 6,
   "signals_by_city": {
-    "New York City": 4
+    "New York City": 6
   }
 }
