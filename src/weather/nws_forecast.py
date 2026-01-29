@@ -46,23 +46,27 @@ class NWSForecastClient:
 
     Uses the same data source as Polymarket for resolution,
     which should improve forecast-to-outcome alignment.
+    Falls back to Open-Meteo for cities without NWS coverage.
     """
 
     BASE_URL = "https://api.weather.gov"
 
-    def __init__(self, timeout: int = 15):
+    def __init__(self, timeout: int = 15, fallback_to_open_meteo: bool = True):
         """Initialize client.
 
         Args:
             timeout: Request timeout in seconds.
+            fallback_to_open_meteo: If True, use Open-Meteo for unsupported cities.
         """
         self.timeout = timeout
+        self.fallback_to_open_meteo = fallback_to_open_meteo
         self.session = requests.Session()
         self.session.headers.update({
             "User-Agent": "polymarket-weather-bot",
             "Accept": "application/geo+json",
         })
         self._cache: dict[str, list[NWSForecastPeriod]] = {}
+        self._open_meteo_client = None
 
     def _fetch_forecast_periods(self, city: str) -> list[NWSForecastPeriod]:
         """Fetch forecast periods from NWS API."""
@@ -103,6 +107,13 @@ class NWSForecastClient:
         self._cache[city] = periods
         return periods
 
+    def _get_open_meteo_client(self):
+        """Lazy-load Open-Meteo client for fallback."""
+        if self._open_meteo_client is None:
+            from src.weather.open_meteo import OpenMeteoClient
+            self._open_meteo_client = OpenMeteoClient()
+        return self._open_meteo_client
+
     def get_forecast(self, city: str, days: int = 7) -> list[DailyForecast]:
         """Fetch daily forecast for a city.
 
@@ -113,6 +124,13 @@ class NWSForecastClient:
         Returns:
             List of DailyForecast objects.
         """
+        # Check if city is supported by NWS
+        if city not in NWS_GRIDPOINTS:
+            if self.fallback_to_open_meteo:
+                logger.debug(f"No NWS coverage for {city}, falling back to Open-Meteo")
+                return self._get_open_meteo_client().get_forecast(city, days)
+            return []
+
         periods = self._fetch_forecast_periods(city)
         if not periods:
             return []

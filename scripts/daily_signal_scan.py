@@ -21,6 +21,7 @@ from src.config import Settings
 from src.polymarket.mock_client import MockPolymarketClient
 from src.polymarket.real_client import RealPolymarketClient
 from src.weather.open_meteo import OpenMeteoClient
+from src.weather.nws_forecast import NWSForecastClient
 from src.weather.probability import WeatherProbabilityEngine
 from src.strategy.filters import MarketFilter
 from src.strategy.decision import DecisionEngine
@@ -57,8 +58,16 @@ def scan_markets() -> dict:
 
     logger.info(f"Found {len(markets)} markets from {data_source}")
 
-    # Initialize components
-    weather_client = OpenMeteoClient()
+    # Initialize weather client based on settings
+    if settings.weather_source == "nws":
+        weather_client = NWSForecastClient()
+        weather_source = "nws"
+        logger.info("Using NWS forecast API (matches Polymarket resolution source)")
+    else:
+        weather_client = OpenMeteoClient()
+        weather_source = "open_meteo"
+        logger.info("Using Open-Meteo forecast API")
+
     prob_engine = WeatherProbabilityEngine(
         weather_client=weather_client,
         default_sigma=settings.forecast_sigma,
@@ -138,6 +147,7 @@ def scan_markets() -> dict:
         "scan_time": datetime.utcnow().isoformat() + "Z",
         "scan_date": date.today().isoformat(),
         "data_source": data_source,
+        "weather_source": weather_source,
         "markets_scanned": len(all_markets),
         "signals_generated": len(signals),
         "signals": signals,
@@ -148,6 +158,7 @@ def scan_markets() -> dict:
             "min_edge_absolute": settings.min_edge_absolute,
             "min_edge_relative": settings.min_edge_relative,
             "forecast_sigma": settings.forecast_sigma,
+            "weather_source": weather_source,
         },
     }
 
@@ -241,6 +252,7 @@ def print_summary(result: dict) -> None:
     print("=" * 60)
     print(f"Date: {result['scan_date']}")
     print(f"Data Source: {result['data_source']}")
+    print(f"Weather Source: {result.get('weather_source', 'open_meteo')}")
     print(f"Markets Scanned: {result['markets_scanned']}")
     print(f"Signals Generated: {result['signals_generated']}")
 

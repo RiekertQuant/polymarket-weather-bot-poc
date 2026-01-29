@@ -1,7 +1,7 @@
 {
-  "trained_at": "2026-01-28T21:37:34.921256",
+  "trained_at": "2026-01-29T07:39:33.579579",
   "n_samples": 7,
-  "additive_bias": 1.148571428571428,
-  "linear_slope": 0.9863534991631441,
-  "linear_intercept": 1.557888473672327
+  "additive_bias": 0.8457142857142854,
+  "linear_slope": 0.9598307356478047,
+  "linear_intercept": 1.9823896975546884
 }
