@@ -66,6 +66,12 @@ class Settings(BaseSettings):
         description="Maximum bets allowed per city/date to avoid correlated losses",
     )
 
+    # ML calibrator
+    use_ml_calibrator: bool = Field(
+        default=False,
+        description="Use ML calibrator for probability adjustment (experimental)",
+    )
+
     # Notifications
     discord_webhook_url: str = Field(
         default="", description="Discord webhook URL for alerts"

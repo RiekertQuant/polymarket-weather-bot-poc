@@ -1,0 +1,18 @@
+{
+  "model_type": "logistic",
+  "cv_brier_score": 0.03666125963539918,
+  "train_brier_score": 0.03450637450118513,
+  "feature_names": [
+    "p_raw",
+    "forecast_temp",
+    "threshold",
+    "temp_diff",
+    "abs_temp_diff",
+    "is_extreme_cold",
+    "is_warm",
+    "month",
+    "weekday",
+    "sigma"
+  ],
+  "trained_date": "2026-01-29"
+}

@@ -23,6 +23,7 @@ from src.polymarket.real_client import RealPolymarketClient
 from src.weather.open_meteo import OpenMeteoClient
 from src.weather.nws_forecast import NWSForecastClient
 from src.weather.probability import WeatherProbabilityEngine
+from src.weather.ml_calibrator import MLCalibrator
 from src.strategy.filters import MarketFilter
 from src.strategy.decision import DecisionEngine
 from src.strategy.sizing import PositionSizer
@@ -68,9 +69,22 @@ def scan_markets() -> dict:
         weather_source = "open_meteo"
         logger.info("Using Open-Meteo forecast API")
 
+    # Initialize ML calibrator if enabled and available
+    calibrator = None
+    if settings.use_ml_calibrator:
+        calibrator = MLCalibrator()
+        if calibrator.is_available():
+            logger.info("Using ML calibrator for probability adjustment")
+        else:
+            logger.info("ML calibrator enabled but not available, using raw probabilities")
+            calibrator = None
+    else:
+        logger.info("ML calibrator disabled, using raw probabilities")
+
     prob_engine = WeatherProbabilityEngine(
         weather_client=weather_client,
         default_sigma=settings.forecast_sigma,
+        calibrator=calibrator,
     )
     decision_engine = DecisionEngine(
         market_filter=MarketFilter(settings),
