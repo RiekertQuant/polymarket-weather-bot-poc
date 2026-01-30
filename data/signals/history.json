@@ -1,6 +1,53 @@
 {
   "scans": [
     {
+      "date": "2026-01-30",
+      "scan_time": "2026-01-30T01:07:57.849908Z",
+      "data_source": "polymarket_api",
+      "markets_scanned": 14,
+      "signals_generated": 2,
+      "signals": [
+        {
+          "market_id": "1282071",
+          "title": "Highest temperature in NYC on January 30? - 20\u00b0F or higher",
+          "city": "New York City",
+          "threshold_celsius": -6.944444444444445,
+          "threshold_celsius_upper": null,
+          "comparison": ">=",
+          "target_date": "2026-01-30",
+          "end_date": "2026-01-30",
+          "market_price": 0.175,
+          "p_model": 0.43438396954566694,
+          "forecast_temp": -7.307936507936508,
+          "edge": 0.25938396954566695,
+          "should_trade": true,
+          "filter_reason": "passed",
+          "signal": "BUY_YES",
+          "recommended_size_usd": 3.5563038172740016,
+          "potential_profit": 16.765432281434578
+        },
+        {
+          "market_id": "1291793",
+          "title": "Highest temperature in NYC on January 31? - 17\u00b0F or below",
+          "city": "New York City",
+          "threshold_celsius": null,
+          "threshold_celsius_upper": -8.055555555555555,
+          "comparison": "<=",
+          "target_date": "2026-01-31",
+          "end_date": "2026-01-31",
+          "market_price": 0.095,
+          "p_model": 0.22859191237648696,
+          "forecast_temp": -6.196825396825397,
+          "edge": 0.13359191237648696,
+          "should_trade": true,
+          "filter_reason": "passed",
+          "signal": "BUY_YES",
+          "recommended_size_usd": 2.801551474258922,
+          "potential_profit": 26.688464044256044
+        }
+      ]
+    },
+    {
       "date": "2026-01-29",
       "scan_time": "2026-01-29T23:17:44.868500Z",
       "data_source": "polymarket_api",
@@ -160,8 +207,8 @@
       "signals": []
     }
   ],
-  "total_signals": 7,
+  "total_signals": 9,
   "signals_by_city": {
-    "New York City": 7
+    "New York City": 9
   }
 }
