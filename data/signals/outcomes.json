@@ -103,34 +103,15 @@
       "comparison": ">=",
       "target_date": "2026-01-30",
       "end_date": "2026-01-30",
-      "market_price": 0.165,
+      "market_price": 0.17,
       "p_model": 0.32523748450760115,
       "forecast_temp": -7.9412698412698415,
-      "edge": 0.16023748450760114,
+      "edge": 0.15523748450760114,
       "should_trade": true,
       "filter_reason": "passed",
       "signal": "BUY_YES",
-      "recommended_size_usd": 2.9614249070456067,
-      "potential_profit": 14.986604832624735
-    },
-    {
-      "market_id": "1291793",
-      "title": "Highest temperature in NYC on January 31? - 17\u00b0F or below",
-      "city": "New York City",
-      "threshold_celsius": null,
-      "threshold_celsius_upper": -8.055555555555555,
-      "comparison": "<=",
-      "target_date": "2026-01-31",
-      "end_date": "2026-01-31",
-      "market_price": 0.055,
-      "p_model": 0.1610482704395948,
-      "forecast_temp": -5.58015873015873,
-      "edge": 0.1060482704395948,
-      "should_trade": true,
-      "filter_reason": "passed",
-      "signal": "BUY_YES",
-      "recommended_size_usd": 2.6362896226375687,
-      "potential_profit": 45.29624897077277
+      "recommended_size_usd": 2.931424907045607,
+      "potential_profit": 14.312251016752079
     },
     {
       "market_id": "1291797",
@@ -141,15 +122,15 @@
       "comparison": "range",
       "target_date": "2026-01-31",
       "end_date": "2026-01-31",
-      "market_price": 0.0495,
-      "p_model": 0.15027376990817531,
-      "forecast_temp": -5.58015873015873,
-      "edge": 0.10077376990817531,
+      "market_price": 0.05,
+      "p_model": 0.15509808913767054,
+      "forecast_temp": -5.43015873015873,
+      "edge": 0.10509808913767053,
       "should_trade": true,
       "filter_reason": "passed",
       "signal": "BUY_YES",
-      "recommended_size_usd": 2.6046426194490517,
-      "potential_profit": 50.01440019770351
+      "recommended_size_usd": 2.630588534826023,
+      "potential_profit": 49.981182161694434
     },
     {
       "market_id": "1282071",
@@ -216,7 +197,7 @@
     "win_rate": 0.0,
     "total_pnl": -12.545,
     "total_risked": 12.5451,
-    "pending": 6
+    "pending": 5
   },
   "last_updated": "2026-01-30"
 }
