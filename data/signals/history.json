@@ -2,11 +2,31 @@
   "scans": [
     {
       "date": "2026-01-31",
-      "scan_time": "2026-01-31T16:15:51.215506Z",
+      "scan_time": "2026-01-31T17:15:56.182516Z",
       "data_source": "polymarket_api",
       "markets_scanned": 7,
-      "signals_generated": 0,
-      "signals": []
+      "signals_generated": 1,
+      "signals": [
+        {
+          "market_id": "1291795",
+          "title": "Highest temperature in NYC on January 31? - 20-21\u00b0F",
+          "city": "New York City",
+          "threshold_celsius": -6.944444444444445,
+          "threshold_celsius_upper": -5.833333333333333,
+          "comparison": "range",
+          "target_date": "2026-01-31",
+          "end_date": "2026-01-31",
+          "market_price": 0.05,
+          "p_model": 0.17904730500926863,
+          "forecast_temp": -5.3579365079365076,
+          "edge": 0.12904730500926864,
+          "should_trade": true,
+          "filter_reason": "passed",
+          "signal": "BUY_YES",
+          "recommended_size_usd": 2.774283830055612,
+          "potential_profit": 52.711392771056616
+        }
+      ]
     },
     {
       "date": "2026-01-30",
@@ -215,8 +235,8 @@
       "signals": []
     }
   ],
-  "total_signals": 9,
+  "total_signals": 10,
   "signals_by_city": {
-    "New York City": 9
+    "New York City": 10
   }
 }
