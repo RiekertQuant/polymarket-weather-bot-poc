@@ -118,6 +118,25 @@
   ],
   "pending_signals": [
     {
+      "market_id": "1291793",
+      "title": "Highest temperature in NYC on January 31? - 17\u00b0F or below",
+      "city": "New York City",
+      "threshold_celsius": null,
+      "threshold_celsius_upper": -8.055555555555555,
+      "comparison": "<=",
+      "target_date": "2026-01-31",
+      "end_date": "2026-01-31",
+      "market_price": 0.016,
+      "p_model": 0.1659189728310787,
+      "forecast_temp": -5.28015873015873,
+      "edge": 0.1499189728310787,
+      "should_trade": true,
+      "filter_reason": "passed",
+      "signal": "BUY_YES",
+      "recommended_size_usd": 2.899513836986472,
+      "potential_profit": 178.320100974668
+    },
+    {
       "market_id": "1291799",
       "title": "Highest temperature in NYC on January 31? - 28\u00b0F or higher",
       "city": "New York City",
@@ -126,15 +145,15 @@
       "comparison": ">=",
       "target_date": "2026-01-31",
       "end_date": "2026-01-31",
-      "market_price": 0.004,
-      "p_model": 0.23889990995937826,
-      "forecast_temp": -4.53015873015873,
-      "edge": 0.23489990995937826,
+      "market_price": 0.0045,
+      "p_model": 0.16550451193170912,
+      "forecast_temp": -5.28015873015873,
+      "edge": 0.16100451193170912,
       "should_trade": true,
       "filter_reason": "passed",
       "signal": "BUY_YES",
-      "recommended_size_usd": 3.4093994597562696,
-      "potential_profit": 848.9404654793111
+      "recommended_size_usd": 2.9660270715902546,
+      "potential_profit": 656.1510999484664
     },
     {
       "market_id": "1291793",
@@ -201,7 +220,7 @@
     "win_rate": 0.0,
     "total_pnl": -17.5125,
     "total_risked": 17.5126,
-    "pending": 4
+    "pending": 5
   },
   "last_updated": "2026-01-31"
 }
