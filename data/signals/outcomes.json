@@ -118,6 +118,44 @@
   ],
   "pending_signals": [
     {
+      "market_id": "1309749",
+      "title": "Highest temperature in NYC on February 1? - 19\u00b0F or below",
+      "city": "New York City",
+      "threshold_celsius": null,
+      "threshold_celsius_upper": -6.944444444444445,
+      "comparison": "<=",
+      "target_date": "2026-02-01",
+      "end_date": "2026-02-01",
+      "market_price": 0.0255,
+      "p_model": 0.1519898474946258,
+      "forecast_temp": -4.374603174603174,
+      "edge": 0.1264898474946258,
+      "should_trade": true,
+      "filter_reason": "passed",
+      "signal": "BUY_YES",
+      "recommended_size_usd": 2.758939084967755,
+      "potential_profit": 105.43475052161088
+    },
+    {
+      "market_id": "1309760",
+      "title": "Highest temperature in NYC on February 2? - 28\u00b0F or below",
+      "city": "New York City",
+      "threshold_celsius": null,
+      "threshold_celsius_upper": -1.9444444444444444,
+      "comparison": "<=",
+      "target_date": "2026-02-02",
+      "end_date": "2026-02-02",
+      "market_price": 0.04,
+      "p_model": 0.2527642539845145,
+      "forecast_temp": -0.08015873015873037,
+      "edge": 0.2127642539845145,
+      "should_trade": true,
+      "filter_reason": "passed",
+      "signal": "BUY_YES",
+      "recommended_size_usd": 3.2765855239070873,
+      "potential_profit": 78.6380525737701
+    },
+    {
       "market_id": "1291793",
       "title": "Highest temperature in NYC on January 31? - 17\u00b0F or below",
       "city": "New York City",
@@ -182,7 +220,7 @@
     "win_rate": 0.0,
     "total_pnl": -17.5125,
     "total_risked": 17.5126,
-    "pending": 3
+    "pending": 5
   },
   "last_updated": "2026-01-31"
 }
