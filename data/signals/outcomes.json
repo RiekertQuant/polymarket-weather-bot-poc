@@ -118,42 +118,23 @@
   ],
   "pending_signals": [
     {
-      "market_id": "1291793",
-      "title": "Highest temperature in NYC on January 31? - 17\u00b0F or below",
+      "market_id": "1291797",
+      "title": "Highest temperature in NYC on January 31? - 24-25\u00b0F",
       "city": "New York City",
-      "threshold_celsius": null,
-      "threshold_celsius_upper": -8.055555555555555,
-      "comparison": "<=",
+      "threshold_celsius": -4.722222222222222,
+      "threshold_celsius_upper": -3.611111111111111,
+      "comparison": "range",
       "target_date": "2026-01-31",
       "end_date": "2026-01-31",
-      "market_price": 0.014,
-      "p_model": 0.15549342049308312,
+      "market_price": 0.0325,
+      "p_model": 0.18050625821886457,
       "forecast_temp": -5.157936507936508,
-      "edge": 0.1414934204930831,
+      "edge": 0.14800625821886457,
       "should_trade": true,
       "filter_reason": "passed",
       "signal": "BUY_YES",
-      "recommended_size_usd": 2.8489605229584987,
-      "potential_profit": 200.64821968836284
-    },
-    {
-      "market_id": "1291799",
-      "title": "Highest temperature in NYC on January 31? - 28\u00b0F or higher",
-      "city": "New York City",
-      "threshold_celsius": -2.5,
-      "threshold_celsius_upper": null,
-      "comparison": ">=",
-      "target_date": "2026-01-31",
-      "end_date": "2026-01-31",
-      "market_price": 0.0025,
-      "p_model": 0.17635427231656697,
-      "forecast_temp": -5.157936507936508,
-      "edge": 0.17385427231656697,
-      "should_trade": true,
-      "filter_reason": "passed",
-      "signal": "BUY_YES",
-      "recommended_size_usd": 3.0431256338994017,
-      "potential_profit": 1214.2071279258614
+      "recommended_size_usd": 2.8880375493131876,
+      "potential_profit": 85.97465627570797
     },
     {
       "market_id": "1291793",
@@ -220,7 +201,7 @@
     "win_rate": 0.0,
     "total_pnl": -17.5125,
     "total_risked": 17.5126,
-    "pending": 5
+    "pending": 4
   },
   "last_updated": "2026-01-31"
 }
