@@ -183,9 +183,7 @@
       "outcome": "NO",
       "pnl": -2.9134,
       "return_pct": -1.0
-    }
-  ],
-  "pending_signals": [
+    },
     {
       "market_id": "1309753",
       "title": "Highest temperature in NYC on February 1? - 26-27\u00b0F",
@@ -203,7 +201,74 @@
       "filter_reason": "passed",
       "signal": "BUY_YES",
       "recommended_size_usd": 2.943123033692056,
-      "potential_profit": 389.47328145858216
+      "potential_profit": 389.47328145858216,
+      "actual_temp": -6.6,
+      "outcome": "NO",
+      "pnl": -2.9431,
+      "return_pct": -1.0
+    },
+    {
+      "market_id": "1309749",
+      "title": "Highest temperature in NYC on February 1? - 19\u00b0F or below",
+      "city": "New York City",
+      "threshold_celsius": null,
+      "threshold_celsius_upper": -6.944444444444445,
+      "comparison": "<=",
+      "target_date": "2026-02-01",
+      "end_date": "2026-02-01",
+      "market_price": 0.015,
+      "p_model": 0.1519898474946258,
+      "forecast_temp": -4.374603174603174,
+      "edge": 0.13698984749462578,
+      "should_trade": true,
+      "filter_reason": "passed",
+      "signal": "BUY_YES",
+      "recommended_size_usd": 2.8219390849677546,
+      "potential_profit": 185.30733324621588,
+      "actual_temp": -6.6,
+      "outcome": "NO",
+      "pnl": -2.8219,
+      "return_pct": -1.0
+    }
+  ],
+  "pending_signals": [
+    {
+      "market_id": "1309760",
+      "title": "Highest temperature in NYC on February 2? - 28\u00b0F or below",
+      "city": "New York City",
+      "threshold_celsius": null,
+      "threshold_celsius_upper": -1.9444444444444444,
+      "comparison": "<=",
+      "target_date": "2026-02-02",
+      "end_date": "2026-02-02",
+      "market_price": 0.014,
+      "p_model": 0.199089662355857,
+      "forecast_temp": -0.08571428571428591,
+      "edge": 0.185089662355857,
+      "should_trade": true,
+      "filter_reason": "passed",
+      "signal": "BUY_YES",
+      "recommended_size_usd": 3.110537974135142,
+      "potential_profit": 219.0707458926607
+    },
+    {
+      "market_id": "1309761",
+      "title": "Highest temperature in NYC on February 2? - 29-30\u00b0F",
+      "city": "New York City",
+      "threshold_celsius": -1.9444444444444444,
+      "threshold_celsius_upper": -0.8333333333333334,
+      "comparison": "range",
+      "target_date": "2026-02-02",
+      "end_date": "2026-02-02",
+      "market_price": 0.028,
+      "p_model": 0.16790380476731492,
+      "forecast_temp": -0.08571428571428591,
+      "edge": 0.13990380476731493,
+      "should_trade": true,
+      "filter_reason": "passed",
+      "signal": "BUY_YES",
+      "recommended_size_usd": 2.8394228286038894,
+      "potential_profit": 98.56853533582073
     },
     {
       "market_id": "1309760",
@@ -263,25 +328,6 @@
       "potential_profit": 25.506935507362503
     },
     {
-      "market_id": "1309749",
-      "title": "Highest temperature in NYC on February 1? - 19\u00b0F or below",
-      "city": "New York City",
-      "threshold_celsius": null,
-      "threshold_celsius_upper": -6.944444444444445,
-      "comparison": "<=",
-      "target_date": "2026-02-01",
-      "end_date": "2026-02-01",
-      "market_price": 0.015,
-      "p_model": 0.1519898474946258,
-      "forecast_temp": -4.374603174603174,
-      "edge": 0.13698984749462578,
-      "should_trade": true,
-      "filter_reason": "passed",
-      "signal": "BUY_YES",
-      "recommended_size_usd": 2.8219390849677546,
-      "potential_profit": 185.30733324621588
-    },
-    {
       "market_id": "1309760",
       "title": "Highest temperature in NYC on February 2? - 28\u00b0F or below",
       "city": "New York City",
@@ -302,13 +348,13 @@
     }
   ],
   "summary": {
-    "total_resolved": 8,
+    "total_resolved": 10,
     "wins": 0,
-    "losses": 8,
+    "losses": 10,
     "win_rate": 0.0,
-    "total_pnl": -26.4271,
-    "total_risked": 26.4272,
+    "total_pnl": -32.1921,
+    "total_risked": 32.1923,
     "pending": 6
   },
-  "last_updated": "2026-02-01"
+  "last_updated": "2026-02-02"
 }
