@@ -242,14 +242,14 @@
       "target_date": "2026-02-02",
       "end_date": "2026-02-02",
       "market_price": 0.0045,
-      "p_model": 0.17035032228745417,
-      "forecast_temp": -0.05793650793650812,
-      "edge": 0.16585032228745417,
+      "p_model": 0.18345494034865373,
+      "forecast_temp": -0.1579365079365081,
+      "edge": 0.17895494034865372,
       "should_trade": true,
       "filter_reason": "passed",
       "signal": "BUY_YES",
-      "recommended_size_usd": 2.995101933724725,
-      "potential_profit": 662.5831055606587
+      "recommended_size_usd": 3.0737296420919225,
+      "potential_profit": 679.977301933891
     },
     {
       "market_id": "1309761",
@@ -260,15 +260,15 @@
       "comparison": "range",
       "target_date": "2026-02-02",
       "end_date": "2026-02-02",
-      "market_price": 0.0315,
-      "p_model": 0.17732119244425515,
-      "forecast_temp": -0.05793650793650812,
-      "edge": 0.14582119244425515,
+      "market_price": 0.0265,
+      "p_model": 0.1830556315804393,
+      "forecast_temp": -0.1579365079365081,
+      "edge": 0.1565556315804393,
       "should_trade": true,
       "filter_reason": "passed",
       "signal": "BUY_YES",
-      "recommended_size_usd": 2.8749271546655306,
-      "potential_profit": 88.39260156487512
+      "recommended_size_usd": 2.939333789482636,
+      "potential_profit": 107.97892241740931
     },
     {
       "market_id": "1312687",
@@ -279,34 +279,15 @@
       "comparison": "<=",
       "target_date": "2026-02-03",
       "end_date": "2026-02-03",
-      "market_price": 0.004,
+      "market_price": 0.0055,
       "p_model": 0.20718551608285962,
       "forecast_temp": 0.44761904761904747,
-      "edge": 0.20318551608285962,
+      "edge": 0.20168551608285962,
       "should_trade": true,
       "filter_reason": "passed",
       "signal": "BUY_YES",
-      "recommended_size_usd": 3.219113096497158,
-      "potential_profit": 801.5591610277924
-    },
-    {
-      "market_id": "1312688",
-      "title": "Highest temperature in NYC on February 3? - 30-31\u00b0F",
-      "city": "New York City",
-      "threshold_celsius": -1.3888888888888888,
-      "threshold_celsius_upper": -0.2777777777777778,
-      "comparison": "range",
-      "target_date": "2026-02-03",
-      "end_date": "2026-02-03",
-      "market_price": 0.065,
-      "p_model": 0.16638986040432419,
-      "forecast_temp": 0.44761904761904747,
-      "edge": 0.10138986040432418,
-      "should_trade": true,
-      "filter_reason": "passed",
-      "signal": "BUY_YES",
-      "recommended_size_usd": 2.608339162425945,
-      "potential_profit": 37.51995564412706
+      "recommended_size_usd": 3.2101130964971576,
+      "potential_profit": 580.4468135393497
     },
     {
       "market_id": "1318631",
@@ -317,15 +298,15 @@
       "comparison": "<=",
       "target_date": "2026-02-04",
       "end_date": "2026-02-04",
-      "market_price": 0.175,
+      "market_price": 0.165,
       "p_model": 0.5003769295361359,
       "forecast_temp": -0.28015873015873033,
-      "edge": 0.3253769295361359,
+      "edge": 0.33537692953613585,
       "should_trade": true,
       "filter_reason": "passed",
       "signal": "BUY_YES",
-      "recommended_size_usd": 3.9522615772168153,
-      "potential_profit": 18.632090292593556
+      "recommended_size_usd": 4.012261577216815,
+      "potential_profit": 20.304475254400245
     },
     {
       "market_id": "1309760",
@@ -411,7 +392,7 @@
     "win_rate": 0.0,
     "total_pnl": -32.1921,
     "total_risked": 32.1923,
-    "pending": 9
+    "pending": 8
   },
   "last_updated": "2026-02-02"
 }
