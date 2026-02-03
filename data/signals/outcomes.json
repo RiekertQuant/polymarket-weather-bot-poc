@@ -321,6 +321,25 @@
       "potential_profit": 19.61827999023101
     },
     {
+      "market_id": "1325435",
+      "title": "Highest temperature in NYC on February 5? - 34\u00b0F or higher",
+      "city": "New York City",
+      "threshold_celsius": 0.8333333333333334,
+      "threshold_celsius_upper": null,
+      "comparison": ">=",
+      "target_date": "2026-02-05",
+      "end_date": "2026-02-05",
+      "market_price": 0.12,
+      "p_model": 0.22317122903382414,
+      "forecast_temp": -1.0857142857142859,
+      "edge": 0.10317122903382414,
+      "should_trade": true,
+      "filter_reason": "passed",
+      "signal": "BUY_YES",
+      "recommended_size_usd": 2.619027374202945,
+      "potential_profit": 19.20620074415493
+    },
+    {
       "market_id": "1312687",
       "title": "Highest temperature in NYC on February 3? - 29\u00b0F or below",
       "city": "New York City",
@@ -404,7 +423,7 @@
     "win_rate": 0.07692307692307693,
     "total_pnl": 29.4175,
     "total_risked": 41.4891,
-    "pending": 5
+    "pending": 6
   },
   "last_updated": "2026-02-03"
 }

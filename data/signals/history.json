@@ -2,10 +2,10 @@
   "scans": [
     {
       "date": "2026-02-03",
-      "scan_time": "2026-02-03T17:44:23.241811Z",
+      "scan_time": "2026-02-03T18:42:31.334162Z",
       "data_source": "polymarket_api",
       "markets_scanned": 21,
-      "signals_generated": 1,
+      "signals_generated": 2,
       "signals": [
         {
           "market_id": "1318631",
@@ -25,6 +25,25 @@
           "signal": "BUY_YES",
           "recommended_size_usd": 3.876666105854032,
           "potential_profit": 19.61827999023101
+        },
+        {
+          "market_id": "1325435",
+          "title": "Highest temperature in NYC on February 5? - 34\u00b0F or higher",
+          "city": "New York City",
+          "threshold_celsius": 0.8333333333333334,
+          "threshold_celsius_upper": null,
+          "comparison": ">=",
+          "target_date": "2026-02-05",
+          "end_date": "2026-02-05",
+          "market_price": 0.12,
+          "p_model": 0.22317122903382414,
+          "forecast_temp": -1.0857142857142859,
+          "edge": 0.10317122903382414,
+          "should_trade": true,
+          "filter_reason": "passed",
+          "signal": "BUY_YES",
+          "recommended_size_usd": 2.619027374202945,
+          "potential_profit": 19.20620074415493
         }
       ]
     },
@@ -471,8 +490,8 @@
       "signals": []
     }
   ],
-  "total_signals": 21,
+  "total_signals": 22,
   "signals_by_city": {
-    "New York City": 21
+    "New York City": 22
   }
 }
