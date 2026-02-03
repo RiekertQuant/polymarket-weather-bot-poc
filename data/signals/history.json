@@ -2,30 +2,11 @@
   "scans": [
     {
       "date": "2026-02-03",
-      "scan_time": "2026-02-03T06:37:57.875643Z",
+      "scan_time": "2026-02-03T07:35:54.687460Z",
       "data_source": "polymarket_api",
       "markets_scanned": 14,
-      "signals_generated": 2,
+      "signals_generated": 1,
       "signals": [
-        {
-          "market_id": "1312693",
-          "title": "Highest temperature in NYC on February 3? - 40\u00b0F or higher",
-          "city": "New York City",
-          "threshold_celsius": 4.166666666666667,
-          "threshold_celsius_upper": null,
-          "comparison": ">=",
-          "target_date": "2026-02-03",
-          "end_date": "2026-02-03",
-          "market_price": 0.007,
-          "p_model": 0.18588634525687664,
-          "forecast_temp": 1.8087301587301585,
-          "edge": 0.17888634525687663,
-          "should_trade": true,
-          "filter_reason": "passed",
-          "signal": "BUY_YES",
-          "recommended_size_usd": 3.0733180715412596,
-          "potential_profit": 435.9721207200672
-        },
         {
           "market_id": "1318631",
           "title": "Highest temperature in NYC on February 4? - 31\u00b0F or below",
@@ -35,15 +16,15 @@
           "comparison": "<=",
           "target_date": "2026-02-04",
           "end_date": "2026-02-04",
-          "market_price": 0.115,
-          "p_model": 0.49957783893550667,
-          "forecast_temp": -0.2746031746031748,
-          "edge": 0.3845778389355067,
+          "market_price": 0.095,
+          "p_model": 0.5364660097823052,
+          "forecast_temp": -0.5523809523809524,
+          "edge": 0.4414660097823052,
           "should_trade": true,
           "filter_reason": "passed",
           "signal": "BUY_YES",
-          "recommended_size_usd": 4.30746703361304,
-          "potential_profit": 33.14876804128296
+          "recommended_size_usd": 4.648796058693831,
+          "potential_profit": 44.28589929597807
         }
       ]
     },
@@ -490,8 +471,8 @@
       "signals": []
     }
   ],
-  "total_signals": 22,
+  "total_signals": 21,
   "signals_by_city": {
-    "New York City": 22
+    "New York City": 21
   }
 }
