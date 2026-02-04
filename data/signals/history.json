@@ -2,7 +2,7 @@
   "scans": [
     {
       "date": "2026-02-04",
-      "scan_time": "2026-02-04T13:56:44.902766Z",
+      "scan_time": "2026-02-04T14:38:14.180532Z",
       "data_source": "polymarket_api",
       "markets_scanned": 21,
       "signals_generated": 5,
@@ -16,15 +16,15 @@
           "comparison": "<=",
           "target_date": "2026-02-04",
           "end_date": "2026-02-04",
-          "market_price": 0.091,
+          "market_price": 0.0545,
           "p_model": 0.42712237105650586,
           "forecast_temp": 0.24761904761904746,
-          "edge": 0.3361223710565059,
+          "edge": 0.37262237105650586,
           "should_trade": true,
           "filter_reason": "passed",
           "signal": "BUY_YES",
-          "recommended_size_usd": 4.016734226339035,
-          "potential_profit": 40.12320232683718
+          "recommended_size_usd": 4.235734226339035,
+          "potential_profit": 73.48415983492767
         },
         {
           "market_id": "1325429",
@@ -35,15 +35,15 @@
           "comparison": "<=",
           "target_date": "2026-02-05",
           "end_date": "2026-02-05",
-          "market_price": 0.001,
-          "p_model": 0.19221582320818753,
-          "forecast_temp": -1.3301587301587303,
-          "edge": 0.19121582320818753,
+          "market_price": 0.0015,
+          "p_model": 0.17190018139286145,
+          "forecast_temp": -1.0301587301587303,
+          "edge": 0.17040018139286145,
           "should_trade": true,
           "filter_reason": "passed",
           "signal": "BUY_YES",
-          "recommended_size_usd": 3.147294939249125,
-          "potential_profit": 3144.147644309876
+          "recommended_size_usd": 3.0224010883571686,
+          "potential_profit": 2011.911657816422
         },
         {
           "market_id": "1325435",
@@ -54,15 +54,15 @@
           "comparison": ">=",
           "target_date": "2026-02-05",
           "end_date": "2026-02-05",
-          "market_price": 0.135,
-          "p_model": 0.28953572426538865,
-          "forecast_temp": -1.3301587301587303,
-          "edge": 0.15453572426538864,
+          "market_price": 0.11,
+          "p_model": 0.3163897042178805,
+          "forecast_temp": -1.0301587301587303,
+          "edge": 0.2063897042178805,
           "should_trade": true,
           "filter_reason": "passed",
           "signal": "BUY_YES",
-          "recommended_size_usd": 2.927214345592332,
-          "potential_profit": 18.75585488101753
+          "recommended_size_usd": 3.2383382253072828,
+          "potential_profit": 26.201100186577108
         },
         {
           "market_id": "1332489",
@@ -73,15 +73,15 @@
           "comparison": ">=",
           "target_date": "2026-02-06",
           "end_date": "2026-02-06",
-          "market_price": 0.1185,
+          "market_price": 0.119,
           "p_model": 0.2317015064795056,
           "forecast_temp": -1.8357142857142856,
-          "edge": 0.11320150647950561,
+          "edge": 0.11270150647950561,
           "should_trade": true,
           "filter_reason": "passed",
           "signal": "BUY_YES",
-          "recommended_size_usd": 2.6792090388770338,
-          "potential_profit": 19.93014993898823
+          "recommended_size_usd": 2.6762090388770337,
+          "potential_profit": 19.81294254832493
         },
         {
           "market_id": "1332483",
@@ -92,15 +92,15 @@
           "comparison": "<=",
           "target_date": "2026-02-06",
           "end_date": "2026-02-06",
-          "market_price": 0.0115,
+          "market_price": 0.013,
           "p_model": 0.21388987683987165,
           "forecast_temp": -1.8357142857142856,
-          "edge": 0.20238987683987164,
+          "edge": 0.20088987683987164,
           "should_trade": true,
           "filter_reason": "passed",
           "signal": "BUY_YES",
-          "recommended_size_usd": 3.21433926103923,
-          "potential_profit": 276.29342256845905
+          "recommended_size_usd": 3.2053392610392297,
+          "potential_profit": 243.35921928044
         }
       ]
     },
