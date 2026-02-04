@@ -403,14 +403,14 @@
       "target_date": "2026-02-05",
       "end_date": "2026-02-05",
       "market_price": 0.0035,
-      "p_model": 0.16725253076266783,
-      "forecast_temp": -1.5857142857142856,
-      "edge": 0.16375253076266783,
+      "p_model": 0.1596618572764088,
+      "forecast_temp": -1.4857142857142858,
+      "edge": 0.1561618572764088,
       "should_trade": true,
       "filter_reason": "passed",
       "signal": "BUY_YES",
-      "recommended_size_usd": 2.982515184576007,
-      "potential_profit": 849.164680408569
+      "recommended_size_usd": 2.936971143658453,
+      "potential_profit": 836.1976413301852
     },
     {
       "market_id": "1325435",
@@ -421,15 +421,15 @@
       "comparison": ">=",
       "target_date": "2026-02-05",
       "end_date": "2026-02-05",
-      "market_price": 0.09,
-      "p_model": 0.2283407432599649,
-      "forecast_temp": -1.5857142857142856,
-      "edge": 0.1383407432599649,
+      "market_price": 0.11,
+      "p_model": 0.23775177944469594,
+      "forecast_temp": -1.4857142857142858,
+      "edge": 0.12775177944469596,
       "should_trade": true,
       "filter_reason": "passed",
       "signal": "BUY_YES",
-      "recommended_size_usd": 2.8300444595597893,
-      "potential_profit": 28.61489397999343
+      "recommended_size_usd": 2.766510676668176,
+      "potential_profit": 22.383586383951606
     },
     {
       "market_id": "1332489",
@@ -440,15 +440,15 @@
       "comparison": ">=",
       "target_date": "2026-02-06",
       "end_date": "2026-02-06",
-      "market_price": 0.09,
+      "market_price": 0.0875,
       "p_model": 0.22753446532680033,
       "forecast_temp": -1.885714285714286,
-      "edge": 0.13753446532680033,
+      "edge": 0.14003446532680033,
       "should_trade": true,
       "filter_reason": "passed",
       "signal": "BUY_YES",
-      "recommended_size_usd": 2.825206791960802,
-      "potential_profit": 28.565979785381444
+      "recommended_size_usd": 2.840206791960802,
+      "potential_profit": 29.619299401876937
     },
     {
       "market_id": "1332483",
