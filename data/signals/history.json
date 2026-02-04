@@ -2,10 +2,10 @@
   "scans": [
     {
       "date": "2026-02-04",
-      "scan_time": "2026-02-04T04:04:07.968631Z",
+      "scan_time": "2026-02-04T05:41:26.045673Z",
       "data_source": "polymarket_api",
       "markets_scanned": 14,
-      "signals_generated": 2,
+      "signals_generated": 1,
       "signals": [
         {
           "market_id": "1318631",
@@ -16,34 +16,15 @@
           "comparison": "<=",
           "target_date": "2026-02-04",
           "end_date": "2026-02-04",
-          "market_price": 0.215,
-          "p_model": 0.36699346712317193,
-          "forecast_temp": 0.46984126984126967,
-          "edge": 0.15199346712317194,
+          "market_price": 0.23,
+          "p_model": 0.5094977283487424,
+          "forecast_temp": -0.3301587301587304,
+          "edge": 0.2794977283487424,
           "should_trade": true,
           "filter_reason": "passed",
           "signal": "BUY_YES",
-          "recommended_size_usd": 2.9119608027390314,
-          "potential_profit": 10.632042930930883
-        },
-        {
-          "market_id": "1325435",
-          "title": "Highest temperature in NYC on February 5? - 34\u00b0F or higher",
-          "city": "New York City",
-          "threshold_celsius": 0.8333333333333334,
-          "threshold_celsius_upper": null,
-          "comparison": ">=",
-          "target_date": "2026-02-05",
-          "end_date": "2026-02-05",
-          "market_price": 0.2,
-          "p_model": 0.3565786549946589,
-          "forecast_temp": -0.08571428571428591,
-          "edge": 0.1565786549946589,
-          "should_trade": true,
-          "filter_reason": "passed",
-          "signal": "BUY_YES",
-          "recommended_size_usd": 2.9394719299679535,
-          "potential_profit": 11.757887719871814
+          "recommended_size_usd": 3.6769863700924548,
+          "potential_profit": 12.309910891179088
         }
       ]
     },
@@ -556,8 +537,8 @@
       "signals": []
     }
   ],
-  "total_signals": 25,
+  "total_signals": 24,
   "signals_by_city": {
-    "New York City": 25
+    "New York City": 24
   }
 }
