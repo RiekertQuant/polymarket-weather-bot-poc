@@ -448,15 +448,15 @@
       "comparison": ">=",
       "target_date": "2026-02-05",
       "end_date": "2026-02-05",
-      "market_price": 0.075,
-      "p_model": 0.25134151487362144,
-      "forecast_temp": -0.6412698412698414,
-      "edge": 0.17634151487362143,
+      "market_price": 0.04,
+      "p_model": 0.2455758505233646,
+      "forecast_temp": -1.135714285714286,
+      "edge": 0.2055758505233646,
       "should_trade": true,
       "filter_reason": "passed",
       "signal": "BUY_YES",
-      "recommended_size_usd": 3.0580490892417287,
-      "potential_profit": 37.715938767314654
+      "recommended_size_usd": 3.2334551031401877,
+      "potential_profit": 77.60292247536451
     },
     {
       "market_id": "1332489",
@@ -467,15 +467,34 @@
       "comparison": ">=",
       "target_date": "2026-02-06",
       "end_date": "2026-02-06",
-      "market_price": 0.0695,
-      "p_model": 0.2776485356891888,
-      "forecast_temp": -0.6412698412698414,
-      "edge": 0.20814853568918879,
+      "market_price": 0.0725,
+      "p_model": 0.2146248609013215,
+      "forecast_temp": -1.735714285714286,
+      "edge": 0.14212486090132148,
       "should_trade": true,
       "filter_reason": "passed",
       "signal": "BUY_YES",
-      "recommended_size_usd": 3.2488912141351327,
-      "potential_profit": 43.49774496047109
+      "recommended_size_usd": 2.852749165407929,
+      "potential_profit": 36.495515185046266
+    },
+    {
+      "market_id": "1332483",
+      "title": "Highest temperature in NYC on February 6? - 23\u00b0F or below",
+      "city": "New York City",
+      "threshold_celsius": null,
+      "threshold_celsius_upper": -4.722222222222222,
+      "comparison": "<=",
+      "target_date": "2026-02-06",
+      "end_date": "2026-02-06",
+      "market_price": 0.0035,
+      "p_model": 0.17906726555422653,
+      "forecast_temp": -1.735714285714286,
+      "edge": 0.17556726555422653,
+      "should_trade": true,
+      "filter_reason": "passed",
+      "signal": "BUY_YES",
+      "recommended_size_usd": 3.053403593325359,
+      "potential_profit": 869.3476230710629
     },
     {
       "market_id": "1325429",
@@ -580,7 +599,7 @@
     "win_rate": 0.05263157894736842,
     "total_pnl": 10.7177,
     "total_risked": 60.1889,
-    "pending": 7
+    "pending": 8
   },
   "last_updated": "2026-02-05"
 }
