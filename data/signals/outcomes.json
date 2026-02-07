@@ -532,42 +532,23 @@
   ],
   "pending_signals": [
     {
-      "market_id": "1338973",
-      "title": "Highest temperature in NYC on February 7? - 22-23\u00b0F",
+      "market_id": "1344855",
+      "title": "Highest temperature in NYC on February 8? - 15\u00b0F or below",
       "city": "New York City",
-      "threshold_celsius": -5.833333333333333,
-      "threshold_celsius_upper": -4.722222222222222,
-      "comparison": "range",
-      "target_date": "2026-02-07",
-      "end_date": "2026-02-07",
-      "market_price": 0.011,
-      "p_model": 0.15279651490932167,
-      "forecast_temp": -5.641269841269841,
-      "edge": 0.14179651490932166,
-      "should_trade": true,
-      "filter_reason": "passed",
-      "signal": "BUY_YES",
-      "recommended_size_usd": 2.85077908945593,
-      "potential_profit": 256.3109563156286
-    },
-    {
-      "market_id": "1344861",
-      "title": "Highest temperature in NYC on February 8? - 26\u00b0F or higher",
-      "city": "New York City",
-      "threshold_celsius": -3.611111111111111,
-      "threshold_celsius_upper": null,
-      "comparison": ">=",
+      "threshold_celsius": null,
+      "threshold_celsius_upper": -9.166666666666666,
+      "comparison": "<=",
       "target_date": "2026-02-08",
       "end_date": "2026-02-08",
-      "market_price": 0.0145,
-      "p_model": 0.21313100545274621,
-      "forecast_temp": -6.196825396825397,
-      "edge": 0.1986310054527462,
+      "market_price": 0.105,
+      "p_model": 0.2790748004724373,
+      "forecast_temp": -7.263492063492064,
+      "edge": 0.17407480047243734,
       "should_trade": true,
       "filter_reason": "passed",
       "signal": "BUY_YES",
-      "recommended_size_usd": 3.191786032716477,
-      "potential_profit": 216.9313886373854
+      "recommended_size_usd": 3.044448802834624,
+      "potential_profit": 25.950301700352274
     },
     {
       "market_id": "1344855",
@@ -615,7 +596,7 @@
     "win_rate": 0.043478260869565216,
     "total_pnl": -3.4629,
     "total_risked": 74.3695,
-    "pending": 4
+    "pending": 3
   },
   "last_updated": "2026-02-07"
 }
