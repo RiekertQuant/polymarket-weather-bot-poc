@@ -540,15 +540,15 @@
       "comparison": "<=",
       "target_date": "2026-02-08",
       "end_date": "2026-02-08",
-      "market_price": 0.0355,
-      "p_model": 0.3588028510026722,
-      "forecast_temp": -7.99126984126984,
-      "edge": 0.3233028510026722,
+      "market_price": 0.035,
+      "p_model": 0.4012543312973127,
+      "forecast_temp": -8.191269841269841,
+      "edge": 0.36625433129731266,
       "should_trade": true,
       "filter_reason": "passed",
       "signal": "BUY_YES",
-      "recommended_size_usd": 3.939817106016033,
-      "potential_profit": 107.04094644373139
+      "recommended_size_usd": 4.197525987783876,
+      "potential_profit": 115.73178794889827
     },
     {
       "market_id": "1351200",
@@ -559,15 +559,15 @@
       "comparison": "<=",
       "target_date": "2026-02-09",
       "end_date": "2026-02-09",
-      "market_price": 0.045,
+      "market_price": 0.0455,
       "p_model": 0.18167722663386676,
       "forecast_temp": -1.4134920634920636,
-      "edge": 0.13667722663386678,
+      "edge": 0.13617722663386678,
       "should_trade": true,
       "filter_reason": "passed",
       "signal": "BUY_YES",
-      "recommended_size_usd": 2.8200633598032008,
-      "potential_profit": 59.84801130249015
+      "recommended_size_usd": 2.8170633598032007,
+      "potential_profit": 59.09641707543198
     },
     {
       "market_id": "1351206",
@@ -578,15 +578,15 @@
       "comparison": ">=",
       "target_date": "2026-02-09",
       "end_date": "2026-02-09",
-      "market_price": 0.06,
+      "market_price": 0.065,
       "p_model": 0.2685317138299095,
       "forecast_temp": -1.4134920634920636,
-      "edge": 0.20853171382990948,
+      "edge": 0.20353171382990948,
       "should_trade": true,
       "filter_reason": "passed",
       "signal": "BUY_YES",
-      "recommended_size_usd": 3.251190282979457,
-      "potential_profit": 50.93531443334483
+      "recommended_size_usd": 3.2211902829794568,
+      "potential_profit": 46.33558330131988
     },
     {
       "market_id": "1344855",
