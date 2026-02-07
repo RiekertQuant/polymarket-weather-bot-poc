@@ -540,15 +540,53 @@
       "comparison": "<=",
       "target_date": "2026-02-08",
       "end_date": "2026-02-08",
-      "market_price": 0.11,
+      "market_price": 0.105,
       "p_model": 0.3588028510026722,
       "forecast_temp": -7.99126984126984,
-      "edge": 0.2488028510026722,
+      "edge": 0.2538028510026722,
       "should_trade": true,
       "filter_reason": "passed",
       "signal": "BUY_YES",
-      "recommended_size_usd": 3.492817106016033,
-      "potential_profit": 28.260065675947903
+      "recommended_size_usd": 3.522817106016033,
+      "potential_profit": 30.02782199889857
+    },
+    {
+      "market_id": "1351200",
+      "title": "Highest temperature in NYC on February 9? - 23\u00b0F or below",
+      "city": "New York City",
+      "threshold_celsius": null,
+      "threshold_celsius_upper": -4.722222222222222,
+      "comparison": "<=",
+      "target_date": "2026-02-09",
+      "end_date": "2026-02-09",
+      "market_price": 0.0345,
+      "p_model": 0.18167722663386676,
+      "forecast_temp": -1.4134920634920636,
+      "edge": 0.14717722663386676,
+      "should_trade": true,
+      "filter_reason": "passed",
+      "signal": "BUY_YES",
+      "recommended_size_usd": 2.8830633598032005,
+      "potential_profit": 80.68399054753594
+    },
+    {
+      "market_id": "1351206",
+      "title": "Highest temperature in NYC on February 9? - 34\u00b0F or higher",
+      "city": "New York City",
+      "threshold_celsius": 0.8333333333333334,
+      "threshold_celsius_upper": null,
+      "comparison": ">=",
+      "target_date": "2026-02-09",
+      "end_date": "2026-02-09",
+      "market_price": 0.075,
+      "p_model": 0.2685317138299095,
+      "forecast_temp": -1.4134920634920636,
+      "edge": 0.19353171382990947,
+      "should_trade": true,
+      "filter_reason": "passed",
+      "signal": "BUY_YES",
+      "recommended_size_usd": 3.1611902829794567,
+      "potential_profit": 38.98801349007997
     },
     {
       "market_id": "1344855",
@@ -596,7 +634,7 @@
     "win_rate": 0.043478260869565216,
     "total_pnl": -3.4629,
     "total_risked": 74.3695,
-    "pending": 3
+    "pending": 5
   },
   "last_updated": "2026-02-07"
 }
