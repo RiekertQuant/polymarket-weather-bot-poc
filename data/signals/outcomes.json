@@ -609,15 +609,34 @@
       "comparison": "range",
       "target_date": "2026-02-09",
       "end_date": "2026-02-09",
-      "market_price": 0.0195,
-      "p_model": 0.1553856188172566,
-      "forecast_temp": -1.4857142857142858,
-      "edge": 0.1358856188172566,
+      "market_price": 0.0155,
+      "p_model": 0.1528994841676215,
+      "forecast_temp": -1.435714285714286,
+      "edge": 0.1373994841676215,
       "should_trade": true,
       "filter_reason": "passed",
       "signal": "BUY_YES",
-      "recommended_size_usd": 2.8153137129035395,
-      "potential_profit": 141.55974848727797
+      "recommended_size_usd": 2.824396905005729,
+      "potential_profit": 179.39475825665423
+    },
+    {
+      "market_id": "1351206",
+      "title": "Highest temperature in NYC on February 9? - 34\u00b0F or higher",
+      "city": "New York City",
+      "threshold_celsius": 0.8333333333333334,
+      "threshold_celsius_upper": null,
+      "comparison": ">=",
+      "target_date": "2026-02-09",
+      "end_date": "2026-02-09",
+      "market_price": 0.0105,
+      "p_model": 0.1511800901385809,
+      "forecast_temp": -1.435714285714286,
+      "edge": 0.1406800901385809,
+      "should_trade": true,
+      "filter_reason": "passed",
+      "signal": "BUY_YES",
+      "recommended_size_usd": 2.8440805408314853,
+      "potential_profit": 268.0207328716909
     },
     {
       "market_id": "1351202",
@@ -684,7 +703,7 @@
     "win_rate": 0.038461538461538464,
     "total_pnl": -14.1231,
     "total_risked": 85.0297,
-    "pending": 4
+    "pending": 5
   },
   "last_updated": "2026-02-09"
 }
