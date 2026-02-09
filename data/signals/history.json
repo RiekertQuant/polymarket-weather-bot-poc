@@ -2,30 +2,11 @@
   "scans": [
     {
       "date": "2026-02-09",
-      "scan_time": "2026-02-09T10:47:25.307268Z",
+      "scan_time": "2026-02-09T11:39:28.087822Z",
       "data_source": "polymarket_api",
-      "markets_scanned": 14,
-      "signals_generated": 2,
+      "markets_scanned": 21,
+      "signals_generated": 1,
       "signals": [
-        {
-          "market_id": "1351202",
-          "title": "Highest temperature in NYC on February 9? - 26-27\u00b0F",
-          "city": "New York City",
-          "threshold_celsius": -3.611111111111111,
-          "threshold_celsius_upper": -2.5,
-          "comparison": "range",
-          "target_date": "2026-02-09",
-          "end_date": "2026-02-09",
-          "market_price": 0.0085,
-          "p_model": 0.1528994841676215,
-          "forecast_temp": -1.435714285714286,
-          "edge": 0.1443994841676215,
-          "should_trade": true,
-          "filter_reason": "passed",
-          "signal": "BUY_YES",
-          "recommended_size_usd": 2.866396905005729,
-          "potential_profit": 334.3567683897859
-        },
         {
           "market_id": "1351206",
           "title": "Highest temperature in NYC on February 9? - 34\u00b0F or higher",
@@ -35,15 +16,15 @@
           "comparison": ">=",
           "target_date": "2026-02-09",
           "end_date": "2026-02-09",
-          "market_price": 0.0175,
-          "p_model": 0.1511800901385809,
-          "forecast_temp": -1.435714285714286,
-          "edge": 0.1336800901385809,
+          "market_price": 0.013,
+          "p_model": 0.16208355150917764,
+          "forecast_temp": -1.3357142857142859,
+          "edge": 0.14908355150917763,
           "should_trade": true,
           "filter_reason": "passed",
           "signal": "BUY_YES",
-          "recommended_size_usd": 2.8020805408314855,
-          "potential_profit": 157.31680750668198
+          "recommended_size_usd": 2.894501309055066,
+          "potential_profit": 219.75944554133463
         }
       ]
     },
@@ -886,8 +867,8 @@
       "signals": []
     }
   ],
-  "total_signals": 40,
+  "total_signals": 39,
   "signals_by_city": {
-    "New York City": 40
+    "New York City": 39
   }
 }
