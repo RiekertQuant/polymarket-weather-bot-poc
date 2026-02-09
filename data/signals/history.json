@@ -2,7 +2,7 @@
   "scans": [
     {
       "date": "2026-02-09",
-      "scan_time": "2026-02-09T19:57:24.537098Z",
+      "scan_time": "2026-02-09T20:34:57.671838Z",
       "data_source": "polymarket_api",
       "markets_scanned": 21,
       "signals_generated": 2,
@@ -16,15 +16,15 @@
           "comparison": ">=",
           "target_date": "2026-02-09",
           "end_date": "2026-02-09",
-          "market_price": 0.015,
-          "p_model": 0.1511800901385809,
-          "forecast_temp": -1.435714285714286,
-          "edge": 0.1361800901385809,
+          "market_price": 0.0065,
+          "p_model": 0.15999741816978608,
+          "forecast_temp": -1.135714285714286,
+          "edge": 0.15349741816978607,
           "should_trade": true,
           "filter_reason": "passed",
           "signal": "BUY_YES",
-          "recommended_size_usd": 2.817080540831485,
-          "potential_profit": 184.9882888479342
+          "recommended_size_usd": 2.9209845090187163,
+          "potential_profit": 446.4612476477069
         },
         {
           "market_id": "1359109",
@@ -35,15 +35,15 @@
           "comparison": "<=",
           "target_date": "2026-02-11",
           "end_date": "2026-02-11",
-          "market_price": 0.004,
-          "p_model": 0.2076432544323445,
+          "market_price": 0.0085,
+          "p_model": 0.18269565577309338,
           "forecast_temp": 3.114285714285714,
-          "edge": 0.2036432544323445,
+          "edge": 0.17419565577309337,
           "should_trade": true,
           "filter_reason": "passed",
           "signal": "BUY_YES",
-          "recommended_size_usd": 3.221859526594067,
-          "potential_profit": 802.2430221219226
+          "recommended_size_usd": 3.0451739346385605,
+          "potential_profit": 355.21058308166266
         }
       ]
     },
