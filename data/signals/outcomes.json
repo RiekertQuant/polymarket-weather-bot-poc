@@ -609,15 +609,15 @@
       "comparison": ">=",
       "target_date": "2026-02-09",
       "end_date": "2026-02-09",
-      "market_price": 0.044,
+      "market_price": 0.0465,
       "p_model": 0.25134151487362144,
       "forecast_temp": -0.6412698412698414,
-      "edge": 0.20734151487362146,
+      "edge": 0.20484151487362146,
       "should_trade": true,
       "filter_reason": "passed",
       "signal": "BUY_YES",
-      "recommended_size_usd": 3.2440490892417286,
-      "potential_profit": 70.48433930261575
+      "recommended_size_usd": 3.2290490892417285,
+      "potential_profit": 66.21286680842985
     },
     {
       "market_id": "1351202",
