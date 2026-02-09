@@ -601,6 +601,25 @@
   ],
   "pending_signals": [
     {
+      "market_id": "1351202",
+      "title": "Highest temperature in NYC on February 9? - 26-27\u00b0F",
+      "city": "New York City",
+      "threshold_celsius": -3.611111111111111,
+      "threshold_celsius_upper": -2.5,
+      "comparison": "range",
+      "target_date": "2026-02-09",
+      "end_date": "2026-02-09",
+      "market_price": 0.0475,
+      "p_model": 0.1503770597630804,
+      "forecast_temp": -1.385714285714286,
+      "edge": 0.10287705976308041,
+      "should_trade": true,
+      "filter_reason": "passed",
+      "signal": "BUY_YES",
+      "recommended_size_usd": 2.6172623585784827,
+      "potential_profit": 52.482997822021154
+    },
+    {
       "market_id": "1351206",
       "title": "Highest temperature in NYC on February 9? - 34\u00b0F or higher",
       "city": "New York City",
@@ -609,15 +628,15 @@
       "comparison": ">=",
       "target_date": "2026-02-09",
       "end_date": "2026-02-09",
-      "market_price": 0.0185,
-      "p_model": 0.1511800901385809,
-      "forecast_temp": -1.435714285714286,
-      "edge": 0.13268009013858093,
+      "market_price": 0.0135,
+      "p_model": 0.1565693383879998,
+      "forecast_temp": -1.385714285714286,
+      "edge": 0.1430693383879998,
       "should_trade": true,
       "filter_reason": "passed",
       "signal": "BUY_YES",
-      "recommended_size_usd": 2.7960805408314853,
-      "potential_profit": 148.34340815276235
+      "recommended_size_usd": 2.858416030327999,
+      "potential_profit": 208.87610473470897
     },
     {
       "market_id": "1359109",
@@ -628,15 +647,15 @@
       "comparison": "<=",
       "target_date": "2026-02-11",
       "end_date": "2026-02-11",
-      "market_price": 0.025,
-      "p_model": 0.2581391425894004,
-      "forecast_temp": 3.014285714285714,
-      "edge": 0.2331391425894004,
+      "market_price": 0.0255,
+      "p_model": 0.18779410095029575,
+      "forecast_temp": 3.314285714285714,
+      "edge": 0.16229410095029576,
       "should_trade": true,
       "filter_reason": "passed",
       "signal": "BUY_YES",
-      "recommended_size_usd": 3.3988348555364025,
-      "potential_profit": 132.5545593659197
+      "recommended_size_usd": 2.9737646057017746,
+      "potential_profit": 113.64445522574037
     },
     {
       "market_id": "1351202",
@@ -703,7 +722,7 @@
     "win_rate": 0.038461538461538464,
     "total_pnl": -14.1231,
     "total_risked": 85.0297,
-    "pending": 5
+    "pending": 6
   },
   "last_updated": "2026-02-09"
 }
