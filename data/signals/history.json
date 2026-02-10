@@ -2,30 +2,11 @@
   "scans": [
     {
       "date": "2026-02-10",
-      "scan_time": "2026-02-10T07:53:23.036369Z",
+      "scan_time": "2026-02-10T08:39:25.165753Z",
       "data_source": "polymarket_api",
       "markets_scanned": 14,
-      "signals_generated": 2,
+      "signals_generated": 1,
       "signals": [
-        {
-          "market_id": "1355273",
-          "title": "Highest temperature in NYC on February 10? - 32-33\u00b0F",
-          "city": "New York City",
-          "threshold_celsius": -0.2777777777777778,
-          "threshold_celsius_upper": 0.8333333333333334,
-          "comparison": "range",
-          "target_date": "2026-02-10",
-          "end_date": "2026-02-10",
-          "market_price": 0.075,
-          "p_model": 0.18449816611346204,
-          "forecast_temp": 1.153174603174603,
-          "edge": 0.10949816611346204,
-          "should_trade": true,
-          "filter_reason": "passed",
-          "signal": "BUY_YES",
-          "recommended_size_usd": 2.6569889966807723,
-          "potential_profit": 32.769530959062855
-        },
         {
           "market_id": "1359115",
           "title": "Highest temperature in NYC on February 11? - 44\u00b0F or higher",
@@ -35,15 +16,15 @@
           "comparison": ">=",
           "target_date": "2026-02-11",
           "end_date": "2026-02-11",
-          "market_price": 0.06,
+          "market_price": 0.05,
           "p_model": 0.17911836553792537,
           "forecast_temp": 4.092063492063492,
-          "edge": 0.11911836553792537,
+          "edge": 0.12911836553792538,
           "should_trade": true,
           "filter_reason": "passed",
           "signal": "BUY_YES",
-          "recommended_size_usd": 2.7147101932275524,
-          "potential_profit": 42.53045969389832
+          "recommended_size_usd": 2.7747101932275524,
+          "potential_profit": 52.71949367132349
         }
       ]
     },
@@ -933,8 +914,8 @@
       "signals": []
     }
   ],
-  "total_signals": 42,
+  "total_signals": 41,
   "signals_by_city": {
-    "New York City": 42
+    "New York City": 41
   }
 }
