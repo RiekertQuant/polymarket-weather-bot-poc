@@ -678,15 +678,15 @@
       "comparison": ">=",
       "target_date": "2026-02-11",
       "end_date": "2026-02-11",
-      "market_price": 0.1935,
-      "p_model": 0.32523748450760115,
-      "forecast_temp": 5.3920634920634924,
-      "edge": 0.13173748450760114,
+      "market_price": 0.0305,
+      "p_model": 0.30904575264050527,
+      "forecast_temp": 5.292063492063493,
+      "edge": 0.2785457526405053,
       "should_trade": true,
       "filter_reason": "passed",
       "signal": "BUY_YES",
-      "recommended_size_usd": 2.790424907045607,
-      "potential_profit": 11.630375646161664
+      "recommended_size_usd": 3.6712745158430318,
+      "potential_profit": 116.69838174130557
     },
     {
       "market_id": "1362559",
@@ -697,15 +697,15 @@
       "comparison": "<=",
       "target_date": "2026-02-12",
       "end_date": "2026-02-12",
-      "market_price": 0.2,
+      "market_price": 0.16,
       "p_model": 0.3303135162454805,
       "forecast_temp": 1.930952380952381,
-      "edge": 0.1303135162454805,
+      "edge": 0.1703135162454805,
       "should_trade": true,
       "filter_reason": "passed",
       "signal": "BUY_YES",
-      "recommended_size_usd": 2.781881097472883,
-      "potential_profit": 11.127524389891532
+      "recommended_size_usd": 3.0218810974728827,
+      "potential_profit": 15.864875761732632
     },
     {
       "market_id": "1365614",
@@ -716,15 +716,15 @@
       "comparison": "<=",
       "target_date": "2026-02-13",
       "end_date": "2026-02-13",
-      "market_price": 0.0445,
+      "market_price": 0.046,
       "p_model": 0.32795096901194576,
       "forecast_temp": 2.0809523809523807,
-      "edge": 0.2834509690119458,
+      "edge": 0.2819509690119458,
       "should_trade": true,
       "filter_reason": "passed",
       "signal": "BUY_YES",
-      "recommended_size_usd": 3.7007058140716746,
-      "potential_profit": 79.46122259203338
+      "recommended_size_usd": 3.6917058140716748,
+      "potential_profit": 76.56276840487777
     },
     {
       "market_id": "1359115",
