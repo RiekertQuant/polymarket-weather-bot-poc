@@ -793,15 +793,15 @@
       "comparison": "<=",
       "target_date": "2026-02-13",
       "end_date": "2026-02-13",
-      "market_price": 0.004,
-      "p_model": 0.15970501353768585,
-      "forecast_temp": 3.6809523809523808,
-      "edge": 0.15570501353768584,
+      "market_price": 0.005,
+      "p_model": 0.15135576654240257,
+      "forecast_temp": 3.780952380952381,
+      "edge": 0.14635576654240257,
       "should_trade": true,
       "filter_reason": "passed",
       "signal": "BUY_YES",
-      "recommended_size_usd": 2.934230081226115,
-      "potential_profit": 730.6232902253026
+      "recommended_size_usd": 2.878134599254415,
+      "potential_profit": 572.7487852516286
     },
     {
       "market_id": "1365620",
@@ -812,15 +812,15 @@
       "comparison": ">=",
       "target_date": "2026-02-13",
       "end_date": "2026-02-13",
-      "market_price": 0.005,
-      "p_model": 0.17186246479035305,
-      "forecast_temp": 3.6809523809523808,
-      "edge": 0.16686246479035305,
+      "market_price": 0.0045,
+      "p_model": 0.1809196540127942,
+      "forecast_temp": 3.780952380952381,
+      "edge": 0.1764196540127942,
       "should_trade": true,
       "filter_reason": "passed",
       "signal": "BUY_YES",
-      "recommended_size_usd": 3.0011747887421185,
-      "potential_profit": 597.2337829596815
+      "recommended_size_usd": 3.058517924076765,
+      "potential_profit": 676.6121318707601
     },
     {
       "market_id": "1368987",
@@ -831,15 +831,15 @@
       "comparison": ">=",
       "target_date": "2026-02-14",
       "end_date": "2026-02-14",
-      "market_price": 0.011,
+      "market_price": 0.004,
       "p_model": 0.19900599834059374,
       "forecast_temp": 6.9753968253968255,
-      "edge": 0.18800599834059373,
+      "edge": 0.19500599834059373,
       "should_trade": true,
       "filter_reason": "passed",
       "signal": "BUY_YES",
-      "recommended_size_usd": 3.1280359900435624,
-      "potential_profit": 281.23887219573487
+      "recommended_size_usd": 3.170035990043562,
+      "potential_profit": 789.338961520847
     },
     {
       "market_id": "1365614",
