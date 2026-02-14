@@ -862,15 +862,15 @@
       "comparison": ">=",
       "target_date": "2026-02-14",
       "end_date": "2026-02-14",
-      "market_price": 0.022,
-      "p_model": 0.29766243192050046,
-      "forecast_temp": 8.203174603174604,
-      "edge": 0.27566243192050044,
+      "market_price": 0.006,
+      "p_model": 0.2916337985288452,
+      "forecast_temp": 8.153174603174604,
+      "edge": 0.2856337985288452,
       "should_trade": true,
       "filter_reason": "passed",
       "signal": "BUY_YES",
-      "recommended_size_usd": 3.653974591523003,
-      "potential_profit": 162.4357795686135
+      "recommended_size_usd": 3.7138027911730713,
+      "potential_profit": 615.2533290710055
     },
     {
       "market_id": "1372079",
@@ -881,15 +881,15 @@
       "comparison": ">=",
       "target_date": "2026-02-15",
       "end_date": "2026-02-15",
-      "market_price": 0.0145,
+      "market_price": 0.0175,
       "p_model": 0.3756787808983617,
       "forecast_temp": 6.264285714285714,
-      "edge": 0.3611787808983617,
+      "edge": 0.3581787808983617,
       "should_trade": true,
       "filter_reason": "passed",
       "signal": "BUY_YES",
-      "recommended_size_usd": 4.1670726853901705,
-      "potential_profit": 283.2172504449664
+      "recommended_size_usd": 4.14907268539017,
+      "potential_profit": 232.94079505119095
     },
     {
       "market_id": "1376605",
@@ -919,15 +919,15 @@
       "comparison": ">=",
       "target_date": "2026-02-16",
       "end_date": "2026-02-16",
-      "market_price": 0.0205,
+      "market_price": 0.0395,
       "p_model": 0.21280112964618692,
       "forecast_temp": 4.01984126984127,
-      "edge": 0.19230112964618692,
+      "edge": 0.1733011296461869,
       "should_trade": true,
       "filter_reason": "passed",
       "signal": "BUY_YES",
-      "recommended_size_usd": 3.1538067778771213,
-      "potential_profit": 150.69042628929952
+      "recommended_size_usd": 3.0398067778771214,
+      "potential_profit": 73.9173268392652
     },
     {
       "market_id": "1368987",
