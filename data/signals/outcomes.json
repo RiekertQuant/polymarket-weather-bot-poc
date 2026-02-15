@@ -908,15 +908,15 @@
       "comparison": ">=",
       "target_date": "2026-02-15",
       "end_date": "2026-02-15",
-      "market_price": 0.012,
-      "p_model": 0.4214515509096939,
-      "forecast_temp": 6.81984126984127,
-      "edge": 0.4094515509096939,
+      "market_price": 0.0155,
+      "p_model": 0.4271586561064443,
+      "forecast_temp": 6.86984126984127,
+      "edge": 0.4116586561064443,
       "should_trade": true,
       "filter_reason": "passed",
       "signal": "BUY_YES",
-      "recommended_size_usd": 4.456709305458164,
-      "potential_profit": 366.93573281605546
+      "recommended_size_usd": 4.469951936638665,
+      "potential_profit": 283.9140439755333
     },
     {
       "market_id": "1376613",
@@ -927,15 +927,15 @@
       "comparison": ">=",
       "target_date": "2026-02-16",
       "end_date": "2026-02-16",
-      "market_price": 0.0125,
+      "market_price": 0.006,
       "p_model": 0.16348882132527365,
       "forecast_temp": 4.314285714285714,
-      "edge": 0.15098882132527364,
+      "edge": 0.15748882132527364,
       "should_trade": true,
       "filter_reason": "passed",
       "signal": "BUY_YES",
-      "recommended_size_usd": 2.9059329279516417,
-      "potential_profit": 229.5687013081797
+      "recommended_size_usd": 2.944932927951642,
+      "potential_profit": 487.8772217306553
     },
     {
       "market_id": "1372079",
