@@ -2,30 +2,11 @@
   "scans": [
     {
       "date": "2026-02-16",
-      "scan_time": "2026-02-16T08:35:18.815404Z",
+      "scan_time": "2026-02-16T09:42:07.717299Z",
       "data_source": "polymarket_api",
       "markets_scanned": 18,
-      "signals_generated": 2,
+      "signals_generated": 1,
       "signals": [
-        {
-          "market_id": "1376613",
-          "title": "Highest temperature in NYC on February 16? - 46\u00b0F or higher",
-          "city": "New York City",
-          "threshold_celsius": 7.5,
-          "threshold_celsius_upper": null,
-          "comparison": ">=",
-          "target_date": "2026-02-16",
-          "end_date": "2026-02-16",
-          "market_price": 0.0075,
-          "p_model": 0.16071867402461915,
-          "forecast_temp": 4.664285714285715,
-          "edge": 0.15321867402461914,
-          "should_trade": true,
-          "filter_reason": "passed",
-          "signal": "BUY_YES",
-          "recommended_size_usd": 2.919312044147715,
-          "potential_profit": 386.32229384221426
-        },
         {
           "market_id": "1381124",
           "title": "Highest temperature in NYC on February 17? - 56\u00b0F or higher",
@@ -1348,8 +1329,8 @@
       "signals": []
     }
   ],
-  "total_signals": 61,
+  "total_signals": 60,
   "signals_by_city": {
-    "New York City": 61
+    "New York City": 60
   }
 }
