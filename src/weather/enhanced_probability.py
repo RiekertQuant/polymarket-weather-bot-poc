@@ -57,12 +57,15 @@ class EnhancedProbabilityResult:
 class EnhancedProbabilityEngine:
     """Enhanced probability engine with all improvements."""
 
-    # Bias correction in Celsius (positive = forecasts run cold)
-    DEFAULT_BIAS_CORRECTION = 0.5  # ~0.9°F, based on observed cold bias
+    # Bias correction in Celsius (negative = forecasts run warm)
+    # Updated 2026-02-16: Changed from +2.2°C to -1.1°C based on 1W/4L results
+    # showing forecasts were ~3°F too warm vs KLGA actuals
+    DEFAULT_BIAS_CORRECTION = -1.1  # ~-2°F, based on observed warm bias in paper trading
 
     # Base sigma and horizon scaling
-    BASE_SIGMA = 2.5  # Increased from 2.0°C
-    SIGMA_PER_DAY = 0.3  # Additional uncertainty per day ahead
+    # Updated 2026-02-02: Increased from 2.5°C to 3.0°C for more conservative uncertainty
+    BASE_SIGMA = 3.0  # Increased from 2.5°C based on observed forecast errors
+    SIGMA_PER_DAY = 0.4  # Additional uncertainty per day ahead (increased from 0.3)
 
     # Extreme temperature thresholds (Celsius)
     EXTREME_COLD_C = -10.0  # ~14°F

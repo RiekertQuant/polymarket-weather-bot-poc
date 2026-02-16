@@ -30,16 +30,18 @@ class Settings(BaseSettings):
     max_risk_per_city_usd: float = Field(default=20.0, ge=1.0, le=500.0)
 
     # Strategy filters
-    price_min: float = Field(default=0.001, description="Minimum price to consider")
-    price_max: float = Field(default=0.25, description="Maximum price for cheap shares")
-    skip_price_min: float = Field(default=0.40, description="Skip 50/50 range lower bound")
-    skip_price_max: float = Field(default=0.60, description="Skip 50/50 range upper bound")
-    min_edge_absolute: float = Field(default=0.15, description="Minimum p_model required")
-    min_edge_relative: float = Field(default=0.10, description="p_model must exceed price by this")
+    # Updated 2026-02-16: More conservative after 1W/4L results
+    price_min: float = Field(default=0.01, description="Minimum price to consider")
+    price_max: float = Field(default=0.20, description="Maximum price for cheap shares")
+    skip_price_min: float = Field(default=0.35, description="Skip 50/50 range lower bound")
+    skip_price_max: float = Field(default=0.65, description="Skip 50/50 range upper bound")
+    min_edge_absolute: float = Field(default=0.30, description="Minimum p_model required (raised from 0.25)")
+    min_edge_relative: float = Field(default=0.20, description="p_model must exceed price by this (raised from 0.15)")
 
     # Weather forecast
+    # Updated 2026-02-16: Increased from 2.0 to 3.5 for more conservative uncertainty
     forecast_sigma: float = Field(
-        default=2.0,
+        default=3.5,
         ge=0.1,
         le=10.0,
         description="Standard deviation for forecast uncertainty (Celsius)",
@@ -53,8 +55,9 @@ class Settings(BaseSettings):
     polymarket_api_url: str = Field(default="https://clob.polymarket.com")
 
     # Weather forecast source
+    # Updated 2026-02-02: Switch to NWS as default since Polymarket resolves with NWS/KLGA
     weather_source: Literal["open_meteo", "nws"] = Field(
-        default="open_meteo",
+        default="nws",
         description="Weather forecast source: open_meteo or nws (NWS matches Polymarket resolution)",
     )
 
