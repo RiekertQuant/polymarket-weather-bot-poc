@@ -2,11 +2,50 @@
   "scans": [
     {
       "date": "2026-02-16",
-      "scan_time": "2026-02-16T01:12:57.660123Z",
+      "scan_time": "2026-02-16T04:14:13.780973Z",
       "data_source": "polymarket_api",
       "markets_scanned": 18,
-      "signals_generated": 0,
-      "signals": []
+      "signals_generated": 2,
+      "signals": [
+        {
+          "market_id": "1376613",
+          "title": "Highest temperature in NYC on February 16? - 46\u00b0F or higher",
+          "city": "New York City",
+          "threshold_celsius": 7.5,
+          "threshold_celsius_upper": null,
+          "comparison": ">=",
+          "target_date": "2026-02-16",
+          "end_date": "2026-02-16",
+          "market_price": 0.004,
+          "p_model": 0.18297227503698377,
+          "forecast_temp": 4.914285714285715,
+          "edge": 0.17897227503698376,
+          "should_trade": true,
+          "filter_reason": "passed",
+          "signal": "BUY_YES",
+          "recommended_size_usd": 3.0738336502219026,
+          "potential_profit": 765.3845789052538
+        },
+        {
+          "market_id": "1381116",
+          "title": "Highest temperature in NYC on February 17? - 41\u00b0F or below",
+          "city": "New York City",
+          "threshold_celsius": null,
+          "threshold_celsius_upper": 5.277777777777778,
+          "comparison": "<=",
+          "target_date": "2026-02-17",
+          "end_date": "2026-02-17",
+          "market_price": 0.058,
+          "p_model": 0.18041167909511108,
+          "forecast_temp": 8.247619047619047,
+          "edge": 0.12241167909511108,
+          "should_trade": true,
+          "filter_reason": "passed",
+          "signal": "BUY_YES",
+          "recommended_size_usd": 2.7344700745706665,
+          "potential_profit": 44.411565693889095
+        }
+      ]
     },
     {
       "date": "2026-02-15",
@@ -1309,8 +1348,8 @@
       "signals": []
     }
   ],
-  "total_signals": 59,
+  "total_signals": 61,
   "signals_by_city": {
-    "New York City": 59
+    "New York City": 61
   }
 }
