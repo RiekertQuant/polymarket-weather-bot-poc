@@ -942,9 +942,7 @@
       "outcome": "NO",
       "pnl": -4.2844,
       "return_pct": -1.0
-    }
-  ],
-  "pending_signals": [
+    },
     {
       "market_id": "1376611",
       "title": "Highest temperature in NYC on February 16? - 42-43\u00b0F",
@@ -962,7 +960,11 @@
       "filter_reason": "passed",
       "signal": "BUY_YES",
       "recommended_size_usd": 2.613519337912405,
-      "potential_profit": 33.939198674848505
+      "potential_profit": 33.939198674848505,
+      "actual_temp": 2.1,
+      "outcome": "NO",
+      "pnl": -2.6135,
+      "return_pct": -1.0
     },
     {
       "market_id": "1376613",
@@ -981,8 +983,14 @@
       "filter_reason": "passed",
       "signal": "BUY_YES",
       "recommended_size_usd": 3.207226127178421,
-      "potential_profit": 798.5993056674268
-    },
+      "potential_profit": 798.5993056674268,
+      "actual_temp": 2.1,
+      "outcome": "NO",
+      "pnl": -3.2072,
+      "return_pct": -1.0
+    }
+  ],
+  "pending_signals": [
     {
       "market_id": "1381116",
       "title": "Highest temperature in NYC on February 17? - 41\u00b0F or below",
@@ -1001,35 +1009,16 @@
       "signal": "BUY_YES",
       "recommended_size_usd": 2.7697646057017744,
       "potential_profit": 43.78090103634486
-    },
-    {
-      "market_id": "1376613",
-      "title": "Highest temperature in NYC on February 16? - 46\u00b0F or higher",
-      "city": "New York City",
-      "threshold_celsius": 7.5,
-      "threshold_celsius_upper": null,
-      "comparison": ">=",
-      "target_date": "2026-02-16",
-      "end_date": "2026-02-16",
-      "market_price": 0.0305,
-      "p_model": 0.15094235330461792,
-      "forecast_temp": 3.7420634920634916,
-      "edge": 0.12044235330461792,
-      "should_trade": true,
-      "filter_reason": "passed",
-      "signal": "BUY_YES",
-      "recommended_size_usd": 2.722654119827707,
-      "potential_profit": 86.54469407124466
     }
   ],
   "summary": {
-    "total_resolved": 41,
+    "total_resolved": 43,
     "wins": 1,
-    "losses": 40,
-    "win_rate": 0.024390243902439025,
-    "total_pnl": -62.8804,
-    "total_risked": 133.7869,
-    "pending": 4
+    "losses": 42,
+    "win_rate": 0.023255813953488372,
+    "total_pnl": -68.7011,
+    "total_risked": 139.6077,
+    "pending": 1
   },
-  "last_updated": "2026-02-16"
+  "last_updated": "2026-02-17"
 }
