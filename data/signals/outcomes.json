@@ -988,9 +988,7 @@
       "outcome": "NO",
       "pnl": -3.2072,
       "return_pct": -1.0
-    }
-  ],
-  "pending_signals": [
+    },
     {
       "market_id": "1381116",
       "title": "Highest temperature in NYC on February 17? - 41\u00b0F or below",
@@ -1008,17 +1006,22 @@
       "filter_reason": "passed",
       "signal": "BUY_YES",
       "recommended_size_usd": 2.7697646057017744,
-      "potential_profit": 43.78090103634486
+      "potential_profit": 43.78090103634486,
+      "actual_temp": 5.8,
+      "outcome": "NO",
+      "pnl": -2.7698,
+      "return_pct": -1.0
     }
   ],
+  "pending_signals": [],
   "summary": {
-    "total_resolved": 43,
+    "total_resolved": 44,
     "wins": 1,
-    "losses": 42,
-    "win_rate": 0.023255813953488372,
-    "total_pnl": -68.7011,
-    "total_risked": 139.6077,
-    "pending": 1
+    "losses": 43,
+    "win_rate": 0.022727272727272728,
+    "total_pnl": -71.4709,
+    "total_risked": 142.3774,
+    "pending": 0
   },
-  "last_updated": "2026-02-17"
+  "last_updated": "2026-02-18"
 }
