@@ -2,7 +2,7 @@
   "scans": [
     {
       "date": "2026-02-19",
-      "scan_time": "2026-02-19T17:42:50.484529Z",
+      "scan_time": "2026-02-19T18:39:22.268814Z",
       "data_source": "polymarket_api",
       "markets_scanned": 27,
       "signals_generated": 0,
