@@ -1,6 +1,14 @@
 {
   "scans": [
     {
+      "date": "2026-02-19",
+      "scan_time": "2026-02-19T01:13:34.305705Z",
+      "data_source": "polymarket_api",
+      "markets_scanned": 18,
+      "signals_generated": 0,
+      "signals": []
+    },
+    {
       "date": "2026-02-18",
       "scan_time": "2026-02-18T23:19:56.604913Z",
       "data_source": "polymarket_api",
