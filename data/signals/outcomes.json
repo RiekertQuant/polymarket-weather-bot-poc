@@ -1011,9 +1011,7 @@
       "outcome": "NO",
       "pnl": -2.7698,
       "return_pct": -1.0
-    }
-  ],
-  "pending_signals": [
+    },
     {
       "market_id": "1397040",
       "title": "Highest temperature in NYC on February 21? - 39\u00b0F or below",
@@ -1031,17 +1029,22 @@
       "filter_reason": "passed",
       "signal": "BUY_YES",
       "recommended_size_usd": 3.51377796175371,
-      "potential_profit": 46.683050063299284
+      "potential_profit": 46.683050063299284,
+      "actual_temp": 8.0,
+      "outcome": "NO",
+      "pnl": -3.5138,
+      "return_pct": -1.0
     }
   ],
+  "pending_signals": [],
   "summary": {
-    "total_resolved": 44,
+    "total_resolved": 45,
     "wins": 1,
-    "losses": 43,
-    "win_rate": 0.022727272727272728,
-    "total_pnl": -71.4709,
-    "total_risked": 142.3774,
-    "pending": 1
+    "losses": 44,
+    "win_rate": 0.022222222222222223,
+    "total_pnl": -74.9847,
+    "total_risked": 145.8912,
+    "pending": 0
   },
-  "last_updated": "2026-02-21"
+  "last_updated": "2026-02-22"
 }
