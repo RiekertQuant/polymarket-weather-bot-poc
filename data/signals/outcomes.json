@@ -1034,6 +1034,29 @@
       "outcome": "NO",
       "pnl": -3.5138,
       "return_pct": -1.0
+    },
+    {
+      "market_id": "1413697",
+      "title": "Highest temperature in NYC on February 24? - 25\u00b0F or below",
+      "city": "New York City",
+      "threshold_celsius": null,
+      "threshold_celsius_upper": -3.611111111111111,
+      "comparison": "<=",
+      "target_date": "2026-02-24",
+      "end_date": "2026-02-24",
+      "market_price": 0.0155,
+      "p_model": 0.508523759079126,
+      "forecast_temp": -3.7111111111111112,
+      "edge": 0.49302375907912593,
+      "should_trade": true,
+      "filter_reason": "passed",
+      "signal": "BUY_YES",
+      "recommended_size_usd": 4.9581425544747555,
+      "potential_profit": 314.92202225034816,
+      "actual_temp": -1.6,
+      "outcome": "NO",
+      "pnl": -4.9581,
+      "return_pct": -1.0
     }
   ],
   "pending_signals": [
@@ -1055,54 +1078,16 @@
       "signal": "BUY_YES",
       "recommended_size_usd": 4.869337890999717,
       "potential_profit": 400.9088196923101
-    },
-    {
-      "market_id": "1413697",
-      "title": "Highest temperature in NYC on February 24? - 25\u00b0F or below",
-      "city": "New York City",
-      "threshold_celsius": null,
-      "threshold_celsius_upper": -3.611111111111111,
-      "comparison": "<=",
-      "target_date": "2026-02-24",
-      "end_date": "2026-02-24",
-      "market_price": 0.0155,
-      "p_model": 0.508523759079126,
-      "forecast_temp": -3.7111111111111112,
-      "edge": 0.49302375907912593,
-      "should_trade": true,
-      "filter_reason": "passed",
-      "signal": "BUY_YES",
-      "recommended_size_usd": 4.9581425544747555,
-      "potential_profit": 314.92202225034816
-    },
-    {
-      "market_id": "1413697",
-      "title": "Highest temperature in NYC on February 24? - 25\u00b0F or below",
-      "city": "New York City",
-      "threshold_celsius": null,
-      "threshold_celsius_upper": -3.611111111111111,
-      "comparison": "<=",
-      "target_date": "2026-02-24",
-      "end_date": "2026-02-24",
-      "market_price": 0.0375,
-      "p_model": 0.3867372563699528,
-      "forecast_temp": -2.338888888888889,
-      "edge": 0.34923725636995284,
-      "should_trade": true,
-      "filter_reason": "passed",
-      "signal": "BUY_YES",
-      "recommended_size_usd": 4.095423538219717,
-      "potential_profit": 105.11587081430608
     }
   ],
   "summary": {
-    "total_resolved": 45,
+    "total_resolved": 46,
     "wins": 1,
-    "losses": 44,
-    "win_rate": 0.022222222222222223,
-    "total_pnl": -74.9847,
-    "total_risked": 145.8912,
-    "pending": 3
+    "losses": 45,
+    "win_rate": 0.021739130434782608,
+    "total_pnl": -79.9428,
+    "total_risked": 150.8494,
+    "pending": 1
   },
-  "last_updated": "2026-02-24"
+  "last_updated": "2026-02-25"
 }
