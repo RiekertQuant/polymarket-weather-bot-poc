@@ -2,7 +2,7 @@
   "scans": [
     {
       "date": "2026-02-27",
-      "scan_time": "2026-02-27T05:44:19.695272Z",
+      "scan_time": "2026-02-27T06:39:51.555796Z",
       "data_source": "polymarket_api",
       "markets_scanned": 18,
       "signals_generated": 1,
@@ -16,15 +16,15 @@
           "comparison": "<=",
           "target_date": "2026-02-27",
           "end_date": "2026-02-27",
-          "market_price": 0.091,
-          "p_model": 0.6785597709693352,
-          "forecast_temp": 2.9611111111111117,
-          "edge": 0.5875597709693352,
+          "market_price": 0.074,
+          "p_model": 0.6646595419711316,
+          "forecast_temp": 3.0611111111111113,
+          "edge": 0.5906595419711317,
           "should_trade": true,
           "filter_reason": "passed",
           "signal": "BUY_YES",
           "recommended_size_usd": 5.0,
-          "potential_profit": 49.94505494505495
+          "potential_profit": 62.567567567567565
         }
       ]
     },
