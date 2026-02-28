@@ -1105,27 +1105,7 @@
       "return_pct": -1.0
     }
   ],
-  "pending_signals": [
-    {
-      "market_id": "1444234",
-      "title": "Highest temperature in NYC on February 28? - 50\u00b0F or higher",
-      "city": "New York City",
-      "threshold_celsius": 9.722222222222221,
-      "threshold_celsius_upper": null,
-      "comparison": ">=",
-      "target_date": "2026-02-28",
-      "end_date": "2026-02-28",
-      "market_price": 0.095,
-      "p_model": 0.30059762807244317,
-      "forecast_temp": 7.955555555555556,
-      "edge": 0.20559762807244317,
-      "should_trade": true,
-      "filter_reason": "passed",
-      "signal": "BUY_YES",
-      "recommended_size_usd": 3.2335857684346587,
-      "potential_profit": 30.804159162456486
-    }
-  ],
+  "pending_signals": [],
   "summary": {
     "total_resolved": 48,
     "wins": 1,
@@ -1133,7 +1113,7 @@
     "win_rate": 0.020833333333333332,
     "total_pnl": -89.8121,
     "total_risked": 160.7187,
-    "pending": 1
+    "pending": 0
   },
   "last_updated": "2026-02-28"
 }
