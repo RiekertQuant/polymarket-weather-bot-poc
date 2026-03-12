@@ -1139,14 +1139,14 @@
       "target_date": "2026-03-14",
       "end_date": "2026-03-14",
       "market_price": 0.013,
-      "p_model": 0.3231985020125719,
-      "forecast_temp": 8.822222222222223,
-      "edge": 0.3101985020125719,
+      "p_model": 0.33341863429175833,
+      "forecast_temp": 8.672222222222222,
+      "edge": 0.3204186342917583,
       "should_trade": true,
       "filter_reason": "passed",
       "signal": "BUY_YES",
-      "recommended_size_usd": 3.861191012075431,
-      "potential_profit": 293.1535022244962
+      "recommended_size_usd": 3.92251180575055,
+      "potential_profit": 297.8091655596764
     }
   ],
   "summary": {
