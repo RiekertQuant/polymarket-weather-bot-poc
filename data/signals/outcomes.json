@@ -1128,7 +1128,27 @@
       "return_pct": -1.0
     }
   ],
-  "pending_signals": [],
+  "pending_signals": [
+    {
+      "market_id": "1566188",
+      "title": "Highest temperature in NYC on March 14? - 43\u00b0F or below",
+      "city": "New York City",
+      "threshold_celsius": null,
+      "threshold_celsius_upper": 6.388888888888889,
+      "comparison": "<=",
+      "target_date": "2026-03-14",
+      "end_date": "2026-03-14",
+      "market_price": 0.013,
+      "p_model": 0.3231985020125719,
+      "forecast_temp": 8.822222222222223,
+      "edge": 0.3101985020125719,
+      "should_trade": true,
+      "filter_reason": "passed",
+      "signal": "BUY_YES",
+      "recommended_size_usd": 3.861191012075431,
+      "potential_profit": 293.1535022244962
+    }
+  ],
   "summary": {
     "total_resolved": 49,
     "wins": 1,
@@ -1136,7 +1156,7 @@
     "win_rate": 0.02040816326530612,
     "total_pnl": -93.7979,
     "total_risked": 164.7045,
-    "pending": 0
+    "pending": 1
   },
   "last_updated": "2026-03-12"
 }
