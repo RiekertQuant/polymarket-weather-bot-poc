@@ -1,6 +1,34 @@
 {
   "scans": [
     {
+      "date": "2026-03-14",
+      "scan_time": "2026-03-14T01:09:07.068140Z",
+      "data_source": "polymarket_api",
+      "markets_scanned": 29,
+      "signals_generated": 1,
+      "signals": [
+        {
+          "market_id": "1574972",
+          "title": "Highest temperature in NYC on March 15? - 52\u00b0F or higher",
+          "city": "New York City",
+          "threshold_celsius": 10.833333333333334,
+          "threshold_celsius_upper": null,
+          "comparison": ">=",
+          "target_date": "2026-03-15",
+          "end_date": "2026-03-15",
+          "market_price": 0.0665,
+          "p_model": 0.3251842029483527,
+          "forecast_temp": 8.88888888888889,
+          "edge": 0.2586842029483527,
+          "should_trade": true,
+          "filter_reason": "passed",
+          "signal": "BUY_YES",
+          "recommended_size_usd": 3.5521052176901162,
+          "potential_profit": 49.863010837800346
+        }
+      ]
+    },
+    {
       "date": "2026-03-13",
       "scan_time": "2026-03-13T23:19:23.046087Z",
       "data_source": "polymarket_api",
@@ -1689,8 +1717,8 @@
       "signals": []
     }
   ],
-  "total_signals": 68,
+  "total_signals": 69,
   "signals_by_city": {
-    "New York City": 68
+    "New York City": 69
   }
 }
