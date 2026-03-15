@@ -1,6 +1,53 @@
 {
   "scans": [
     {
+      "date": "2026-03-15",
+      "scan_time": "2026-03-15T01:20:26.076543Z",
+      "data_source": "polymarket_api",
+      "markets_scanned": 31,
+      "signals_generated": 2,
+      "signals": [
+        {
+          "market_id": "1574972",
+          "title": "Highest temperature in NYC on March 15? - 52\u00b0F or higher",
+          "city": "New York City",
+          "threshold_celsius": 10.833333333333334,
+          "threshold_celsius_upper": null,
+          "comparison": ">=",
+          "target_date": "2026-03-15",
+          "end_date": "2026-03-15",
+          "market_price": 0.0305,
+          "p_model": 0.35436656868626915,
+          "forecast_temp": 9.444444444444445,
+          "edge": 0.3238665686862692,
+          "should_trade": true,
+          "filter_reason": "passed",
+          "signal": "BUY_YES",
+          "recommended_size_usd": 3.943199412117615,
+          "potential_profit": 125.34202721468945
+        },
+        {
+          "market_id": "1577576",
+          "title": "Highest temperature in NYC on March 16? - 64\u00b0F or higher",
+          "city": "New York City",
+          "threshold_celsius": 17.5,
+          "threshold_celsius_upper": null,
+          "comparison": ">=",
+          "target_date": "2026-03-16",
+          "end_date": "2026-03-16",
+          "market_price": 0.07,
+          "p_model": 0.37306353404636305,
+          "forecast_temp": 16.11111111111111,
+          "edge": 0.30306353404636305,
+          "should_trade": true,
+          "filter_reason": "passed",
+          "signal": "BUY_YES",
+          "recommended_size_usd": 3.8183812042781784,
+          "potential_profit": 50.729921713981504
+        }
+      ]
+    },
+    {
       "date": "2026-03-14",
       "scan_time": "2026-03-14T23:17:58.383114Z",
       "data_source": "polymarket_api",
@@ -1717,8 +1764,8 @@
       "signals": []
     }
   ],
-  "total_signals": 69,
+  "total_signals": 71,
   "signals_by_city": {
-    "New York City": 69
+    "New York City": 71
   }
 }
