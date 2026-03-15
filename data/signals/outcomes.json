@@ -1161,34 +1161,15 @@
       "comparison": ">=",
       "target_date": "2026-03-16",
       "end_date": "2026-03-16",
-      "market_price": 0.05,
+      "market_price": 0.075,
       "p_model": 0.3307981010824752,
       "forecast_temp": 15.622222222222224,
-      "edge": 0.2807981010824752,
+      "edge": 0.2557981010824752,
       "should_trade": true,
       "filter_reason": "passed",
       "signal": "BUY_YES",
-      "recommended_size_usd": 3.6847886064948514,
-      "potential_profit": 70.01098352340217
-    },
-    {
-      "market_id": "1585962",
-      "title": "Highest temperature in NYC on March 18? - 31\u00b0F or below",
-      "city": "New York City",
-      "threshold_celsius": null,
-      "threshold_celsius_upper": -0.2777777777777778,
-      "comparison": "<=",
-      "target_date": "2026-03-18",
-      "end_date": "2026-03-18",
-      "market_price": 0.0205,
-      "p_model": 0.3036451805685435,
-      "forecast_temp": 2.261111111111111,
-      "edge": 0.2831451805685435,
-      "should_trade": true,
-      "filter_reason": "passed",
-      "signal": "BUY_YES",
-      "recommended_size_usd": 3.698871083411261,
-      "potential_profit": 176.7338646927478
+      "recommended_size_usd": 3.534788606494851,
+      "potential_profit": 43.595726146769834
     },
     {
       "market_id": "1577576",
@@ -1217,7 +1198,7 @@
     "win_rate": 0.02,
     "total_pnl": -97.8218,
     "total_risked": 168.7285,
-    "pending": 3
+    "pending": 2
   },
   "last_updated": "2026-03-15"
 }
