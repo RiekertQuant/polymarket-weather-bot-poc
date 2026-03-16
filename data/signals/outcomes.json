@@ -1161,6 +1161,44 @@
       "comparison": ">=",
       "target_date": "2026-03-16",
       "end_date": "2026-03-16",
+      "market_price": 0.0235,
+      "p_model": 0.3706148543135023,
+      "forecast_temp": 16.272222222222222,
+      "edge": 0.34711485431350225,
+      "should_trade": true,
+      "filter_reason": "passed",
+      "signal": "BUY_YES",
+      "recommended_size_usd": 4.082689125881013,
+      "potential_profit": 169.6487630392685
+    },
+    {
+      "market_id": "1585962",
+      "title": "Highest temperature in NYC on March 18? - 31\u00b0F or below",
+      "city": "New York City",
+      "threshold_celsius": null,
+      "threshold_celsius_upper": -0.2777777777777778,
+      "comparison": "<=",
+      "target_date": "2026-03-18",
+      "end_date": "2026-03-18",
+      "market_price": 0.024,
+      "p_model": 0.3009678492836839,
+      "forecast_temp": 2.488888888888889,
+      "edge": 0.2769678492836839,
+      "should_trade": true,
+      "filter_reason": "passed",
+      "signal": "BUY_YES",
+      "recommended_size_usd": 3.6618070957021036,
+      "potential_profit": 148.91348855855222
+    },
+    {
+      "market_id": "1577576",
+      "title": "Highest temperature in NYC on March 16? - 64\u00b0F or higher",
+      "city": "New York City",
+      "threshold_celsius": 17.5,
+      "threshold_celsius_upper": null,
+      "comparison": ">=",
+      "target_date": "2026-03-16",
+      "end_date": "2026-03-16",
       "market_price": 0.055,
       "p_model": 0.3140756723294613,
       "forecast_temp": 15.42222222222222,
@@ -1198,7 +1236,7 @@
     "win_rate": 0.02,
     "total_pnl": -97.8218,
     "total_risked": 168.7285,
-    "pending": 2
+    "pending": 4
   },
   "last_updated": "2026-03-16"
 }
