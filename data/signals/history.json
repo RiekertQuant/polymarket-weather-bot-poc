@@ -2,30 +2,11 @@
   "scans": [
     {
       "date": "2026-03-19",
-      "scan_time": "2026-03-19T22:17:54.935780Z",
+      "scan_time": "2026-03-19T23:20:43.874236Z",
       "data_source": "polymarket_api",
       "markets_scanned": 44,
-      "signals_generated": 2,
+      "signals_generated": 1,
       "signals": [
-        {
-          "market_id": "1605692",
-          "title": "Highest temperature in NYC on March 20? - 62\u00b0F or higher",
-          "city": "New York City",
-          "threshold_celsius": 16.38888888888889,
-          "threshold_celsius_upper": null,
-          "comparison": ">=",
-          "target_date": "2026-03-20",
-          "end_date": "2026-03-20",
-          "market_price": 0.0145,
-          "p_model": 0.3307981010824752,
-          "forecast_temp": 14.511111111111113,
-          "edge": 0.3162981010824752,
-          "should_trade": true,
-          "filter_reason": "passed",
-          "signal": "BUY_YES",
-          "recommended_size_usd": 3.897788606494851,
-          "potential_profit": 264.9152187379776
-        },
         {
           "market_id": "1638078",
           "title": "Highest temperature in NYC on March 22? - 53\u00b0F or below",
@@ -35,15 +16,15 @@
           "comparison": "<=",
           "target_date": "2026-03-22",
           "end_date": "2026-03-22",
-          "market_price": 0.155,
-          "p_model": 0.4779524607000897,
+          "market_price": 0.125,
+          "p_model": 0.47134826891090437,
           "forecast_temp": 12.272222222222222,
-          "edge": 0.32295246070008965,
+          "edge": 0.34634826891090437,
           "should_trade": true,
           "filter_reason": "passed",
           "signal": "BUY_YES",
-          "recommended_size_usd": 3.937714764200538,
-          "potential_profit": 21.466896617738417
+          "recommended_size_usd": 4.078089613465426,
+          "potential_profit": 28.546627294257984
         }
       ]
     },
@@ -1816,8 +1797,8 @@
       "signals": []
     }
   ],
-  "total_signals": 72,
+  "total_signals": 71,
   "signals_by_city": {
-    "New York City": 72
+    "New York City": 71
   }
 }
