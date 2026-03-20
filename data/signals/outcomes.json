@@ -1176,6 +1176,25 @@
   ],
   "pending_signals": [
     {
+      "market_id": "1625895",
+      "title": "Highest temperature in NYC on March 21? - 60\u00b0F or higher",
+      "city": "New York City",
+      "threshold_celsius": 15.277777777777779,
+      "threshold_celsius_upper": null,
+      "comparison": ">=",
+      "target_date": "2026-03-21",
+      "end_date": "2026-03-21",
+      "market_price": 0.1395,
+      "p_model": 0.4003175488691181,
+      "forecast_temp": 14.444444444444445,
+      "edge": 0.26081754886911807,
+      "should_trade": true,
+      "filter_reason": "passed",
+      "signal": "BUY_YES",
+      "recommended_size_usd": 3.5649052932147085,
+      "potential_profit": 21.98997136065417
+    },
+    {
       "market_id": "1638078",
       "title": "Highest temperature in NYC on March 22? - 53\u00b0F or below",
       "city": "New York City",
@@ -1202,7 +1221,7 @@
     "win_rate": 0.0392156862745098,
     "total_pnl": -36.7498,
     "total_risked": 172.2829,
-    "pending": 1
+    "pending": 2
   },
-  "last_updated": "2026-03-19"
+  "last_updated": "2026-03-20"
 }
