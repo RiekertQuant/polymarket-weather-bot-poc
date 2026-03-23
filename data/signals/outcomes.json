@@ -1172,9 +1172,7 @@
       "outcome": "YES",
       "pnl": 61.072,
       "return_pct": 17.1818
-    }
-  ],
-  "pending_signals": [
+    },
     {
       "market_id": "1638078",
       "title": "Highest temperature in NYC on March 22? - 53\u00b0F or below",
@@ -1192,17 +1190,22 @@
       "filter_reason": "passed",
       "signal": "BUY_YES",
       "recommended_size_usd": 4.078089613465426,
-      "potential_profit": 28.546627294257984
+      "potential_profit": 28.546627294257984,
+      "actual_temp": 16.5,
+      "outcome": "NO",
+      "pnl": -4.0781,
+      "return_pct": -1.0
     }
   ],
+  "pending_signals": [],
   "summary": {
-    "total_resolved": 51,
+    "total_resolved": 52,
     "wins": 2,
-    "losses": 49,
-    "win_rate": 0.0392156862745098,
-    "total_pnl": -36.7498,
-    "total_risked": 172.2829,
-    "pending": 1
+    "losses": 50,
+    "win_rate": 0.038461538461538464,
+    "total_pnl": -40.8279,
+    "total_risked": 176.361,
+    "pending": 0
   },
-  "last_updated": "2026-03-22"
+  "last_updated": "2026-03-23"
 }
