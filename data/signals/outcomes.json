@@ -1197,27 +1197,7 @@
       "return_pct": -1.0
     }
   ],
-  "pending_signals": [
-    {
-      "market_id": "1779898",
-      "title": "Highest temperature in NYC on April 1? - 69\u00b0F or below",
-      "city": "New York City",
-      "threshold_celsius": null,
-      "threshold_celsius_upper": 20.833333333333332,
-      "comparison": "<=",
-      "target_date": "2026-04-01",
-      "end_date": "2026-04-01",
-      "market_price": 0.0355,
-      "p_model": 0.32440758680181203,
-      "forecast_temp": 23.17777777777778,
-      "edge": 0.28890758680181206,
-      "should_trade": true,
-      "filter_reason": "passed",
-      "signal": "BUY_YES",
-      "recommended_size_usd": 3.7334455208108723,
-      "potential_profit": 101.43403393865033
-    }
-  ],
+  "pending_signals": [],
   "summary": {
     "total_resolved": 52,
     "wins": 2,
@@ -1225,7 +1205,7 @@
     "win_rate": 0.038461538461538464,
     "total_pnl": -40.8279,
     "total_risked": 176.361,
-    "pending": 1
+    "pending": 0
   },
   "last_updated": "2026-03-31"
 }
