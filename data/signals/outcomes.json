@@ -1218,9 +1218,7 @@
       "outcome": "NO",
       "pnl": -3.3973,
       "return_pct": -1.0
-    }
-  ],
-  "pending_signals": [
+    },
     {
       "market_id": "1871703",
       "title": "Highest temperature in NYC on April 9? - 45\u00b0F or below",
@@ -1238,17 +1236,22 @@
       "filter_reason": "passed",
       "signal": "BUY_YES",
       "recommended_size_usd": 4.069072855147322,
-      "potential_profit": 117.39578849253392
+      "potential_profit": 117.39578849253392,
+      "actual_temp": 9.6,
+      "outcome": "NO",
+      "pnl": -4.0691,
+      "return_pct": -1.0
     }
   ],
+  "pending_signals": [],
   "summary": {
-    "total_resolved": 53,
+    "total_resolved": 54,
     "wins": 2,
-    "losses": 51,
-    "win_rate": 0.03773584905660377,
-    "total_pnl": -44.2252,
-    "total_risked": 179.7583,
-    "pending": 1
+    "losses": 52,
+    "win_rate": 0.037037037037037035,
+    "total_pnl": -48.2943,
+    "total_risked": 183.8273,
+    "pending": 0
   },
-  "last_updated": "2026-04-09"
+  "last_updated": "2026-04-10"
 }
