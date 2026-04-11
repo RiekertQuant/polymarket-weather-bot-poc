@@ -1253,15 +1253,15 @@
       "comparison": "<=",
       "target_date": "2026-04-11",
       "end_date": "2026-04-11",
-      "market_price": 0.1795,
-      "p_model": 0.4154001707796597,
-      "forecast_temp": 16.0,
-      "edge": 0.2359001707796597,
+      "market_price": 0.105,
+      "p_model": 0.40964117134539657,
+      "forecast_temp": 16.05,
+      "edge": 0.3046411713453966,
       "should_trade": true,
       "filter_reason": "passed",
       "signal": "BUY_YES",
-      "recommended_size_usd": 3.415401024677958,
-      "potential_profit": 15.611902733973618
+      "recommended_size_usd": 3.8278470280723793,
+      "potential_profit": 32.62783895356933
     },
     {
       "market_id": "1901729",
