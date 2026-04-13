@@ -1276,25 +1276,6 @@
       "comparison": ">=",
       "target_date": "2026-04-13",
       "end_date": "2026-04-13",
-      "market_price": 0.1315,
-      "p_model": 0.36038856944637954,
-      "forecast_temp": 25.366666666666667,
-      "edge": 0.22888856944637953,
-      "should_trade": true,
-      "filter_reason": "passed",
-      "signal": "BUY_YES",
-      "recommended_size_usd": 3.373331416678277,
-      "potential_profit": 22.279378976312422
-    },
-    {
-      "market_id": "1924418",
-      "title": "Highest temperature in NYC on April 13? - 80\u00b0F or higher",
-      "city": "New York City",
-      "threshold_celsius": 26.38888888888889,
-      "threshold_celsius_upper": null,
-      "comparison": ">=",
-      "target_date": "2026-04-13",
-      "end_date": "2026-04-13",
       "market_price": 0.0645,
       "p_model": 0.37837009709023506,
       "forecast_temp": 25.366666666666667,
@@ -1313,7 +1294,7 @@
     "win_rate": 0.03636363636363636,
     "total_pnl": -52.2214,
     "total_risked": 187.7544,
-    "pending": 2
+    "pending": 1
   },
   "last_updated": "2026-04-13"
 }
