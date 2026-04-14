@@ -1264,9 +1264,7 @@
       "outcome": "NO",
       "pnl": -3.9271,
       "return_pct": -1.0
-    }
-  ],
-  "pending_signals": [
+    },
     {
       "market_id": "1924418",
       "title": "Highest temperature in NYC on April 13? - 80\u00b0F or higher",
@@ -1284,17 +1282,22 @@
       "filter_reason": "passed",
       "signal": "BUY_YES",
       "recommended_size_usd": 3.8832205825414103,
-      "potential_profit": 56.32174968941844
+      "potential_profit": 56.32174968941844,
+      "actual_temp": 26.5,
+      "outcome": "YES",
+      "pnl": 56.3217,
+      "return_pct": 14.5039
     }
   ],
+  "pending_signals": [],
   "summary": {
-    "total_resolved": 55,
-    "wins": 2,
+    "total_resolved": 56,
+    "wins": 3,
     "losses": 53,
-    "win_rate": 0.03636363636363636,
-    "total_pnl": -52.2214,
-    "total_risked": 187.7544,
-    "pending": 1
+    "win_rate": 0.05357142857142857,
+    "total_pnl": 4.1003,
+    "total_risked": 191.6376,
+    "pending": 0
   },
-  "last_updated": "2026-04-13"
+  "last_updated": "2026-04-14"
 }
