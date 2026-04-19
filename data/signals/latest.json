@@ -1,11 +1,31 @@
 {
-  "scan_time": "2026-04-19T20:26:23.395780Z",
+  "scan_time": "2026-04-19T21:25:50.187571Z",
   "scan_date": "2026-04-19",
   "data_source": "polymarket_api",
   "weather_source": "nws",
   "markets_scanned": 22,
-  "signals_generated": 0,
-  "signals": [],
+  "signals_generated": 1,
+  "signals": [
+    {
+      "market_id": "2011123",
+      "title": "Highest temperature in NYC on April 20? - 45\u00b0F or below",
+      "city": "New York City",
+      "threshold_celsius": null,
+      "threshold_celsius_upper": 7.5,
+      "comparison": "<=",
+      "target_date": "2026-04-20",
+      "end_date": "2026-04-20",
+      "market_price": 0.01,
+      "p_model": 0.3085375387259868,
+      "forecast_temp": 9.3,
+      "edge": 0.2985375387259868,
+      "should_trade": true,
+      "filter_reason": "passed",
+      "signal": "BUY_YES",
+      "recommended_size_usd": 3.791225232355921,
+      "potential_profit": 375.33129800323616
+    }
+  ],
   "all_markets": [
     {
       "market_id": "2003711",
@@ -64,10 +84,10 @@
       "comparison": "range",
       "target_date": "2026-04-19",
       "end_date": "2026-04-19",
-      "market_price": 0.9925,
+      "market_price": 0.993,
       "p_model": 0.14902694394993976,
       "forecast_temp": 10.65,
-      "edge": -0.8434730560500603,
+      "edge": -0.8439730560500602,
       "should_trade": false,
       "filter_reason": "price_too_high"
     },
@@ -80,12 +100,12 @@
       "comparison": "range",
       "target_date": "2026-04-19",
       "end_date": "2026-04-19",
-      "market_price": 0.0125,
+      "market_price": 0.007,
       "p_model": 0.12527231437762998,
       "forecast_temp": 10.65,
-      "edge": 0.11277231437762998,
+      "edge": 0.11827231437762997,
       "should_trade": false,
-      "filter_reason": "insufficient_edge"
+      "filter_reason": "price_too_low"
     },
     {
       "market_id": "2003716",
@@ -96,10 +116,10 @@
       "comparison": "range",
       "target_date": "2026-04-19",
       "end_date": "2026-04-19",
-      "market_price": 0.003,
+      "market_price": 0.0025,
       "p_model": 0.09072225540479795,
       "forecast_temp": 10.65,
-      "edge": 0.08772225540479794,
+      "edge": 0.08822225540479794,
       "should_trade": false,
       "filter_reason": "price_too_low"
     },
@@ -112,10 +132,10 @@
       "comparison": "range",
       "target_date": "2026-04-19",
       "end_date": "2026-04-19",
-      "market_price": 0.002,
+      "market_price": 0.0005,
       "p_model": 0.05660268577020022,
       "forecast_temp": 10.65,
-      "edge": 0.05460268577020022,
+      "edge": 0.05610268577020022,
       "should_trade": false,
       "filter_reason": "price_too_low"
     },
@@ -176,10 +196,10 @@
       "comparison": ">=",
       "target_date": "2026-04-19",
       "end_date": "2026-04-19",
-      "market_price": 0.001,
+      "market_price": 0.0015,
       "p_model": 0.002687920598379301,
       "forecast_temp": 10.65,
-      "edge": 0.0016879205983793008,
+      "edge": 0.0011879205983793008,
       "should_trade": false,
       "filter_reason": "price_too_low"
     },
@@ -192,12 +212,12 @@
       "comparison": "<=",
       "target_date": "2026-04-20",
       "end_date": "2026-04-20",
-      "market_price": 0.006,
+      "market_price": 0.01,
       "p_model": 0.3085375387259868,
       "forecast_temp": 9.3,
-      "edge": 0.3025375387259868,
-      "should_trade": false,
-      "filter_reason": "price_too_low"
+      "edge": 0.2985375387259868,
+      "should_trade": true,
+      "filter_reason": "passed"
     },
     {
       "market_id": "2011124",
@@ -208,10 +228,10 @@
       "comparison": "range",
       "target_date": "2026-04-20",
       "end_date": "2026-04-20",
-      "market_price": 0.0345,
+      "market_price": 0.037,
       "p_model": 0.11558501315891301,
       "forecast_temp": 9.3,
-      "edge": 0.081085013158913,
+      "edge": 0.078585013158913,
       "should_trade": false,
       "filter_reason": "insufficient_edge"
     },
@@ -224,10 +244,10 @@
       "comparison": "range",
       "target_date": "2026-04-20",
       "end_date": "2026-04-20",
-      "market_price": 0.21,
+      "market_price": 0.205,
       "p_model": 0.12255992671363652,
       "forecast_temp": 9.3,
-      "edge": -0.08744007328636347,
+      "edge": -0.08244007328636346,
       "should_trade": false,
       "filter_reason": "price_too_high"
     },
@@ -240,10 +260,10 @@
       "comparison": "range",
       "target_date": "2026-04-20",
       "end_date": "2026-04-20",
-      "market_price": 0.35,
+      "market_price": 0.39,
       "p_model": 0.10824244112535053,
       "forecast_temp": 9.3,
-      "edge": -0.24175755887464945,
+      "edge": -0.2817575588746495,
       "should_trade": false,
       "filter_reason": "price_in_50_50_range"
     },
@@ -256,12 +276,12 @@
       "comparison": "range",
       "target_date": "2026-04-20",
       "end_date": "2026-04-20",
-      "market_price": 0.325,
+      "market_price": 0.185,
       "p_model": 0.09716793689132353,
       "forecast_temp": 9.3,
-      "edge": -0.22783206310867649,
+      "edge": -0.08783206310867647,
       "should_trade": false,
-      "filter_reason": "price_too_high"
+      "filter_reason": "insufficient_edge"
     },
     {
       "market_id": "2011128",
@@ -272,10 +292,10 @@
       "comparison": "range",
       "target_date": "2026-04-20",
       "end_date": "2026-04-20",
-      "market_price": 0.105,
+      "market_price": 0.055,
       "p_model": 0.08066424643483783,
       "forecast_temp": 9.3,
-      "edge": -0.02433575356516217,
+      "edge": 0.025664246434837827,
       "should_trade": false,
       "filter_reason": "insufficient_edge"
     },
@@ -288,12 +308,12 @@
       "comparison": "range",
       "target_date": "2026-04-20",
       "end_date": "2026-04-20",
-      "market_price": 0.0125,
+      "market_price": 0.0035,
       "p_model": 0.061925788977148954,
       "forecast_temp": 9.3,
-      "edge": 0.04942578897714896,
+      "edge": 0.05842578897714895,
       "should_trade": false,
-      "filter_reason": "insufficient_edge"
+      "filter_reason": "price_too_low"
     },
     {
       "market_id": "2011130",

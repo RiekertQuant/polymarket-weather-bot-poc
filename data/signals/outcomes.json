@@ -1289,7 +1289,27 @@
       "return_pct": 14.5039
     }
   ],
-  "pending_signals": [],
+  "pending_signals": [
+    {
+      "market_id": "2011123",
+      "title": "Highest temperature in NYC on April 20? - 45\u00b0F or below",
+      "city": "New York City",
+      "threshold_celsius": null,
+      "threshold_celsius_upper": 7.5,
+      "comparison": "<=",
+      "target_date": "2026-04-20",
+      "end_date": "2026-04-20",
+      "market_price": 0.01,
+      "p_model": 0.3085375387259868,
+      "forecast_temp": 9.3,
+      "edge": 0.2985375387259868,
+      "should_trade": true,
+      "filter_reason": "passed",
+      "signal": "BUY_YES",
+      "recommended_size_usd": 3.791225232355921,
+      "potential_profit": 375.33129800323616
+    }
+  ],
   "summary": {
     "total_resolved": 56,
     "wins": 3,
@@ -1297,7 +1317,7 @@
     "win_rate": 0.05357142857142857,
     "total_pnl": 4.1003,
     "total_risked": 191.6376,
-    "pending": 0
+    "pending": 1
   },
   "last_updated": "2026-04-19"
 }
