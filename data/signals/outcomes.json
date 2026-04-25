@@ -1314,25 +1314,6 @@
   ],
   "pending_signals": [
     {
-      "market_id": "2064756",
-      "title": "Lowest temperature in NYC on April 26? - 54\u00b0F or higher",
-      "city": "New York City",
-      "threshold_celsius": 11.944444444444445,
-      "threshold_celsius_upper": null,
-      "comparison": ">=",
-      "target_date": "2026-04-26",
-      "end_date": "2026-04-26",
-      "market_price": 0.0125,
-      "p_model": 0.357001465041618,
-      "forecast_temp": 10.372222222222224,
-      "edge": 0.344501465041618,
-      "should_trade": true,
-      "filter_reason": "passed",
-      "signal": "BUY_YES",
-      "recommended_size_usd": 4.067008790249708,
-      "potential_profit": 321.2936944297269
-    },
-    {
       "market_id": "2064897",
       "title": "Highest temperature in NYC on April 26? - 49\u00b0F or below",
       "city": "New York City",
@@ -1341,15 +1322,15 @@
       "comparison": "<=",
       "target_date": "2026-04-26",
       "end_date": "2026-04-26",
-      "market_price": 0.0145,
+      "market_price": 0.0135,
       "p_model": 0.4338161673890961,
       "forecast_temp": 10.372222222222224,
-      "edge": 0.4193161673890961,
+      "edge": 0.4203161673890961,
       "should_trade": true,
       "filter_reason": "passed",
       "signal": "BUY_YES",
-      "recommended_size_usd": 4.515897004334576,
-      "potential_profit": 306.9252757083948
+      "recommended_size_usd": 4.521897004334576,
+      "potential_profit": 330.4334366500785
     }
   ],
   "summary": {
@@ -1359,7 +1340,7 @@
     "win_rate": 0.05263157894736842,
     "total_pnl": 0.3301,
     "total_risked": 195.4078,
-    "pending": 2
+    "pending": 1
   },
   "last_updated": "2026-04-25"
 }
