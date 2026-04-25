@@ -2,11 +2,30 @@
   "scans": [
     {
       "date": "2026-04-25",
-      "scan_time": "2026-04-25T20:28:03.792511Z",
+      "scan_time": "2026-04-25T21:27:38.905232Z",
       "data_source": "polymarket_api",
       "markets_scanned": 44,
-      "signals_generated": 1,
+      "signals_generated": 2,
       "signals": [
+        {
+          "market_id": "2064756",
+          "title": "Lowest temperature in NYC on April 26? - 54\u00b0F or higher",
+          "city": "New York City",
+          "threshold_celsius": 11.944444444444445,
+          "threshold_celsius_upper": null,
+          "comparison": ">=",
+          "target_date": "2026-04-26",
+          "end_date": "2026-04-26",
+          "market_price": 0.015,
+          "p_model": 0.357001465041618,
+          "forecast_temp": 10.372222222222224,
+          "edge": 0.342001465041618,
+          "should_trade": true,
+          "filter_reason": "passed",
+          "signal": "BUY_YES",
+          "recommended_size_usd": 4.052008790249708,
+          "potential_profit": 266.08191055973083
+        },
         {
           "market_id": "2064897",
           "title": "Highest temperature in NYC on April 26? - 49\u00b0F or below",
@@ -16,15 +35,15 @@
           "comparison": "<=",
           "target_date": "2026-04-26",
           "end_date": "2026-04-26",
-          "market_price": 0.0125,
+          "market_price": 0.014,
           "p_model": 0.4338161673890961,
           "forecast_temp": 10.372222222222224,
-          "edge": 0.4213161673890961,
+          "edge": 0.4198161673890961,
           "should_trade": true,
           "filter_reason": "passed",
           "signal": "BUY_YES",
-          "recommended_size_usd": 4.5278970043345765,
-          "potential_profit": 357.7038633424316
+          "recommended_size_usd": 4.518897004334576,
+          "potential_profit": 318.25946044813514
         }
       ]
     },
@@ -2213,8 +2232,8 @@
       "signals": []
     }
   ],
-  "total_signals": 77,
+  "total_signals": 78,
   "signals_by_city": {
-    "New York City": 77
+    "New York City": 78
   }
 }
