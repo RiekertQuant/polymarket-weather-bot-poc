@@ -1,6 +1,14 @@
 {
   "scans": [
     {
+      "date": "2026-04-28",
+      "scan_time": "2026-04-28T01:55:40.597069Z",
+      "data_source": "polymarket_api",
+      "markets_scanned": 22,
+      "signals_generated": 0,
+      "signals": []
+    },
+    {
       "date": "2026-04-27",
       "scan_time": "2026-04-27T23:42:40.051106Z",
       "data_source": "polymarket_api",
@@ -2153,76 +2161,10 @@
           "potential_profit": 111.33766748861558
         }
       ]
-    },
-    {
-      "date": "2026-01-28",
-      "scan_time": "2026-01-28T19:55:25.084829Z",
-      "data_source": "polymarket_api",
-      "markets_scanned": 21,
-      "signals_generated": 3,
-      "signals": [
-        {
-          "market_id": "1270717",
-          "title": "Highest temperature in NYC on January 28? - 26-27\u00b0F",
-          "city": "New York City",
-          "threshold_celsius": -3.611111111111111,
-          "threshold_celsius_upper": -2.5,
-          "comparison": "range",
-          "target_date": "2026-01-28",
-          "end_date": "2026-01-28",
-          "market_price": 0.0485,
-          "p_model": 0.15740177341373385,
-          "forecast_temp": -4.7,
-          "edge": 0.10890177341373385,
-          "should_trade": true,
-          "filter_reason": "passed",
-          "signal": "BUY_YES",
-          "recommended_size_usd": 2.653410640482403,
-          "potential_profit": 52.05608710142281
-        },
-        {
-          "market_id": "1276586",
-          "title": "Highest temperature in NYC on January 29? - 17\u00b0F or below",
-          "city": "New York City",
-          "threshold_celsius": null,
-          "threshold_celsius_upper": -8.055555555555555,
-          "comparison": "<=",
-          "target_date": "2026-01-29",
-          "end_date": "2026-01-29",
-          "market_price": 0.011,
-          "p_model": 0.26507476279895176,
-          "forecast_temp": -6.8,
-          "edge": 0.25407476279895175,
-          "should_trade": true,
-          "filter_reason": "passed",
-          "signal": "BUY_YES",
-          "recommended_size_usd": 3.5244485767937106,
-          "potential_profit": 316.8799674953618
-        },
-        {
-          "market_id": "1276587",
-          "title": "Highest temperature in NYC on January 29? - 18-19\u00b0F",
-          "city": "New York City",
-          "threshold_celsius": -8.055555555555555,
-          "threshold_celsius_upper": -6.944444444444445,
-          "comparison": "range",
-          "target_date": "2026-01-29",
-          "end_date": "2026-01-29",
-          "market_price": 0.0465,
-          "p_model": 0.20613776748864793,
-          "forecast_temp": -6.8,
-          "edge": 0.15963776748864794,
-          "should_trade": true,
-          "filter_reason": "passed",
-          "signal": "BUY_YES",
-          "recommended_size_usd": 2.9578266049318875,
-          "potential_profit": 60.6513476946786
-        }
-      ]
     }
   ],
-  "total_signals": 77,
+  "total_signals": 74,
   "signals_by_city": {
-    "New York City": 77
+    "New York City": 74
   }
 }
