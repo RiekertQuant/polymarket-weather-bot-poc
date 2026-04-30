@@ -1,6 +1,14 @@
 {
   "scans": [
     {
+      "date": "2026-04-30",
+      "scan_time": "2026-04-30T01:57:05.539844Z",
+      "data_source": "polymarket_api",
+      "markets_scanned": 22,
+      "signals_generated": 0,
+      "signals": []
+    },
+    {
       "date": "2026-04-29",
       "scan_time": "2026-04-29T23:43:49.621983Z",
       "data_source": "polymarket_api",
@@ -2037,57 +2045,10 @@
           "potential_profit": 49.4531732078777
         }
       ]
-    },
-    {
-      "date": "2026-01-30",
-      "scan_time": "2026-01-30T23:16:52.633931Z",
-      "data_source": "polymarket_api",
-      "markets_scanned": 14,
-      "signals_generated": 2,
-      "signals": [
-        {
-          "market_id": "1282071",
-          "title": "Highest temperature in NYC on January 30? - 20\u00b0F or higher",
-          "city": "New York City",
-          "threshold_celsius": -6.944444444444445,
-          "threshold_celsius_upper": null,
-          "comparison": ">=",
-          "target_date": "2026-01-30",
-          "end_date": "2026-01-30",
-          "market_price": 0.008,
-          "p_model": 0.5025905160831858,
-          "forecast_temp": -6.93015873015873,
-          "edge": 0.4945905160831858,
-          "should_trade": true,
-          "filter_reason": "passed",
-          "signal": "BUY_YES",
-          "recommended_size_usd": 4.967543096499115,
-          "potential_profit": 615.9753439658904
-        },
-        {
-          "market_id": "1291793",
-          "title": "Highest temperature in NYC on January 31? - 17\u00b0F or below",
-          "city": "New York City",
-          "threshold_celsius": null,
-          "threshold_celsius_upper": -8.055555555555555,
-          "comparison": "<=",
-          "target_date": "2026-01-31",
-          "end_date": "2026-01-31",
-          "market_price": 0.014,
-          "p_model": 0.17614445312799853,
-          "forecast_temp": -5.73015873015873,
-          "edge": 0.16214445312799852,
-          "should_trade": true,
-          "filter_reason": "passed",
-          "signal": "BUY_YES",
-          "recommended_size_usd": 2.972866718767991,
-          "potential_profit": 209.37475605037423
-        }
-      ]
     }
   ],
-  "total_signals": 70,
+  "total_signals": 68,
   "signals_by_city": {
-    "New York City": 70
+    "New York City": 68
   }
 }
