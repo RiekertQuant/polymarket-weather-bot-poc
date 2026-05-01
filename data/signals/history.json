@@ -1,6 +1,14 @@
 {
   "scans": [
     {
+      "date": "2026-05-01",
+      "scan_time": "2026-05-01T01:59:13.376853Z",
+      "data_source": "polymarket_api",
+      "markets_scanned": 22,
+      "signals_generated": 0,
+      "signals": []
+    },
+    {
       "date": "2026-04-30",
       "scan_time": "2026-04-30T23:42:05.176052Z",
       "data_source": "polymarket_api",
@@ -1979,76 +1987,10 @@
           "potential_profit": 25.506935507362503
         }
       ]
-    },
-    {
-      "date": "2026-01-31",
-      "scan_time": "2026-01-31T23:13:45.361980Z",
-      "data_source": "polymarket_api",
-      "markets_scanned": 21,
-      "signals_generated": 3,
-      "signals": [
-        {
-          "market_id": "1291798",
-          "title": "Highest temperature in NYC on January 31? - 26-27\u00b0F",
-          "city": "New York City",
-          "threshold_celsius": -3.611111111111111,
-          "threshold_celsius_upper": -2.5,
-          "comparison": "range",
-          "target_date": "2026-01-31",
-          "end_date": "2026-01-31",
-          "market_price": 0.006,
-          "p_model": 0.17739080151246567,
-          "forecast_temp": -4.13015873015873,
-          "edge": 0.17139080151246566,
-          "should_trade": true,
-          "filter_reason": "passed",
-          "signal": "BUY_YES",
-          "recommended_size_usd": 3.028344809074794,
-          "potential_profit": 501.6957900367242
-        },
-        {
-          "market_id": "1309749",
-          "title": "Highest temperature in NYC on February 1? - 19\u00b0F or below",
-          "city": "New York City",
-          "threshold_celsius": null,
-          "threshold_celsius_upper": -6.944444444444445,
-          "comparison": "<=",
-          "target_date": "2026-02-01",
-          "end_date": "2026-02-01",
-          "market_price": 0.015,
-          "p_model": 0.1519898474946258,
-          "forecast_temp": -4.374603174603174,
-          "edge": 0.13698984749462578,
-          "should_trade": true,
-          "filter_reason": "passed",
-          "signal": "BUY_YES",
-          "recommended_size_usd": 2.8219390849677546,
-          "potential_profit": 185.30733324621588
-        },
-        {
-          "market_id": "1309760",
-          "title": "Highest temperature in NYC on February 2? - 28\u00b0F or below",
-          "city": "New York City",
-          "threshold_celsius": null,
-          "threshold_celsius_upper": -1.9444444444444444,
-          "comparison": "<=",
-          "target_date": "2026-02-02",
-          "end_date": "2026-02-02",
-          "market_price": 0.06,
-          "p_model": 0.2527642539845145,
-          "forecast_temp": -0.08015873015873037,
-          "edge": 0.19276425398451452,
-          "should_trade": true,
-          "filter_reason": "passed",
-          "signal": "BUY_YES",
-          "recommended_size_usd": 3.1565855239070872,
-          "potential_profit": 49.4531732078777
-        }
-      ]
     }
   ],
-  "total_signals": 68,
+  "total_signals": 65,
   "signals_by_city": {
-    "New York City": 68
+    "New York City": 65
   }
 }
