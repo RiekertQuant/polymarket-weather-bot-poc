@@ -1,6 +1,14 @@
 {
   "scans": [
     {
+      "date": "2026-05-08",
+      "scan_time": "2026-05-08T02:01:30.824387Z",
+      "data_source": "polymarket_api",
+      "markets_scanned": 22,
+      "signals_generated": 0,
+      "signals": []
+    },
+    {
       "date": "2026-05-07",
       "scan_time": "2026-05-07T23:43:23.922969Z",
       "data_source": "polymarket_api",
@@ -1535,57 +1543,10 @@
           "potential_profit": 49.63535646126388
         }
       ]
-    },
-    {
-      "date": "2026-02-07",
-      "scan_time": "2026-02-07T23:19:54.899554Z",
-      "data_source": "polymarket_api",
-      "markets_scanned": 14,
-      "signals_generated": 2,
-      "signals": [
-        {
-          "market_id": "1344855",
-          "title": "Highest temperature in NYC on February 8? - 15\u00b0F or below",
-          "city": "New York City",
-          "threshold_celsius": null,
-          "threshold_celsius_upper": -9.166666666666666,
-          "comparison": "<=",
-          "target_date": "2026-02-08",
-          "end_date": "2026-02-08",
-          "market_price": 0.0365,
-          "p_model": 0.45939675168868244,
-          "forecast_temp": -8.769047619047619,
-          "edge": 0.42289675168868246,
-          "should_trade": true,
-          "filter_reason": "passed",
-          "signal": "BUY_YES",
-          "recommended_size_usd": 4.5373805101320945,
-          "potential_profit": 119.77441428800749
-        },
-        {
-          "market_id": "1351206",
-          "title": "Highest temperature in NYC on February 9? - 34\u00b0F or higher",
-          "city": "New York City",
-          "threshold_celsius": 0.8333333333333334,
-          "threshold_celsius_upper": null,
-          "comparison": ">=",
-          "target_date": "2026-02-09",
-          "end_date": "2026-02-09",
-          "market_price": 0.0365,
-          "p_model": 0.32109658512207706,
-          "forecast_temp": -0.8579365079365082,
-          "edge": 0.2845965851220771,
-          "should_trade": true,
-          "filter_reason": "passed",
-          "signal": "BUY_YES",
-          "recommended_size_usd": 3.7075795107324625,
-          "potential_profit": 97.86994133125282
-        }
-      ]
     }
   ],
-  "total_signals": 44,
+  "total_signals": 42,
   "signals_by_city": {
-    "New York City": 44
+    "New York City": 42
   }
 }
