@@ -1,5 +1,5 @@
 {
-  "scan_time": "2026-05-09T10:46:48.988919Z",
+  "scan_time": "2026-05-09T11:41:12.793111Z",
   "scan_date": "2026-05-09",
   "data_source": "polymarket_api",
   "weather_source": "nws",
@@ -15,15 +15,15 @@
       "comparison": ">=",
       "target_date": "2026-05-09",
       "end_date": "2026-05-09",
-      "market_price": 0.0105,
+      "market_price": 0.0115,
       "p_model": 0.38538215487023963,
       "forecast_temp": 19.533333333333335,
-      "edge": 0.3748821548702396,
+      "edge": 0.3738821548702396,
       "should_trade": true,
       "filter_reason": "passed",
       "signal": "BUY_YES",
-      "recommended_size_usd": 4.249292929221438,
-      "potential_profit": 400.44527175853455
+      "recommended_size_usd": 4.243292929221438,
+      "potential_profit": 364.738700916121
     }
   ],
   "all_markets": [
@@ -36,10 +36,10 @@
       "comparison": "range",
       "target_date": "2026-05-09",
       "end_date": "2026-05-09",
-      "market_price": 0.035,
+      "market_price": 0.03,
       "p_model": 0.011651121310847334,
       "forecast_temp": 19.533333333333335,
-      "edge": -0.02334887868915267,
+      "edge": -0.018348878689152665,
       "should_trade": false,
       "filter_reason": "insufficient_edge"
     },
@@ -52,10 +52,10 @@
       "comparison": "range",
       "target_date": "2026-05-09",
       "end_date": "2026-05-09",
-      "market_price": 0.695,
+      "market_price": 0.73,
       "p_model": 0.028787652886938055,
       "forecast_temp": 19.533333333333335,
-      "edge": -0.6662123471130619,
+      "edge": -0.7012123471130619,
       "should_trade": false,
       "filter_reason": "price_too_high"
     },
@@ -132,10 +132,10 @@
       "comparison": "range",
       "target_date": "2026-05-09",
       "end_date": "2026-05-09",
-      "market_price": 0.3,
+      "market_price": 0.25,
       "p_model": 0.018887991274761255,
       "forecast_temp": 19.533333333333335,
-      "edge": -0.2811120087252387,
+      "edge": -0.23111200872523874,
       "should_trade": false,
       "filter_reason": "price_too_high"
     },
@@ -292,10 +292,10 @@
       "comparison": "range",
       "target_date": "2026-05-09",
       "end_date": "2026-05-09",
-      "market_price": 0.295,
+      "market_price": 0.275,
       "p_model": 0.0703858961401927,
       "forecast_temp": 19.533333333333335,
-      "edge": -0.2246141038598073,
+      "edge": -0.20461410385980733,
       "should_trade": false,
       "filter_reason": "price_too_high"
     },
@@ -308,10 +308,10 @@
       "comparison": "range",
       "target_date": "2026-05-09",
       "end_date": "2026-05-09",
-      "market_price": 0.43,
+      "market_price": 0.435,
       "p_model": 0.08381445690583572,
       "forecast_temp": 19.533333333333335,
-      "edge": -0.34618554309416427,
+      "edge": -0.3511855430941643,
       "should_trade": false,
       "filter_reason": "price_in_50_50_range"
     },
@@ -324,12 +324,12 @@
       "comparison": "range",
       "target_date": "2026-05-09",
       "end_date": "2026-05-09",
-      "market_price": 0.198,
+      "market_price": 0.211,
       "p_model": 0.09383307195667162,
       "forecast_temp": 19.533333333333335,
-      "edge": -0.10416692804332839,
+      "edge": -0.11716692804332837,
       "should_trade": false,
-      "filter_reason": "insufficient_edge"
+      "filter_reason": "price_too_high"
     },
     {
       "market_id": "2179155",
@@ -340,10 +340,10 @@
       "comparison": "range",
       "target_date": "2026-05-09",
       "end_date": "2026-05-09",
-      "market_price": 0.0575,
+      "market_price": 0.0375,
       "p_model": 0.09876356092192168,
       "forecast_temp": 19.533333333333335,
-      "edge": 0.041263560921921676,
+      "edge": 0.06126356092192168,
       "should_trade": false,
       "filter_reason": "insufficient_edge"
     },
@@ -372,10 +372,10 @@
       "comparison": ">=",
       "target_date": "2026-05-09",
       "end_date": "2026-05-09",
-      "market_price": 0.0105,
+      "market_price": 0.0115,
       "p_model": 0.38538215487023963,
       "forecast_temp": 19.533333333333335,
-      "edge": 0.3748821548702396,
+      "edge": 0.3738821548702396,
       "should_trade": true,
       "filter_reason": "passed"
     }
