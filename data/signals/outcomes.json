@@ -1335,7 +1335,27 @@
       "return_pct": -1.0
     }
   ],
-  "pending_signals": [],
+  "pending_signals": [
+    {
+      "market_id": "2179157",
+      "title": "Highest temperature in NYC on May 9? - 70\u00b0F or higher",
+      "city": "New York City",
+      "threshold_celsius": 20.833333333333332,
+      "threshold_celsius_upper": null,
+      "comparison": ">=",
+      "target_date": "2026-05-09",
+      "end_date": "2026-05-09",
+      "market_price": 0.0105,
+      "p_model": 0.38538215487023963,
+      "forecast_temp": 19.533333333333335,
+      "edge": 0.3748821548702396,
+      "should_trade": true,
+      "filter_reason": "passed",
+      "signal": "BUY_YES",
+      "recommended_size_usd": 4.249292929221438,
+      "potential_profit": 400.44527175853455
+    }
+  ],
   "summary": {
     "total_resolved": 58,
     "wins": 3,
@@ -1343,7 +1363,7 @@
     "win_rate": 0.05172413793103448,
     "total_pnl": -4.1918,
     "total_risked": 199.9297,
-    "pending": 0
+    "pending": 1
   },
   "last_updated": "2026-05-09"
 }

@@ -2,11 +2,31 @@
   "scans": [
     {
       "date": "2026-05-09",
-      "scan_time": "2026-05-09T09:07:54.110902Z",
+      "scan_time": "2026-05-09T10:46:48.988919Z",
       "data_source": "polymarket_api",
       "markets_scanned": 22,
-      "signals_generated": 0,
-      "signals": []
+      "signals_generated": 1,
+      "signals": [
+        {
+          "market_id": "2179157",
+          "title": "Highest temperature in NYC on May 9? - 70\u00b0F or higher",
+          "city": "New York City",
+          "threshold_celsius": 20.833333333333332,
+          "threshold_celsius_upper": null,
+          "comparison": ">=",
+          "target_date": "2026-05-09",
+          "end_date": "2026-05-09",
+          "market_price": 0.0105,
+          "p_model": 0.38538215487023963,
+          "forecast_temp": 19.533333333333335,
+          "edge": 0.3748821548702396,
+          "should_trade": true,
+          "filter_reason": "passed",
+          "signal": "BUY_YES",
+          "recommended_size_usd": 4.249292929221438,
+          "potential_profit": 400.44527175853455
+        }
+      ]
     },
     {
       "date": "2026-05-08",
@@ -1487,8 +1507,8 @@
       ]
     }
   ],
-  "total_signals": 39,
+  "total_signals": 40,
   "signals_by_city": {
-    "New York City": 39
+    "New York City": 40
   }
 }
