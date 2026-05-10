@@ -1,6 +1,14 @@
 {
   "scans": [
     {
+      "date": "2026-05-10",
+      "scan_time": "2026-05-10T01:54:13.813844Z",
+      "data_source": "polymarket_api",
+      "markets_scanned": 22,
+      "signals_generated": 0,
+      "signals": []
+    },
+    {
       "date": "2026-05-09",
       "scan_time": "2026-05-09T23:37:00.168125Z",
       "data_source": "polymarket_api",
@@ -1438,57 +1446,10 @@
           "potential_profit": 24.34297253843717
         }
       ]
-    },
-    {
-      "date": "2026-02-09",
-      "scan_time": "2026-02-09T23:29:12.886857Z",
-      "data_source": "polymarket_api",
-      "markets_scanned": 21,
-      "signals_generated": 2,
-      "signals": [
-        {
-          "market_id": "1351205",
-          "title": "Highest temperature in NYC on February 9? - 32-33\u00b0F",
-          "city": "New York City",
-          "threshold_celsius": -0.2777777777777778,
-          "threshold_celsius_upper": 0.8333333333333334,
-          "comparison": "range",
-          "target_date": "2026-02-09",
-          "end_date": "2026-02-09",
-          "market_price": 0.0105,
-          "p_model": 0.18971713642511845,
-          "forecast_temp": -0.8301587301587303,
-          "edge": 0.17921713642511844,
-          "should_trade": true,
-          "filter_reason": "passed",
-          "signal": "BUY_YES",
-          "recommended_size_usd": 3.0753028185507105,
-          "potential_profit": 289.81067990056454
-        },
-        {
-          "market_id": "1359109",
-          "title": "Highest temperature in NYC on February 11? - 33\u00b0F or below",
-          "city": "New York City",
-          "threshold_celsius": null,
-          "threshold_celsius_upper": 0.8333333333333334,
-          "comparison": "<=",
-          "target_date": "2026-02-11",
-          "end_date": "2026-02-11",
-          "market_price": 0.0125,
-          "p_model": 0.18269565577309338,
-          "forecast_temp": 3.114285714285714,
-          "edge": 0.17019565577309337,
-          "should_trade": true,
-          "filter_reason": "passed",
-          "signal": "BUY_YES",
-          "recommended_size_usd": 3.0211739346385604,
-          "potential_profit": 238.67274083644628
-        }
-      ]
     }
   ],
-  "total_signals": 39,
+  "total_signals": 37,
   "signals_by_city": {
-    "New York City": 39
+    "New York City": 37
   }
 }
