@@ -1368,15 +1368,34 @@
       "comparison": ">=",
       "target_date": "2026-05-18",
       "end_date": "2026-05-18",
-      "market_price": 0.0155,
+      "market_price": 0.014,
       "p_model": 0.8561045414277118,
       "forecast_temp": 27.416666666666668,
-      "edge": 0.8406045414277118,
+      "edge": 0.8421045414277117,
       "should_trade": true,
       "filter_reason": "passed",
       "signal": "BUY_YES",
       "recommended_size_usd": 5.0,
-      "potential_profit": 317.5806451612903
+      "potential_profit": 352.1428571428571
+    },
+    {
+      "market_id": "2266328",
+      "title": "Lowest temperature in NYC on May 19? - 74\u00b0F or higher",
+      "city": "New York City",
+      "threshold_celsius": 23.055555555555557,
+      "threshold_celsius_upper": null,
+      "comparison": ">=",
+      "target_date": "2026-05-19",
+      "end_date": "2026-05-19",
+      "market_price": 0.0465,
+      "p_model": 0.9550276918024536,
+      "forecast_temp": 31.3,
+      "edge": 0.9085276918024536,
+      "should_trade": true,
+      "filter_reason": "passed",
+      "signal": "BUY_YES",
+      "recommended_size_usd": 5.0,
+      "potential_profit": 102.52688172043011
     },
     {
       "market_id": "2257899",
@@ -1405,7 +1424,7 @@
     "win_rate": 0.05084745762711865,
     "total_pnl": -7.959,
     "total_risked": 203.697,
-    "pending": 2
+    "pending": 3
   },
   "last_updated": "2026-05-17"
 }
