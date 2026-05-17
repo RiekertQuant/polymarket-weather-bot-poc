@@ -1368,6 +1368,25 @@
       "comparison": ">=",
       "target_date": "2026-05-18",
       "end_date": "2026-05-18",
+      "market_price": 0.0135,
+      "p_model": 0.42298999098486934,
+      "forecast_temp": 21.11111111111111,
+      "edge": 0.4094899909848693,
+      "should_trade": true,
+      "filter_reason": "passed",
+      "signal": "BUY_YES",
+      "recommended_size_usd": 4.456939945909216,
+      "potential_profit": 325.68675975106976
+    },
+    {
+      "market_id": "2257899",
+      "title": "Lowest temperature in NYC on May 18? - 72\u00b0F or higher",
+      "city": "New York City",
+      "threshold_celsius": 21.944444444444443,
+      "threshold_celsius_upper": null,
+      "comparison": ">=",
+      "target_date": "2026-05-18",
+      "end_date": "2026-05-18",
       "market_price": 0.013,
       "p_model": 0.6504723308421809,
       "forecast_temp": 24.2,
@@ -1386,7 +1405,7 @@
     "win_rate": 0.05084745762711865,
     "total_pnl": -7.959,
     "total_risked": 203.697,
-    "pending": 1
+    "pending": 2
   },
-  "last_updated": "2026-05-16"
+  "last_updated": "2026-05-17"
 }
