@@ -1356,9 +1356,7 @@
       "outcome": "NO",
       "pnl": -3.7672,
       "return_pct": -1.0
-    }
-  ],
-  "pending_signals": [
+    },
     {
       "market_id": "2257899",
       "title": "Lowest temperature in NYC on May 18? - 72\u00b0F or higher",
@@ -1376,8 +1374,14 @@
       "filter_reason": "passed",
       "signal": "BUY_YES",
       "recommended_size_usd": 5.0,
-      "potential_profit": 148.84615384615384
-    },
+      "potential_profit": 148.84615384615384,
+      "actual_temp": 32.0,
+      "outcome": "YES",
+      "pnl": 148.8462,
+      "return_pct": 29.7692
+    }
+  ],
+  "pending_signals": [
     {
       "market_id": "2266328",
       "title": "Lowest temperature in NYC on May 19? - 74\u00b0F or higher",
@@ -1396,35 +1400,16 @@
       "signal": "BUY_YES",
       "recommended_size_usd": 5.0,
       "potential_profit": 108.63636363636364
-    },
-    {
-      "market_id": "2257899",
-      "title": "Lowest temperature in NYC on May 18? - 72\u00b0F or higher",
-      "city": "New York City",
-      "threshold_celsius": 21.944444444444443,
-      "threshold_celsius_upper": null,
-      "comparison": ">=",
-      "target_date": "2026-05-18",
-      "end_date": "2026-05-18",
-      "market_price": 0.013,
-      "p_model": 0.6504723308421809,
-      "forecast_temp": 24.2,
-      "edge": 0.6374723308421809,
-      "should_trade": true,
-      "filter_reason": "passed",
-      "signal": "BUY_YES",
-      "recommended_size_usd": 5.0,
-      "potential_profit": 379.61538461538464
     }
   ],
   "summary": {
-    "total_resolved": 59,
-    "wins": 3,
+    "total_resolved": 60,
+    "wins": 4,
     "losses": 56,
-    "win_rate": 0.05084745762711865,
-    "total_pnl": -7.959,
-    "total_risked": 203.697,
-    "pending": 3
+    "win_rate": 0.06666666666666667,
+    "total_pnl": 140.8872,
+    "total_risked": 208.697,
+    "pending": 1
   },
-  "last_updated": "2026-05-18"
+  "last_updated": "2026-05-19"
 }
