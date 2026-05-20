@@ -1379,27 +1379,6 @@
       "outcome": "YES",
       "pnl": 148.8462,
       "return_pct": 29.7692
-    }
-  ],
-  "pending_signals": [
-    {
-      "market_id": "2289638",
-      "title": "Highest temperature in NYC on May 20? - 85\u00b0F or below",
-      "city": "New York City",
-      "threshold_celsius": null,
-      "threshold_celsius_upper": 29.72222222222222,
-      "comparison": "<=",
-      "target_date": "2026-05-20",
-      "end_date": "2026-05-20",
-      "market_price": 0.0345,
-      "p_model": 0.3310328526250228,
-      "forecast_temp": 31.972222222222225,
-      "edge": 0.2965328526250228,
-      "should_trade": true,
-      "filter_reason": "passed",
-      "signal": "BUY_YES",
-      "recommended_size_usd": 3.779197115750137,
-      "potential_profit": 105.7627482683118
     },
     {
       "market_id": "2266328",
@@ -1418,17 +1397,61 @@
       "filter_reason": "passed",
       "signal": "BUY_YES",
       "recommended_size_usd": 5.0,
-      "potential_profit": 108.63636363636364
+      "potential_profit": 108.63636363636364,
+      "actual_temp": 35.8,
+      "outcome": "YES",
+      "pnl": 108.6364,
+      "return_pct": 21.7273
+    }
+  ],
+  "pending_signals": [
+    {
+      "market_id": "2289638",
+      "title": "Highest temperature in NYC on May 20? - 85\u00b0F or below",
+      "city": "New York City",
+      "threshold_celsius": null,
+      "threshold_celsius_upper": 29.72222222222222,
+      "comparison": "<=",
+      "target_date": "2026-05-20",
+      "end_date": "2026-05-20",
+      "market_price": 0.015,
+      "p_model": 0.4113261919991917,
+      "forecast_temp": 30.555555555555557,
+      "edge": 0.39632619199919167,
+      "should_trade": true,
+      "filter_reason": "passed",
+      "signal": "BUY_YES",
+      "recommended_size_usd": 4.37795715199515,
+      "potential_profit": 287.4858529810149
+    },
+    {
+      "market_id": "2289638",
+      "title": "Highest temperature in NYC on May 20? - 85\u00b0F or below",
+      "city": "New York City",
+      "threshold_celsius": null,
+      "threshold_celsius_upper": 29.72222222222222,
+      "comparison": "<=",
+      "target_date": "2026-05-20",
+      "end_date": "2026-05-20",
+      "market_price": 0.0345,
+      "p_model": 0.3310328526250228,
+      "forecast_temp": 31.972222222222225,
+      "edge": 0.2965328526250228,
+      "should_trade": true,
+      "filter_reason": "passed",
+      "signal": "BUY_YES",
+      "recommended_size_usd": 3.779197115750137,
+      "potential_profit": 105.7627482683118
     }
   ],
   "summary": {
-    "total_resolved": 60,
-    "wins": 4,
+    "total_resolved": 61,
+    "wins": 5,
     "losses": 56,
-    "win_rate": 0.06666666666666667,
-    "total_pnl": 140.8872,
-    "total_risked": 208.697,
+    "win_rate": 0.08196721311475409,
+    "total_pnl": 249.5236,
+    "total_risked": 213.697,
     "pending": 2
   },
-  "last_updated": "2026-05-19"
+  "last_updated": "2026-05-20"
 }
