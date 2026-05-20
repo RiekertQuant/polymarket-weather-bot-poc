@@ -1414,25 +1414,6 @@
       "comparison": "<=",
       "target_date": "2026-05-20",
       "end_date": "2026-05-20",
-      "market_price": 0.015,
-      "p_model": 0.4113261919991917,
-      "forecast_temp": 30.555555555555557,
-      "edge": 0.39632619199919167,
-      "should_trade": true,
-      "filter_reason": "passed",
-      "signal": "BUY_YES",
-      "recommended_size_usd": 4.37795715199515,
-      "potential_profit": 287.4858529810149
-    },
-    {
-      "market_id": "2289638",
-      "title": "Highest temperature in NYC on May 20? - 85\u00b0F or below",
-      "city": "New York City",
-      "threshold_celsius": null,
-      "threshold_celsius_upper": 29.72222222222222,
-      "comparison": "<=",
-      "target_date": "2026-05-20",
-      "end_date": "2026-05-20",
       "market_price": 0.0345,
       "p_model": 0.3310328526250228,
       "forecast_temp": 31.972222222222225,
@@ -1451,7 +1432,7 @@
     "win_rate": 0.08196721311475409,
     "total_pnl": 249.5236,
     "total_risked": 213.697,
-    "pending": 2
+    "pending": 1
   },
   "last_updated": "2026-05-20"
 }
