@@ -1402,9 +1402,7 @@
       "outcome": "YES",
       "pnl": 108.6364,
       "return_pct": 21.7273
-    }
-  ],
-  "pending_signals": [
+    },
     {
       "market_id": "2289638",
       "title": "Highest temperature in NYC on May 20? - 85\u00b0F or below",
@@ -1422,17 +1420,22 @@
       "filter_reason": "passed",
       "signal": "BUY_YES",
       "recommended_size_usd": 3.779197115750137,
-      "potential_profit": 105.7627482683118
+      "potential_profit": 105.7627482683118,
+      "actual_temp": 34.6,
+      "outcome": "NO",
+      "pnl": -3.7792,
+      "return_pct": -1.0
     }
   ],
+  "pending_signals": [],
   "summary": {
-    "total_resolved": 61,
+    "total_resolved": 62,
     "wins": 5,
-    "losses": 56,
-    "win_rate": 0.08196721311475409,
-    "total_pnl": 249.5236,
-    "total_risked": 213.697,
-    "pending": 1
+    "losses": 57,
+    "win_rate": 0.08064516129032258,
+    "total_pnl": 245.7444,
+    "total_risked": 217.4762,
+    "pending": 0
   },
-  "last_updated": "2026-05-20"
+  "last_updated": "2026-05-21"
 }
