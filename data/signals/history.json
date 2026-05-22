@@ -2,11 +2,31 @@
   "scans": [
     {
       "date": "2026-05-22",
-      "scan_time": "2026-05-22T16:14:16.634210Z",
+      "scan_time": "2026-05-22T18:28:05.168190Z",
       "data_source": "polymarket_api",
-      "markets_scanned": 22,
-      "signals_generated": 0,
-      "signals": []
+      "markets_scanned": 33,
+      "signals_generated": 1,
+      "signals": [
+        {
+          "market_id": "2318510",
+          "title": "Lowest temperature in NYC on May 25? - 66\u00b0F or higher",
+          "city": "New York City",
+          "threshold_celsius": 18.61111111111111,
+          "threshold_celsius_upper": null,
+          "comparison": ">=",
+          "target_date": "2026-05-25",
+          "end_date": "2026-05-25",
+          "market_price": 0.01,
+          "p_model": 0.47703622216935093,
+          "forecast_temp": 18.322222222222223,
+          "edge": 0.4670362221693509,
+          "should_trade": true,
+          "filter_reason": "passed",
+          "signal": "BUY_YES",
+          "recommended_size_usd": 4.802217333016106,
+          "potential_profit": 475.41951596859445
+        }
+      ]
     },
     {
       "date": "2026-05-21",
@@ -1160,8 +1180,8 @@
       ]
     }
   ],
-  "total_signals": 22,
+  "total_signals": 23,
   "signals_by_city": {
-    "New York City": 22
+    "New York City": 23
   }
 }
