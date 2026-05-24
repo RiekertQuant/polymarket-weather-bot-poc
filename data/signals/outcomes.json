@@ -1429,25 +1429,6 @@
   ],
   "pending_signals": [
     {
-      "market_id": "2328864",
-      "title": "Lowest temperature in NYC on May 26? - 68\u00b0F or higher",
-      "city": "New York City",
-      "threshold_celsius": 19.72222222222222,
-      "threshold_celsius_upper": null,
-      "comparison": ">=",
-      "target_date": "2026-05-26",
-      "end_date": "2026-05-26",
-      "market_price": 0.021,
-      "p_model": 0.6806897385573383,
-      "forecast_temp": 22.005555555555556,
-      "edge": 0.6596897385573383,
-      "should_trade": true,
-      "filter_reason": "passed",
-      "signal": "BUY_YES",
-      "recommended_size_usd": 5.0,
-      "potential_profit": 233.09523809523807
-    },
-    {
       "market_id": "2318510",
       "title": "Lowest temperature in NYC on May 25? - 66\u00b0F or higher",
       "city": "New York City",
@@ -1474,7 +1455,7 @@
     "win_rate": 0.08064516129032258,
     "total_pnl": 245.7444,
     "total_risked": 217.4762,
-    "pending": 2
+    "pending": 1
   },
   "last_updated": "2026-05-24"
 }
