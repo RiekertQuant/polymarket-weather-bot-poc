@@ -1448,6 +1448,29 @@
       "outcome": "YES",
       "pnl": 424.2734,
       "return_pct": 99.0
+    },
+    {
+      "market_id": "2328864",
+      "title": "Lowest temperature in NYC on May 26? - 68\u00b0F or higher",
+      "city": "New York City",
+      "threshold_celsius": 19.72222222222222,
+      "threshold_celsius_upper": null,
+      "comparison": ">=",
+      "target_date": "2026-05-26",
+      "end_date": "2026-05-26",
+      "market_price": 0.0105,
+      "p_model": 0.7066664030478587,
+      "forecast_temp": 21.755555555555556,
+      "edge": 0.6961664030478587,
+      "should_trade": true,
+      "filter_reason": "passed",
+      "signal": "BUY_YES",
+      "recommended_size_usd": 5.0,
+      "potential_profit": 471.19047619047615,
+      "actual_temp": 26.2,
+      "outcome": "YES",
+      "pnl": 471.1905,
+      "return_pct": 94.2381
     }
   ],
   "pending_signals": [
@@ -1469,35 +1492,16 @@
       "signal": "BUY_YES",
       "recommended_size_usd": 5.0,
       "potential_profit": 365.3703703703704
-    },
-    {
-      "market_id": "2328864",
-      "title": "Lowest temperature in NYC on May 26? - 68\u00b0F or higher",
-      "city": "New York City",
-      "threshold_celsius": 19.72222222222222,
-      "threshold_celsius_upper": null,
-      "comparison": ">=",
-      "target_date": "2026-05-26",
-      "end_date": "2026-05-26",
-      "market_price": 0.0105,
-      "p_model": 0.7066664030478587,
-      "forecast_temp": 21.755555555555556,
-      "edge": 0.6961664030478587,
-      "should_trade": true,
-      "filter_reason": "passed",
-      "signal": "BUY_YES",
-      "recommended_size_usd": 5.0,
-      "potential_profit": 471.19047619047615
     }
   ],
   "summary": {
-    "total_resolved": 63,
-    "wins": 6,
+    "total_resolved": 64,
+    "wins": 7,
     "losses": 57,
-    "win_rate": 0.09523809523809523,
-    "total_pnl": 670.0178,
-    "total_risked": 221.7617,
-    "pending": 2
+    "win_rate": 0.109375,
+    "total_pnl": 1141.2083,
+    "total_risked": 226.7617,
+    "pending": 1
   },
-  "last_updated": "2026-05-26"
+  "last_updated": "2026-05-27"
 }
