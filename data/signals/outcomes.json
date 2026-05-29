@@ -1471,9 +1471,7 @@
       "outcome": "YES",
       "pnl": 471.1905,
       "return_pct": 94.2381
-    }
-  ],
-  "pending_signals": [
+    },
     {
       "market_id": "2344727",
       "title": "Lowest temperature in NYC on May 28? - 72\u00b0F or higher",
@@ -1491,17 +1489,22 @@
       "filter_reason": "passed",
       "signal": "BUY_YES",
       "recommended_size_usd": 5.0,
-      "potential_profit": 365.3703703703704
+      "potential_profit": 365.3703703703704,
+      "actual_temp": 24.5,
+      "outcome": "YES",
+      "pnl": 365.3704,
+      "return_pct": 73.0741
     }
   ],
+  "pending_signals": [],
   "summary": {
-    "total_resolved": 64,
-    "wins": 7,
+    "total_resolved": 65,
+    "wins": 8,
     "losses": 57,
-    "win_rate": 0.109375,
-    "total_pnl": 1141.2083,
-    "total_risked": 226.7617,
-    "pending": 1
+    "win_rate": 0.12307692307692308,
+    "total_pnl": 1506.5787,
+    "total_risked": 231.7617,
+    "pending": 0
   },
-  "last_updated": "2026-05-28"
+  "last_updated": "2026-05-29"
 }
