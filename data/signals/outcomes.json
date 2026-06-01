@@ -1496,27 +1496,7 @@
       "return_pct": 73.0741
     }
   ],
-  "pending_signals": [
-    {
-      "market_id": "2391236",
-      "title": "Highest temperature in NYC on June 1? - 67\u00b0F or below",
-      "city": "New York City",
-      "threshold_celsius": null,
-      "threshold_celsius_upper": 19.72222222222222,
-      "comparison": "<=",
-      "target_date": "2026-06-01",
-      "end_date": "2026-06-01",
-      "market_price": 0.0165,
-      "p_model": 0.41290229529218514,
-      "forecast_temp": 20.294444444444444,
-      "edge": 0.3964022952921851,
-      "should_trade": true,
-      "filter_reason": "passed",
-      "signal": "BUY_YES",
-      "recommended_size_usd": 4.378413771753111,
-      "potential_profit": 260.97999663752637
-    }
-  ],
+  "pending_signals": [],
   "summary": {
     "total_resolved": 65,
     "wins": 8,
@@ -1524,7 +1504,7 @@
     "win_rate": 0.12307692307692308,
     "total_pnl": 1506.5787,
     "total_risked": 231.7617,
-    "pending": 1
+    "pending": 0
   },
   "last_updated": "2026-06-01"
 }
