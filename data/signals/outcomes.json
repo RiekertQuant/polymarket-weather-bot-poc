@@ -1496,7 +1496,27 @@
       "return_pct": 73.0741
     }
   ],
-  "pending_signals": [],
+  "pending_signals": [
+    {
+      "market_id": "2441387",
+      "title": "Lowest temperature in NYC on June 6? - 76\u00b0F or higher",
+      "city": "New York City",
+      "threshold_celsius": 24.166666666666668,
+      "threshold_celsius_upper": null,
+      "comparison": ">=",
+      "target_date": "2026-06-06",
+      "end_date": "2026-06-06",
+      "market_price": 0.191,
+      "p_model": 0.995272966061224,
+      "forecast_temp": 31.588888888888892,
+      "edge": 0.804272966061224,
+      "should_trade": true,
+      "filter_reason": "passed",
+      "signal": "BUY_YES",
+      "recommended_size_usd": 5.0,
+      "potential_profit": 21.17801047120419
+    }
+  ],
   "summary": {
     "total_resolved": 65,
     "wins": 8,
@@ -1504,7 +1524,7 @@
     "win_rate": 0.12307692307692308,
     "total_pnl": 1506.5787,
     "total_risked": 231.7617,
-    "pending": 0
+    "pending": 1
   },
   "last_updated": "2026-06-06"
 }
