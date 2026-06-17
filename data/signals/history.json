@@ -1,6 +1,14 @@
 {
   "scans": [
     {
+      "date": "2026-06-17",
+      "scan_time": "2026-06-17T00:08:34.654323Z",
+      "data_source": "polymarket_api",
+      "markets_scanned": 0,
+      "signals_generated": 0,
+      "signals": []
+    },
+    {
       "date": "2026-06-16",
       "scan_time": "2026-06-16T22:47:16.803925Z",
       "data_source": "polymarket_api",
@@ -1010,38 +1018,10 @@
       "markets_scanned": 33,
       "signals_generated": 0,
       "signals": []
-    },
-    {
-      "date": "2026-03-19",
-      "scan_time": "2026-03-19T23:20:43.874236Z",
-      "data_source": "polymarket_api",
-      "markets_scanned": 44,
-      "signals_generated": 1,
-      "signals": [
-        {
-          "market_id": "1638078",
-          "title": "Highest temperature in NYC on March 22? - 53\u00b0F or below",
-          "city": "New York City",
-          "threshold_celsius": null,
-          "threshold_celsius_upper": 11.944444444444445,
-          "comparison": "<=",
-          "target_date": "2026-03-22",
-          "end_date": "2026-03-22",
-          "market_price": 0.125,
-          "p_model": 0.47134826891090437,
-          "forecast_temp": 12.272222222222222,
-          "edge": 0.34634826891090437,
-          "should_trade": true,
-          "filter_reason": "passed",
-          "signal": "BUY_YES",
-          "recommended_size_usd": 4.078089613465426,
-          "potential_profit": 28.546627294257984
-        }
-      ]
     }
   ],
-  "total_signals": 16,
+  "total_signals": 15,
   "signals_by_city": {
-    "New York City": 16
+    "New York City": 15
   }
 }
