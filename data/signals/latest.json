@@ -1,5 +1,5 @@
 {
-  "scan_time": "2026-06-27T17:55:09.963652Z",
+  "scan_time": "2026-06-27T19:03:14.627426Z",
   "scan_date": "2026-06-27",
   "data_source": "polymarket_api",
   "weather_source": "nws",
@@ -32,12 +32,12 @@
       "comparison": "range",
       "target_date": "2026-06-27",
       "end_date": "2026-06-27",
-      "market_price": 0.011,
+      "market_price": 0.0065,
       "p_model": 0.08755945318732117,
       "forecast_temp": 25.033333333333335,
-      "edge": 0.07655945318732117,
+      "edge": 0.08105945318732116,
       "should_trade": false,
-      "filter_reason": "insufficient_edge"
+      "filter_reason": "price_too_low"
     },
     {
       "market_id": "2687157",
@@ -48,10 +48,10 @@
       "comparison": "range",
       "target_date": "2026-06-27",
       "end_date": "2026-06-27",
-      "market_price": 0.004,
+      "market_price": 0.003,
       "p_model": 0.06266155144299801,
       "forecast_temp": 25.033333333333335,
-      "edge": 0.058661551442998006,
+      "edge": 0.059661551442998007,
       "should_trade": false,
       "filter_reason": "price_too_low"
     },
@@ -64,10 +64,10 @@
       "comparison": ">=",
       "target_date": "2026-06-27",
       "end_date": "2026-06-27",
-      "market_price": 0.0015,
+      "market_price": 0.0025,
       "p_model": 0.08593396215341675,
       "forecast_temp": 25.033333333333335,
-      "edge": 0.08443396215341675,
+      "edge": 0.08343396215341675,
       "should_trade": false,
       "filter_reason": "price_too_low"
     },
@@ -176,10 +176,10 @@
       "comparison": "range",
       "target_date": "2026-06-27",
       "end_date": "2026-06-27",
-      "market_price": 0.98,
+      "market_price": 0.9805,
       "p_model": 0.12517879071300697,
       "forecast_temp": 25.033333333333335,
-      "edge": -0.854821209286993,
+      "edge": -0.8553212092869931,
       "should_trade": false,
       "filter_reason": "price_too_high"
     },
@@ -208,10 +208,10 @@
       "comparison": "range",
       "target_date": "2026-06-27",
       "end_date": "2026-06-27",
-      "market_price": 0.003,
+      "market_price": 0.001,
       "p_model": 0.016572533805089,
       "forecast_temp": 25.033333333333335,
-      "edge": 0.013572533805089,
+      "edge": 0.015572533805088998,
       "should_trade": false,
       "filter_reason": "price_too_low"
     },
@@ -224,10 +224,10 @@
       "comparison": "range",
       "target_date": "2026-06-27",
       "end_date": "2026-06-27",
-      "market_price": 0.0115,
+      "market_price": 0.0365,
       "p_model": 0.030214806685639195,
       "forecast_temp": 25.033333333333335,
-      "edge": 0.018714806685639195,
+      "edge": -0.006285193314360803,
       "should_trade": false,
       "filter_reason": "insufficient_edge"
     },
@@ -240,12 +240,12 @@
       "comparison": "range",
       "target_date": "2026-06-27",
       "end_date": "2026-06-27",
-      "market_price": 0.1675,
+      "market_price": 0.575,
       "p_model": 0.04965016397886213,
       "forecast_temp": 25.033333333333335,
-      "edge": -0.11784983602113788,
+      "edge": -0.5253498360211378,
       "should_trade": false,
-      "filter_reason": "insufficient_edge"
+      "filter_reason": "price_in_50_50_range"
     },
     {
       "market_id": "2687335",
@@ -256,10 +256,10 @@
       "comparison": "range",
       "target_date": "2026-06-27",
       "end_date": "2026-06-27",
-      "market_price": 0.2575,
+      "market_price": 0.3215,
       "p_model": 0.07353490583374106,
       "forecast_temp": 25.033333333333335,
-      "edge": -0.18396509416625895,
+      "edge": -0.24796509416625895,
       "should_trade": false,
       "filter_reason": "price_too_high"
     },
@@ -272,12 +272,12 @@
       "comparison": "range",
       "target_date": "2026-06-27",
       "end_date": "2026-06-27",
-      "market_price": 0.4085,
+      "market_price": 0.0005,
       "p_model": 0.09816123050687531,
       "forecast_temp": 25.033333333333335,
-      "edge": -0.31033876949312467,
+      "edge": 0.09766123050687531,
       "should_trade": false,
-      "filter_reason": "price_in_50_50_range"
+      "filter_reason": "price_too_low"
     },
     {
       "market_id": "2687337",
