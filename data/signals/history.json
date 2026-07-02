@@ -2,31 +2,11 @@
   "scans": [
     {
       "date": "2026-07-02",
-      "scan_time": "2026-07-02T15:04:40.739271Z",
+      "scan_time": "2026-07-02T17:25:55.722401Z",
       "data_source": "polymarket_api",
       "markets_scanned": 22,
-      "signals_generated": 1,
-      "signals": [
-        {
-          "market_id": "2749907",
-          "title": "Highest temperature in NYC on July 2? - 97\u00b0F or below",
-          "city": "New York City",
-          "threshold_celsius": null,
-          "threshold_celsius_upper": 36.388888888888886,
-          "comparison": "<=",
-          "target_date": "2026-07-02",
-          "end_date": "2026-07-02",
-          "market_price": 0.065,
-          "p_model": 0.5232352328214076,
-          "forecast_temp": 36.18888888888888,
-          "edge": 0.4582352328214076,
-          "should_trade": true,
-          "filter_reason": "passed",
-          "signal": "BUY_YES",
-          "recommended_size_usd": 4.749411396928446,
-          "potential_profit": 68.31845624812458
-        }
-      ]
+      "signals_generated": 0,
+      "signals": []
     },
     {
       "date": "2026-07-01",
@@ -1020,8 +1000,8 @@
       "signals": []
     }
   ],
-  "total_signals": 15,
+  "total_signals": 14,
   "signals_by_city": {
-    "New York City": 15
+    "New York City": 14
   }
 }
