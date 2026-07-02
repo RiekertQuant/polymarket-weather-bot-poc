@@ -1529,15 +1529,15 @@
       "comparison": "<=",
       "target_date": "2026-07-02",
       "end_date": "2026-07-02",
-      "market_price": 0.125,
-      "p_model": 0.5984308965435153,
-      "forecast_temp": 35.53333333333333,
-      "edge": 0.47343089654351533,
+      "market_price": 0.085,
+      "p_model": 0.5348282178153357,
+      "forecast_temp": 36.08888888888889,
+      "edge": 0.4498282178153357,
       "should_trade": true,
       "filter_reason": "passed",
       "signal": "BUY_YES",
-      "recommended_size_usd": 4.840585379261092,
-      "potential_profit": 33.88409765482764
+      "recommended_size_usd": 4.698969306892014,
+      "potential_profit": 50.58302253889639
     }
   ],
   "summary": {
