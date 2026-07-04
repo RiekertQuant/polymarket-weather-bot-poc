@@ -1519,7 +1519,27 @@
       "return_pct": 4.2356
     }
   ],
-  "pending_signals": [],
+  "pending_signals": [
+    {
+      "market_id": "2777737",
+      "title": "Highest temperature in NYC on July 4? - 93\u00b0F or below",
+      "city": "New York City",
+      "threshold_celsius": null,
+      "threshold_celsius_upper": 34.166666666666664,
+      "comparison": "<=",
+      "target_date": "2026-07-04",
+      "end_date": "2026-07-04",
+      "market_price": 0.0645,
+      "p_model": 0.45587865997516225,
+      "forecast_temp": 34.66111111111111,
+      "edge": 0.39137865997516225,
+      "should_trade": true,
+      "filter_reason": "passed",
+      "signal": "BUY_YES",
+      "recommended_size_usd": 4.348271959850973,
+      "potential_profit": 63.06679718512535
+    }
+  ],
   "summary": {
     "total_resolved": 66,
     "wins": 9,
@@ -1527,7 +1547,7 @@
     "win_rate": 0.13636363636363635,
     "total_pnl": 1527.7567,
     "total_risked": 236.7617,
-    "pending": 0
+    "pending": 1
   },
   "last_updated": "2026-07-04"
 }
