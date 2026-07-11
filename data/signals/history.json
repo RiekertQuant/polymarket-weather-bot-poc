@@ -1,6 +1,14 @@
 {
   "scans": [
     {
+      "date": "2026-07-11",
+      "scan_time": "2026-07-11T01:42:01.646498Z",
+      "data_source": "polymarket_api",
+      "markets_scanned": 0,
+      "signals_generated": 0,
+      "signals": []
+    },
+    {
       "date": "2026-07-10",
       "scan_time": "2026-07-10T23:47:12.164781Z",
       "data_source": "polymarket_api",
@@ -930,38 +938,10 @@
       "markets_scanned": 22,
       "signals_generated": 0,
       "signals": []
-    },
-    {
-      "date": "2026-04-12",
-      "scan_time": "2026-04-12T23:24:48.775857Z",
-      "data_source": "polymarket_api",
-      "markets_scanned": 22,
-      "signals_generated": 1,
-      "signals": [
-        {
-          "market_id": "1924418",
-          "title": "Highest temperature in NYC on April 13? - 80\u00b0F or higher",
-          "city": "New York City",
-          "threshold_celsius": 26.38888888888889,
-          "threshold_celsius_upper": null,
-          "comparison": ">=",
-          "target_date": "2026-04-13",
-          "end_date": "2026-04-13",
-          "market_price": 0.0645,
-          "p_model": 0.37837009709023506,
-          "forecast_temp": 25.366666666666667,
-          "edge": 0.31387009709023506,
-          "should_trade": true,
-          "filter_reason": "passed",
-          "signal": "BUY_YES",
-          "recommended_size_usd": 3.8832205825414103,
-          "potential_profit": 56.32174968941844
-        }
-      ]
     }
   ],
-  "total_signals": 12,
+  "total_signals": 11,
   "signals_by_city": {
-    "New York City": 12
+    "New York City": 11
   }
 }
