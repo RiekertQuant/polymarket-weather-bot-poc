@@ -1,5 +1,5 @@
 {
-  "scan_time": "2026-07-17T20:50:07.100529Z",
+  "scan_time": "2026-07-17T21:41:12.459990Z",
   "scan_date": "2026-07-17",
   "data_source": "polymarket_api",
   "weather_source": "nws",
@@ -64,12 +64,12 @@
       "comparison": "range",
       "target_date": "2026-07-17",
       "end_date": "2026-07-17",
-      "market_price": 0.61,
+      "market_price": 0.895,
       "p_model": 0.1626207797583331,
       "forecast_temp": 29.461111111111112,
-      "edge": -0.4473792202416669,
+      "edge": -0.7323792202416669,
       "should_trade": false,
-      "filter_reason": "price_in_50_50_range"
+      "filter_reason": "price_too_high"
     },
     {
       "market_id": "2941429",
@@ -80,12 +80,12 @@
       "comparison": "range",
       "target_date": "2026-07-17",
       "end_date": "2026-07-17",
-      "market_price": 0.355,
+      "market_price": 0.085,
       "p_model": 0.1296505924053717,
       "forecast_temp": 29.461111111111112,
-      "edge": -0.2253494075946283,
+      "edge": 0.044650592405371684,
       "should_trade": false,
-      "filter_reason": "price_in_50_50_range"
+      "filter_reason": "insufficient_edge"
     },
     {
       "market_id": "2941430",
@@ -96,10 +96,10 @@
       "comparison": "range",
       "target_date": "2026-07-17",
       "end_date": "2026-07-17",
-      "market_price": 0.011,
+      "market_price": 0.015,
       "p_model": 0.08603796100742833,
       "forecast_temp": 29.461111111111112,
-      "edge": 0.07503796100742834,
+      "edge": 0.07103796100742833,
       "should_trade": false,
       "filter_reason": "insufficient_edge"
     },
@@ -112,10 +112,10 @@
       "comparison": "range",
       "target_date": "2026-07-17",
       "end_date": "2026-07-17",
-      "market_price": 0.0015,
+      "market_price": 0.0035,
       "p_model": 0.047524047369498,
       "forecast_temp": 29.461111111111112,
-      "edge": 0.046024047369498,
+      "edge": 0.044024047369498,
       "should_trade": false,
       "filter_reason": "price_too_low"
     },
@@ -128,10 +128,10 @@
       "comparison": "range",
       "target_date": "2026-07-17",
       "end_date": "2026-07-17",
-      "market_price": 0.0005,
+      "market_price": 0.001,
       "p_model": 0.021848970894252195,
       "forecast_temp": 29.461111111111112,
-      "edge": 0.021348970894252195,
+      "edge": 0.020848970894252195,
       "should_trade": false,
       "filter_reason": "price_too_low"
     },
@@ -272,10 +272,10 @@
       "comparison": "range",
       "target_date": "2026-07-17",
       "end_date": "2026-07-17",
-      "market_price": 0.05,
+      "market_price": 0.045,
       "p_model": 0.004664187456120233,
       "forecast_temp": 29.461111111111112,
-      "edge": -0.04533581254387977,
+      "edge": -0.040335812543879766,
       "should_trade": false,
       "filter_reason": "insufficient_edge"
     },
@@ -288,10 +288,10 @@
       "comparison": "range",
       "target_date": "2026-07-17",
       "end_date": "2026-07-17",
-      "market_price": 0.955,
+      "market_price": 0.95,
       "p_model": 0.013435160115584044,
       "forecast_temp": 29.461111111111112,
-      "edge": -0.9415648398844159,
+      "edge": -0.936564839884416,
       "should_trade": false,
       "filter_reason": "price_too_high"
     },
