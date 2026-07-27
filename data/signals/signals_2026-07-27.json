@@ -1,5 +1,5 @@
 {
-  "scan_time": "2026-07-27T22:50:44.078487Z",
+  "scan_time": "2026-07-27T23:54:19.822282Z",
   "scan_date": "2026-07-27",
   "data_source": "polymarket_api",
   "weather_source": "nws",
@@ -96,10 +96,10 @@
       "comparison": "range",
       "target_date": "2026-07-27",
       "end_date": "2026-07-27",
-      "market_price": 0.9955,
+      "market_price": 0.9965,
       "p_model": 0.12449172887226323,
       "forecast_temp": 27.288888888888888,
-      "edge": -0.8710082711277368,
+      "edge": -0.8720082711277368,
       "should_trade": false,
       "filter_reason": "price_too_high"
     },
@@ -144,10 +144,10 @@
       "comparison": "range",
       "target_date": "2026-07-27",
       "end_date": "2026-07-27",
-      "market_price": 0.001,
+      "market_price": 0.0005,
       "p_model": 0.02989846851054112,
       "forecast_temp": 27.288888888888888,
-      "edge": 0.02889846851054112,
+      "edge": 0.02939846851054112,
       "should_trade": false,
       "filter_reason": "price_too_low"
     },
