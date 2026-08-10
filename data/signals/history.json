@@ -2,11 +2,31 @@
   "scans": [
     {
       "date": "2026-08-10",
-      "scan_time": "2026-08-10T15:49:24.027475Z",
+      "scan_time": "2026-08-10T16:42:01.015145Z",
       "data_source": "polymarket_api",
-      "markets_scanned": 0,
-      "signals_generated": 0,
-      "signals": []
+      "markets_scanned": 11,
+      "signals_generated": 1,
+      "signals": [
+        {
+          "market_id": "3433859",
+          "title": "Highest temperature in NYC on August 10? - 85\u00b0F or below",
+          "city": "New York City",
+          "threshold_celsius": null,
+          "threshold_celsius_upper": 29.72222222222222,
+          "comparison": "<=",
+          "target_date": "2026-08-10",
+          "end_date": "2026-08-10",
+          "market_price": 0.0145,
+          "p_model": 0.37355388955761504,
+          "forecast_temp": 30.644444444444442,
+          "edge": 0.359053889557615,
+          "should_trade": true,
+          "filter_reason": "passed",
+          "signal": "BUY_YES",
+          "recommended_size_usd": 4.154323337345691,
+          "potential_profit": 282.350734410633
+        }
+      ]
     },
     {
       "date": "2026-08-09",
@@ -900,8 +920,8 @@
       ]
     }
   ],
-  "total_signals": 9,
+  "total_signals": 10,
   "signals_by_city": {
-    "New York City": 9
+    "New York City": 10
   }
 }
