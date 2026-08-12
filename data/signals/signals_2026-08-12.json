@@ -1,5 +1,5 @@
 {
-  "scan_time": "2026-08-12T20:32:31.992614Z",
+  "scan_time": "2026-08-12T21:33:59.338627Z",
   "scan_date": "2026-08-12",
   "data_source": "polymarket_api",
   "weather_source": "nws",
@@ -64,12 +64,12 @@
       "comparison": "range",
       "target_date": "2026-08-12",
       "end_date": "2026-08-12",
-      "market_price": 0.24,
+      "market_price": 0.0005,
       "p_model": 0.1659511555813729,
       "forecast_temp": 29.794444444444444,
-      "edge": -0.07404884441862708,
+      "edge": 0.1654511555813729,
       "should_trade": false,
-      "filter_reason": "price_too_high"
+      "filter_reason": "price_too_low"
     },
     {
       "market_id": "3504686",
@@ -80,12 +80,12 @@
       "comparison": "range",
       "target_date": "2026-08-12",
       "end_date": "2026-08-12",
-      "market_price": 0.575,
+      "market_price": 0.895,
       "p_model": 0.1679419681637463,
       "forecast_temp": 29.794444444444444,
-      "edge": -0.40705803183625366,
+      "edge": -0.7270580318362537,
       "should_trade": false,
-      "filter_reason": "price_in_50_50_range"
+      "filter_reason": "price_too_high"
     },
     {
       "market_id": "3504687",
@@ -96,10 +96,10 @@
       "comparison": "range",
       "target_date": "2026-08-12",
       "end_date": "2026-08-12",
-      "market_price": 0.155,
+      "market_price": 0.095,
       "p_model": 0.14146902001611195,
       "forecast_temp": 29.794444444444444,
-      "edge": -0.013530979983888053,
+      "edge": 0.046469020016111945,
       "should_trade": false,
       "filter_reason": "insufficient_edge"
     },
@@ -112,12 +112,12 @@
       "comparison": "range",
       "target_date": "2026-08-12",
       "end_date": "2026-08-12",
-      "market_price": 0.011,
+      "market_price": 0.006,
       "p_model": 0.09919336211927177,
       "forecast_temp": 29.794444444444444,
-      "edge": 0.08819336211927177,
+      "edge": 0.09319336211927176,
       "should_trade": false,
-      "filter_reason": "insufficient_edge"
+      "filter_reason": "price_too_low"
     },
     {
       "market_id": "3504689",
