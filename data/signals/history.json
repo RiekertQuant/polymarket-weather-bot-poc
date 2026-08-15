@@ -1,6 +1,14 @@
 {
   "scans": [
     {
+      "date": "2026-08-15",
+      "scan_time": "2026-08-15T00:37:15.244442Z",
+      "data_source": "polymarket_api",
+      "markets_scanned": 0,
+      "signals_generated": 0,
+      "signals": []
+    },
+    {
       "date": "2026-08-14",
       "scan_time": "2026-08-14T23:11:34.363232Z",
       "data_source": "polymarket_api",
@@ -811,57 +819,10 @@
       "markets_scanned": 0,
       "signals_generated": 0,
       "signals": []
-    },
-    {
-      "date": "2026-05-17",
-      "scan_time": "2026-05-17T23:48:26.321057Z",
-      "data_source": "polymarket_api",
-      "markets_scanned": 44,
-      "signals_generated": 2,
-      "signals": [
-        {
-          "market_id": "2257899",
-          "title": "Lowest temperature in NYC on May 18? - 72\u00b0F or higher",
-          "city": "New York City",
-          "threshold_celsius": 21.944444444444443,
-          "threshold_celsius_upper": null,
-          "comparison": ">=",
-          "target_date": "2026-05-18",
-          "end_date": "2026-05-18",
-          "market_price": 0.0325,
-          "p_model": 0.8604637515449121,
-          "forecast_temp": 27.51666666666667,
-          "edge": 0.8279637515449121,
-          "should_trade": true,
-          "filter_reason": "passed",
-          "signal": "BUY_YES",
-          "recommended_size_usd": 5.0,
-          "potential_profit": 148.84615384615384
-        },
-        {
-          "market_id": "2266328",
-          "title": "Lowest temperature in NYC on May 19? - 74\u00b0F or higher",
-          "city": "New York City",
-          "threshold_celsius": 23.055555555555557,
-          "threshold_celsius_upper": null,
-          "comparison": ">=",
-          "target_date": "2026-05-19",
-          "end_date": "2026-05-19",
-          "market_price": 0.044,
-          "p_model": 0.9559935178361864,
-          "forecast_temp": 31.349999999999998,
-          "edge": 0.9119935178361863,
-          "should_trade": true,
-          "filter_reason": "passed",
-          "signal": "BUY_YES",
-          "recommended_size_usd": 5.0,
-          "potential_profit": 108.63636363636364
-        }
-      ]
     }
   ],
-  "total_signals": 7,
+  "total_signals": 5,
   "signals_by_city": {
-    "New York City": 7
+    "New York City": 5
   }
 }
