@@ -1,5 +1,5 @@
 {
-  "scan_time": "2026-08-16T19:13:14.860386Z",
+  "scan_time": "2026-08-16T20:10:01.154204Z",
   "scan_date": "2026-08-16",
   "data_source": "polymarket_api",
   "weather_source": "nws",
@@ -64,12 +64,12 @@
       "comparison": "range",
       "target_date": "2026-08-16",
       "end_date": "2026-08-16",
-      "market_price": 0.012,
+      "market_price": 0.0075,
       "p_model": 0.023723492383786488,
       "forecast_temp": 25.844444444444445,
-      "edge": 0.011723492383786487,
+      "edge": 0.016223492383786488,
       "should_trade": false,
-      "filter_reason": "insufficient_edge"
+      "filter_reason": "price_too_low"
     },
     {
       "market_id": "3594571",
@@ -80,10 +80,10 @@
       "comparison": "range",
       "target_date": "2026-08-16",
       "end_date": "2026-08-16",
-      "market_price": 0.985,
+      "market_price": 0.995,
       "p_model": 0.046465872702698,
       "forecast_temp": 25.844444444444445,
-      "edge": -0.938534127297302,
+      "edge": -0.948534127297302,
       "should_trade": false,
       "filter_reason": "price_too_high"
     },
