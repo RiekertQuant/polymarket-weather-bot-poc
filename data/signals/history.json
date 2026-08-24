@@ -1,6 +1,14 @@
 {
   "scans": [
     {
+      "date": "2026-08-24",
+      "scan_time": "2026-08-24T00:38:34.269636Z",
+      "data_source": "polymarket_api",
+      "markets_scanned": 0,
+      "signals_generated": 0,
+      "signals": []
+    },
+    {
       "date": "2026-08-23",
       "scan_time": "2026-08-23T23:10:49.122005Z",
       "data_source": "polymarket_api",
@@ -731,38 +739,10 @@
       "markets_scanned": 33,
       "signals_generated": 0,
       "signals": []
-    },
-    {
-      "date": "2026-05-26",
-      "scan_time": "2026-05-26T23:00:55.879469Z",
-      "data_source": "polymarket_api",
-      "markets_scanned": 44,
-      "signals_generated": 1,
-      "signals": [
-        {
-          "market_id": "2344727",
-          "title": "Lowest temperature in NYC on May 28? - 72\u00b0F or higher",
-          "city": "New York City",
-          "threshold_celsius": 21.944444444444443,
-          "threshold_celsius_upper": null,
-          "comparison": ">=",
-          "target_date": "2026-05-28",
-          "end_date": "2026-05-28",
-          "market_price": 0.0135,
-          "p_model": 0.5730697159868103,
-          "forecast_temp": 22.633333333333336,
-          "edge": 0.5595697159868104,
-          "should_trade": true,
-          "filter_reason": "passed",
-          "signal": "BUY_YES",
-          "recommended_size_usd": 5.0,
-          "potential_profit": 365.3703703703704
-        }
-      ]
     }
   ],
-  "total_signals": 2,
+  "total_signals": 1,
   "signals_by_city": {
-    "New York City": 2
+    "New York City": 1
   }
 }
