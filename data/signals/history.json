@@ -1,6 +1,14 @@
 {
   "scans": [
     {
+      "date": "2026-09-04",
+      "scan_time": "2026-09-04T01:54:33.881436Z",
+      "data_source": "polymarket_api",
+      "markets_scanned": 0,
+      "signals_generated": 0,
+      "signals": []
+    },
+    {
       "date": "2026-09-03",
       "scan_time": "2026-09-03T23:40:10.803570Z",
       "data_source": "polymarket_api",
@@ -711,38 +719,8 @@
       "markets_scanned": 22,
       "signals_generated": 0,
       "signals": []
-    },
-    {
-      "date": "2026-06-06",
-      "scan_time": "2026-06-06T23:56:13.379264Z",
-      "data_source": "polymarket_api",
-      "markets_scanned": 33,
-      "signals_generated": 1,
-      "signals": [
-        {
-          "market_id": "2441387",
-          "title": "Lowest temperature in NYC on June 6? - 76\u00b0F or higher",
-          "city": "New York City",
-          "threshold_celsius": 24.166666666666668,
-          "threshold_celsius_upper": null,
-          "comparison": ">=",
-          "target_date": "2026-06-06",
-          "end_date": "2026-06-06",
-          "market_price": 0.191,
-          "p_model": 0.995272966061224,
-          "forecast_temp": 31.588888888888892,
-          "edge": 0.804272966061224,
-          "should_trade": true,
-          "filter_reason": "passed",
-          "signal": "BUY_YES",
-          "recommended_size_usd": 5.0,
-          "potential_profit": 21.17801047120419
-        }
-      ]
     }
   ],
-  "total_signals": 1,
-  "signals_by_city": {
-    "New York City": 1
-  }
+  "total_signals": 0,
+  "signals_by_city": {}
 }
