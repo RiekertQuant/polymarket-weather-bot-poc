@@ -1,6 +1,14 @@
 {
   "scans": [
     {
+      "date": "2026-09-16",
+      "scan_time": "2026-09-16T02:15:32.669948Z",
+      "data_source": "polymarket_api",
+      "markets_scanned": 0,
+      "signals_generated": 0,
+      "signals": []
+    },
+    {
       "date": "2026-09-15",
       "scan_time": "2026-09-15T23:17:57.926734Z",
       "data_source": "polymarket_api",
@@ -709,14 +717,6 @@
       "scan_time": "2026-06-19T23:59:36.127918Z",
       "data_source": "polymarket_api",
       "markets_scanned": 22,
-      "signals_generated": 0,
-      "signals": []
-    },
-    {
-      "date": "2026-06-18",
-      "scan_time": "2026-06-18T22:51:24.139098Z",
-      "data_source": "polymarket_api",
-      "markets_scanned": 11,
       "signals_generated": 0,
       "signals": []
     }
