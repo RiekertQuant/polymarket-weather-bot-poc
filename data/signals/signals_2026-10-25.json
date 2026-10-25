@@ -1,0 +1,18 @@
+{
+  "scan_time": "2026-10-25T00:39:59.106590Z",
+  "scan_date": "2026-10-25",
+  "data_source": "polymarket_api",
+  "weather_source": "nws",
+  "markets_scanned": 0,
+  "signals_generated": 0,
+  "signals": [],
+  "all_markets": [],
+  "settings": {
+    "price_min": 0.01,
+    "price_max": 0.2,
+    "min_edge_absolute": 0.3,
+    "min_edge_relative": 0.2,
+    "forecast_sigma": 3.5,
+    "weather_source": "nws"
+  }
+}
